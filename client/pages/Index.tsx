@@ -712,31 +712,31 @@ export default function Index() {
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-4">
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">Status</span>
+                                    <span className="text-gray-600 dark:text-gray-300">Status</span>
                                     <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30 px-3 py-1">
                                       Valid
                                     </Badge>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">Confidence</span>
-                                    <span className="text-white font-semibold">98.5%</span>
+                                    <span className="text-gray-600 dark:text-gray-300">Confidence</span>
+                                    <span className="text-gray-900 dark:text-white font-semibold">98.5%</span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">Deliverability</span>
+                                    <span className="text-gray-600 dark:text-gray-300">Deliverability</span>
                                     <span className="text-brand-success font-semibold">High</span>
                                   </div>
                                 </div>
                                 <div className="space-y-4">
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">Domain Check</span>
+                                    <span className="text-gray-600 dark:text-gray-300">Domain Check</span>
                                     <span className="text-brand-success">✓ Valid</span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">Syntax Check</span>
+                                    <span className="text-gray-600 dark:text-gray-300">Syntax Check</span>
                                     <span className="text-brand-success">✓ Valid</span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-300">MX Records</span>
+                                    <span className="text-gray-600 dark:text-gray-300">MX Records</span>
                                     <span className="text-brand-success">✓ Found</span>
                                   </div>
                                 </div>
