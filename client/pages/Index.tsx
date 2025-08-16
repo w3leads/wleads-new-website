@@ -395,9 +395,12 @@ export default function Index() {
       <section className="py-20 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">How It Works</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              How It Works
+            </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Simple 4-step process to supercharge your lead generation and start converting prospects into customers
+              Simple 4-step process to supercharge your lead generation and
+              start converting prospects into customers
             </p>
           </div>
 
@@ -437,13 +440,19 @@ export default function Index() {
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
                   {/* Step Number */}
                   <div className="absolute -top-4 left-8">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                      <span className="text-white font-bold text-lg">{item.step}</span>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center shadow-lg`}
+                    >
+                      <span className="text-white font-bold text-lg">
+                        {item.step}
+                      </span>
                     </div>
                   </div>
 
                   {/* Icon */}
-                  <div className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4`}>
+                  <div
+                    className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4`}
+                  >
                     <item.icon className="w-10 h-10 text-white" />
                   </div>
 
@@ -475,13 +484,17 @@ export default function Index() {
                 Ready to Get Started?
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Join thousands of sales teams who've automated their lead generation process and increased conversions by 340%
+                Join thousands of sales teams who've automated their lead
+                generation process and increased conversions by 340%
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white px-8 py-3 font-semibold">
                   Start Free Trial
                 </Button>
-                <Button variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 px-8 py-3">
+                <Button
+                  variant="outline"
+                  className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 px-8 py-3"
+                >
                   Watch Demo
                 </Button>
               </div>
