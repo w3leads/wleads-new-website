@@ -397,7 +397,7 @@ export default function Index() {
                 number: "10K+",
                 label: "Companies Served",
                 sublabel: "Across 50+ countries",
-                icon: "🏢",
+                icon: Building,
                 gradient: "from-brand-primary to-brand-primary",
                 bgGradient:
                   "from-brand-primary/5 to-brand-primary/10 dark:from-brand-primary/10 dark:to-brand-primary/20",
