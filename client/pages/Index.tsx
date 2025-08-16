@@ -1651,261 +1651,479 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. Premium Pricing Architecture */}
-      <section className="py-32 px-4 relative overflow-hidden">
-        {/* Sophisticated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-green-50/30 to-blue-50/20 dark:from-slate-900 dark:via-green-900/20 dark:to-blue-900/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.1),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.15),transparent_50%)]"></div>
+      {/* 10. Ultra-Premium Pricing Architecture */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Sophisticated Multi-Layer Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/80 to-purple-950/70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,69,19,0.12),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(34,197,94,0.08)_50%,transparent_70%)]"></div>
 
-        {/* Floating Price Elements */}
-        <div className="absolute top-20 right-1/4 text-4xl text-green-200/20 dark:text-green-400/10 font-bold">
-          $
-        </div>
-        <div className="absolute bottom-20 left-1/4 text-3xl text-blue-200/20 dark:text-blue-400/10 font-bold">
-          €
-        </div>
-        <div className="absolute top-1/2 right-10 w-24 h-24 bg-green-200/10 dark:bg-green-400/5 rounded-full blur-2xl animate-pulse"></div>
+        {/* Animated Geometric Elements */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-60"></div>
+        <div className="absolute bottom-32 right-32 w-1 h-1 bg-emerald-400 rounded-full animate-pulse opacity-80"></div>
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
 
-        <div className="relative max-w-7xl mx-auto">
-          {/* Premium Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-100/80 dark:bg-green-500/10 border border-green-200/50 dark:border-green-500/20 backdrop-blur-sm mb-8">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-green-600 dark:text-green-400 text-sm font-medium tracking-wide uppercase">
-                Investment Plans
+        {/* Floating Currency Symbols with Gradients */}
+        <div className="absolute top-32 right-1/6 text-5xl font-bold opacity-10">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">$</span>
+        </div>
+        <div className="absolute bottom-40 left-1/6 text-4xl font-bold opacity-8">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">€</span>
+        </div>
+
+        {/* Large Ambient Light Effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="relative max-w-8xl mx-auto">
+          {/* Elite Header Section */}
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-12">
+              <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mr-4 animate-pulse shadow-lg shadow-emerald-400/50"></div>
+              <span className="text-emerald-300 text-sm font-semibold tracking-[0.2em] uppercase">
+                Investment Tiers
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              <span className="block">Simple, Transparent</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-blue-600 to-purple-600">
-                ROI-Driven Pricing
+            <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
+              <span className="block text-white mb-2">Pricing That</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 relative">
+                Scales Success
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 via-blue-400/20 to-purple-400/20 blur-xl -z-10"></div>
               </span>
             </h2>
 
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Choose the investment level that matches your growth ambitions.
-              Every plan is designed to deliver measurable ROI from day one.
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-16 font-light">
+              Transparent, value-driven pricing designed for ambitious teams who demand
+              <span className="text-emerald-400 font-medium"> exceptional ROI</span> and
+              <span className="text-blue-400 font-medium"> measurable growth</span>.
             </p>
 
-            <Tabs defaultValue="monthly" className="mt-8">
-              <TabsList className="glass border-white/20">
-                <TabsTrigger value="monthly" className="text-white">
-                  Monthly
-                </TabsTrigger>
-                <TabsTrigger value="yearly" className="text-white">
-                  Yearly{" "}
-                  <Badge className="ml-2 bg-brand-success">Save 20%</Badge>
-                </TabsTrigger>
-              </TabsList>
+            {/* Advanced Billing Toggle with Enhanced Design */}
+            <div className="relative inline-flex p-2 bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl">
+              <Tabs defaultValue="monthly" className="w-full">
+                <TabsList className="bg-transparent p-0 h-auto space-x-2">
+                  <TabsTrigger
+                    value="monthly"
+                    className="px-8 py-4 rounded-xl text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 font-medium"
+                  >
+                    Monthly Billing
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="yearly"
+                    className="px-8 py-4 rounded-xl text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 font-medium relative"
+                  >
+                    Annual Billing
+                    <Badge className="ml-3 bg-emerald-500/20 text-emerald-300 border-emerald-500/30 px-2 py-1 text-xs">
+                      Save 25%
+                    </Badge>
+                  </TabsTrigger>
+                </TabsList>
 
-              <TabsContent value="monthly" className="mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      name: "Starter",
-                      price: "$29",
-                      period: "/month",
-                      features: [
-                        "1,000 email verifications",
-                        "Basic domain search",
-                        "Email support",
-                        "Standard integrations",
-                      ],
-                      popular: false,
-                    },
-                    {
-                      name: "Professional",
-                      price: "$99",
-                      period: "/month",
-                      features: [
-                        "10,000 email verifications",
-                        "Advanced search filters",
-                        "Campaign automation",
-                        "Priority support",
-                        "All integrations",
-                      ],
-                      popular: true,
-                    },
-                    {
-                      name: "Enterprise",
-                      price: "Custom",
-                      period: "",
-                      features: [
-                        "Unlimited verifications",
-                        "Custom integrations",
-                        "Dedicated support",
-                        "Advanced analytics",
-                        "White-label options",
-                      ],
-                      popular: false,
-                    },
-                  ].map((plan, index) => (
-                    <Card
-                      key={index}
-                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular
-                          ? "border-green-500 ring-2 ring-green-500/20"
-                          : ""
-                      }`}
-                    >
-                      {plan.popular && (
-                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
-                          Most Popular
-                        </Badge>
-                      )}
-                      <CardHeader>
-                        <CardTitle className="text-gray-900 dark:text-white text-xl">
-                          {plan.name}
-                        </CardTitle>
-                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                          {plan.price}
-                          <span className="text-lg text-gray-600 dark:text-gray-300">
-                            {plan.period}
-                          </span>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-3">
-                          {plan.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-gray-600 dark:text-gray-300"
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                        <Button
-                          className={`w-full mt-6 ${
-                            plan.popular
-                              ? "bg-green-500 hover:bg-green-600"
-                              : "bg-blue-600 hover:bg-blue-700"
-                          } text-white`}
-                          asChild
-                        >
-                          <Link to="/signup">Get Started</Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
+                <TabsContent value="monthly" className="mt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {[
+                      {
+                        tier: "Starter",
+                        subtitle: "For Growing Teams",
+                        price: "49",
+                        originalPrice: null,
+                        currency: "$",
+                        period: "/month",
+                        description: "Perfect for small teams starting their lead generation journey",
+                        features: [
+                          "5,000 email verifications",
+                          "Basic domain intelligence",
+                          "Standard email support",
+                          "Core integrations (5+)",
+                          "Export to CSV/Excel",
+                          "Basic analytics dashboard"
+                        ],
+                        highlight: false,
+                        ctaText: "Start Free Trial",
+                        gradient: "from-slate-600 to-gray-700",
+                        accentColor: "text-gray-400",
+                        borderGlow: "from-gray-500/30 to-slate-500/30"
+                      },
+                      {
+                        tier: "Professional",
+                        subtitle: "Most Popular Choice",
+                        price: "149",
+                        originalPrice: null,
+                        currency: "$",
+                        period: "/month",
+                        description: "Advanced features for high-performing sales teams",
+                        features: [
+                          "25,000 email verifications",
+                          "Advanced domain mapping",
+                          "Campaign automation suite",
+                          "Priority 24/7 support",
+                          "Premium integrations (50+)",
+                          "Advanced analytics & reporting",
+                          "A/B testing capabilities",
+                          "Custom email templates",
+                          "Bulk processing tools"
+                        ],
+                        highlight: true,
+                        ctaText: "Upgrade to Pro",
+                        gradient: "from-emerald-500 to-blue-600",
+                        accentColor: "text-emerald-400",
+                        borderGlow: "from-emerald-500/50 to-blue-500/50"
+                      },
+                      {
+                        tier: "Enterprise",
+                        subtitle: "Unlimited Scale",
+                        price: "Custom",
+                        originalPrice: null,
+                        currency: "",
+                        period: "",
+                        description: "White-glove service for enterprise organizations",
+                        features: [
+                          "Unlimited verifications",
+                          "Custom domain intelligence",
+                          "Dedicated account manager",
+                          "99.9% SLA guarantee",
+                          "Custom integrations",
+                          "Advanced security (SSO/SAML)",
+                          "White-label solutions",
+                          "API rate limit increases",
+                          "Custom onboarding & training"
+                        ],
+                        highlight: false,
+                        ctaText: "Contact Sales",
+                        gradient: "from-purple-600 to-pink-600",
+                        accentColor: "text-purple-400",
+                        borderGlow: "from-purple-500/30 to-pink-500/30"
+                      }
+                    ].map((plan, index) => (
+                      <div key={index} className={`group relative ${plan.highlight ? 'lg:scale-110 lg:-mt-8' : ''}`}>
+                        {/* Sophisticated Glow Effect */}
+                        <div className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}></div>
 
-              <TabsContent value="yearly" className="mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      name: "Starter",
-                      price: "$23",
-                      period: "/month",
-                      originalPrice: "$29",
-                      features: [
-                        "1,000 email verifications",
-                        "Basic domain search",
-                        "Email support",
-                        "Standard integrations",
-                      ],
-                      popular: false,
-                    },
-                    {
-                      name: "Professional",
-                      price: "$79",
-                      period: "/month",
-                      originalPrice: "$99",
-                      features: [
-                        "10,000 email verifications",
-                        "Advanced search filters",
-                        "Campaign automation",
-                        "Priority support",
-                        "All integrations",
-                      ],
-                      popular: true,
-                    },
-                    {
-                      name: "Enterprise",
-                      price: "Custom",
-                      period: "",
-                      originalPrice: "",
-                      features: [
-                        "Unlimited verifications",
-                        "Custom integrations",
-                        "Dedicated support",
-                        "Advanced analytics",
-                        "White-label options",
-                      ],
-                      popular: false,
-                    },
-                  ].map((plan, index) => (
-                    <Card
-                      key={index}
-                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular
-                          ? "border-green-500 ring-2 ring-green-500/20"
-                          : ""
-                      }`}
-                    >
-                      {plan.popular && (
-                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
-                          Most Popular
-                        </Badge>
-                      )}
-                      <CardHeader>
-                        <CardTitle className="text-gray-900 dark:text-white text-xl">
-                          {plan.name}
-                        </CardTitle>
-                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                          {plan.price}
-                          <span className="text-lg text-gray-600 dark:text-gray-300">
-                            {plan.period}
-                          </span>
-                          {plan.originalPrice && (
-                            <div className="text-sm text-gray-500 line-through">
-                              was {plan.originalPrice}
-                              {plan.period}
+                        {/* Most Popular Badge */}
+                        {plan.highlight && (
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                            <div className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white text-sm font-semibold shadow-2xl">
+                              <span className="flex items-center">
+                                <Star className="w-4 h-4 mr-2 fill-current" />
+                                Most Popular
+                              </span>
                             </div>
-                          )}
+                          </div>
+                        )}
+
+                        {/* Premium Card Design */}
+                        <div className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? 'ring-2 ring-emerald-500/30' : ''}`}>
+
+                          {/* Header Section */}
+                          <div className="text-center mb-8">
+                            <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}>
+                              <span className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}>
+                                {plan.subtitle}
+                              </span>
+                            </div>
+
+                            <h3 className="text-3xl font-bold text-white mb-2">{plan.tier}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                              {plan.description}
+                            </p>
+                          </div>
+
+                          {/* Pricing Display */}
+                          <div className="text-center mb-10">
+                            <div className="flex items-baseline justify-center mb-4">
+                              {plan.currency && (
+                                <span className={`text-3xl font-semibold ${plan.accentColor} mr-1`}>
+                                  {plan.currency}
+                                </span>
+                              )}
+                              <span className="text-6xl font-bold text-white tracking-tight">
+                                {plan.price}
+                              </span>
+                              {plan.period && (
+                                <span className="text-xl text-gray-400 ml-2">
+                                  {plan.period}
+                                </span>
+                              )}
+                            </div>
+
+                            {plan.originalPrice && (
+                              <div className="text-gray-500">
+                                <span className="line-through text-lg">${plan.originalPrice}/month</span>
+                                <span className="ml-2 text-emerald-400 font-medium">Save 25%</span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Features List */}
+                          <div className="space-y-4 mb-10">
+                            {plan.features.map((feature, idx) => (
+                              <div key={idx} className="flex items-start group/item">
+                                <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
+                                  <CheckCircle className="w-3 h-3 text-white" />
+                                </div>
+                                <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* CTA Button */}
+                          <Button
+                            asChild
+                            className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
+                              plan.highlight
+                                ? 'bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white'
+                                : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
+                            }`}
+                          >
+                            <Link to="/signup" className="flex items-center justify-center">
+                              {plan.ctaText}
+                              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
+                          </Button>
+
+                          {/* Trust Indicators */}
+                          <div className="mt-6 text-center">
+                            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>14-day free trial</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>No setup fees</span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-3">
-                          {plan.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-gray-600 dark:text-gray-300"
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                        <Button
-                          className={`w-full mt-6 ${
-                            plan.popular
-                              ? "bg-green-500 hover:bg-green-600"
-                              : "bg-blue-600 hover:bg-blue-700"
-                          } text-white`}
-                          asChild
-                        >
-                          <Link to="/signup">Get Started</Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="yearly" className="mt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {[
+                      {
+                        tier: "Starter",
+                        subtitle: "For Growing Teams",
+                        price: "39",
+                        originalPrice: "49",
+                        currency: "$",
+                        period: "/month",
+                        description: "Perfect for small teams starting their lead generation journey",
+                        features: [
+                          "5,000 email verifications",
+                          "Basic domain intelligence",
+                          "Standard email support",
+                          "Core integrations (5+)",
+                          "Export to CSV/Excel",
+                          "Basic analytics dashboard"
+                        ],
+                        highlight: false,
+                        ctaText: "Start Free Trial",
+                        gradient: "from-slate-600 to-gray-700",
+                        accentColor: "text-gray-400",
+                        borderGlow: "from-gray-500/30 to-slate-500/30"
+                      },
+                      {
+                        tier: "Professional",
+                        subtitle: "Most Popular Choice",
+                        price: "119",
+                        originalPrice: "149",
+                        currency: "$",
+                        period: "/month",
+                        description: "Advanced features for high-performing sales teams",
+                        features: [
+                          "25,000 email verifications",
+                          "Advanced domain mapping",
+                          "Campaign automation suite",
+                          "Priority 24/7 support",
+                          "Premium integrations (50+)",
+                          "Advanced analytics & reporting",
+                          "A/B testing capabilities",
+                          "Custom email templates",
+                          "Bulk processing tools"
+                        ],
+                        highlight: true,
+                        ctaText: "Upgrade to Pro",
+                        gradient: "from-emerald-500 to-blue-600",
+                        accentColor: "text-emerald-400",
+                        borderGlow: "from-emerald-500/50 to-blue-500/50"
+                      },
+                      {
+                        tier: "Enterprise",
+                        subtitle: "Unlimited Scale",
+                        price: "Custom",
+                        originalPrice: null,
+                        currency: "",
+                        period: "",
+                        description: "White-glove service for enterprise organizations",
+                        features: [
+                          "Unlimited verifications",
+                          "Custom domain intelligence",
+                          "Dedicated account manager",
+                          "99.9% SLA guarantee",
+                          "Custom integrations",
+                          "Advanced security (SSO/SAML)",
+                          "White-label solutions",
+                          "API rate limit increases",
+                          "Custom onboarding & training"
+                        ],
+                        highlight: false,
+                        ctaText: "Contact Sales",
+                        gradient: "from-purple-600 to-pink-600",
+                        accentColor: "text-purple-400",
+                        borderGlow: "from-purple-500/30 to-pink-500/30"
+                      }
+                    ].map((plan, index) => (
+                      <div key={index} className={`group relative ${plan.highlight ? 'lg:scale-110 lg:-mt-8' : ''}`}>
+                        {/* Sophisticated Glow Effect */}
+                        <div className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}></div>
+
+                        {/* Most Popular Badge */}
+                        {plan.highlight && (
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                            <div className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white text-sm font-semibold shadow-2xl">
+                              <span className="flex items-center">
+                                <Star className="w-4 h-4 mr-2 fill-current" />
+                                Most Popular
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Premium Card Design */}
+                        <div className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? 'ring-2 ring-emerald-500/30' : ''}`}>
+
+                          {/* Header Section */}
+                          <div className="text-center mb-8">
+                            <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}>
+                              <span className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}>
+                                {plan.subtitle}
+                              </span>
+                            </div>
+
+                            <h3 className="text-3xl font-bold text-white mb-2">{plan.tier}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                              {plan.description}
+                            </p>
+                          </div>
+
+                          {/* Pricing Display */}
+                          <div className="text-center mb-10">
+                            <div className="flex items-baseline justify-center mb-4">
+                              {plan.currency && (
+                                <span className={`text-3xl font-semibold ${plan.accentColor} mr-1`}>
+                                  {plan.currency}
+                                </span>
+                              )}
+                              <span className="text-6xl font-bold text-white tracking-tight">
+                                {plan.price}
+                              </span>
+                              {plan.period && (
+                                <span className="text-xl text-gray-400 ml-2">
+                                  {plan.period}
+                                </span>
+                              )}
+                            </div>
+
+                            {plan.originalPrice && (
+                              <div className="text-gray-500">
+                                <span className="line-through text-lg">${plan.originalPrice}/month</span>
+                                <span className="ml-2 text-emerald-400 font-medium">Save 25%</span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Features List */}
+                          <div className="space-y-4 mb-10">
+                            {plan.features.map((feature, idx) => (
+                              <div key={idx} className="flex items-start group/item">
+                                <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
+                                  <CheckCircle className="w-3 h-3 text-white" />
+                                </div>
+                                <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* CTA Button */}
+                          <Button
+                            asChild
+                            className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
+                              plan.highlight
+                                ? 'bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white'
+                                : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
+                            }`}
+                          >
+                            <Link to="/signup" className="flex items-center justify-center">
+                              {plan.ctaText}
+                              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
+                          </Button>
+
+                          {/* Trust Indicators */}
+                          <div className="mt-6 text-center">
+                            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>14-day free trial</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>No setup fees</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
           </div>
 
-          <div className="text-center">
-            <Button
-              size="lg"
-              asChild
-              className="bg-transparent border-2 border-brand-success text-brand-success hover:bg-brand-success hover:text-white"
-            >
-              <Link to="/pricing">View Full Pricing Details</Link>
-            </Button>
+          {/* Advanced Value Proposition Footer */}
+          <div className="mt-24 text-center">
+            <div className="relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-white/[0.08] to-white/[0.12] backdrop-blur-xl border border-white/20 rounded-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-2xl blur-lg"></div>
+              <div className="relative flex items-center space-x-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-semibold text-lg">Enterprise Ready</div>
+                    <div className="text-gray-400 text-sm">SOC 2 Type II Certified</div>
+                  </div>
+                </div>
+
+                <div className="w-px h-12 bg-white/20"></div>
+
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link to="/pricing" className="flex items-center">
+                    View Detailed Pricing
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            <p className="text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
+              All plans include 14-day free trial • No setup fees • Cancel anytime •
+              <span className="text-emerald-400 font-medium"> 99.9% uptime SLA</span>
+            </p>
           </div>
         </div>
       </section>
