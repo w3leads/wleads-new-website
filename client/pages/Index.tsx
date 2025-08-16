@@ -197,61 +197,180 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 2. Social Proof */}
-      <section className="py-12 px-4 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">
-                50M+
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">
-                Emails Verified
-              </div>
+      {/* 2. Advanced Social Proof & Metrics Showcase */}
+      <section className="py-24 px-4 relative overflow-hidden">
+        {/* Sophisticated Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 dark:from-slate-900 dark:via-blue-900/20 dark:to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.08),transparent_60%)] dark:bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.12),transparent_60%)]"></div>
+
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.5) 1px, transparent 1px)`,
+            backgroundSize: '32px 32px'
+          }}></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Section Header with Premium Typography */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 shadow-lg mb-8">
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-gray-700 dark:text-gray-300 text-sm font-medium tracking-wide uppercase">
+                Trusted Worldwide
+              </span>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">
-                10K+
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">
-                Companies Served
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">
-                98.5%
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">
-                Accuracy Rate
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">
-                24/7
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">Support</div>
-            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+              Powering Success for
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple"> Industry Leaders</span>
+            </h2>
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Join thousands of companies who trust our platform to deliver exceptional results and drive growth.
+            </p>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-300 mb-8">
-            Trusted by leading companies worldwide
-          </p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
+          {/* Advanced Metrics Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {[
-              "TechCorp",
-              "StartupXYZ",
-              "Scale Inc",
-              "Growth Co",
-              "Lead Gen",
-              "Sales Pro",
-            ].map((company) => (
-              <div
-                key={company}
-                className="text-gray-700 dark:text-white font-semibold text-lg"
-              >
-                {company}
+              {
+                number: "50M+",
+                label: "Emails Verified",
+                sublabel: "Monthly processing",
+                icon: "✉️",
+                gradient: "from-emerald-500 to-teal-500",
+                bgGradient: "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
+                iconBg: "bg-emerald-100 dark:bg-emerald-900/30"
+              },
+              {
+                number: "10K+",
+                label: "Companies Served",
+                sublabel: "Across 50+ countries",
+                icon: "🏢",
+                gradient: "from-blue-500 to-cyan-500",
+                bgGradient: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
+                iconBg: "bg-blue-100 dark:bg-blue-900/30"
+              },
+              {
+                number: "98.5%",
+                label: "Accuracy Rate",
+                sublabel: "Industry leading",
+                icon: "🎯",
+                gradient: "from-purple-500 to-pink-500",
+                bgGradient: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
+                iconBg: "bg-purple-100 dark:bg-purple-900/30"
+              },
+              {
+                number: "24/7",
+                label: "Expert Support",
+                sublabel: "Always available",
+                icon: "🚀",
+                gradient: "from-orange-500 to-red-500",
+                bgGradient: "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+                iconBg: "bg-orange-100 dark:bg-orange-900/30"
+              }
+            ].map((metric, index) => (
+              <div key={index} className="group relative">
+                {/* Subtle Glow Effect */}
+                <div className={`absolute -inset-0.5 bg-gradient-to-r ${metric.gradient} rounded-2xl blur-sm opacity-0 group-hover:opacity-20 transition-all duration-500`}></div>
+
+                {/* Main Card */}
+                <div className={`relative bg-gradient-to-br ${metric.bgGradient} backdrop-blur-sm border border-white/50 dark:border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform group-hover:scale-[1.02] group-hover:-translate-y-1`}>
+                  {/* Icon Container */}
+                  <div className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-2xl">{metric.icon}</span>
+                  </div>
+
+                  {/* Metric Number */}
+                  <div className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${metric.gradient} bg-clip-text text-transparent mb-2 tracking-tight`}>
+                    {metric.number}
+                  </div>
+
+                  {/* Primary Label */}
+                  <div className="text-gray-900 dark:text-white font-semibold text-lg mb-1">
+                    {metric.label}
+                  </div>
+
+                  {/* Sublabel */}
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                    {metric.sublabel}
+                  </div>
+
+                  {/* Progress Indicator */}
+                  <div className="mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+                    <div className={`h-full bg-gradient-to-r ${metric.gradient} rounded-full transition-all duration-1000 transform origin-left group-hover:scale-x-100`}
+                         style={{
+                           width: index === 0 ? '95%' : index === 1 ? '87%' : index === 2 ? '98%' : '100%',
+                           transform: 'scaleX(0.7)',
+                           animation: 'none'
+                         }}>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Premium Company Showcase */}
+          <div className="text-center">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
+              Trusted by Industry Leaders
+            </h3>
+
+            {/* Company Logos Grid with Modern Design */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {[
+                { name: "TechCorp", logo: "T", color: "from-blue-500 to-blue-600" },
+                { name: "StartupXYZ", logo: "S", color: "from-purple-500 to-purple-600" },
+                { name: "Scale Inc", logo: "S", color: "from-emerald-500 to-emerald-600" },
+                { name: "Growth Co", logo: "G", color: "from-orange-500 to-orange-600" },
+                { name: "Lead Gen", logo: "L", color: "from-pink-500 to-pink-600" },
+                { name: "Sales Pro", logo: "P", color: "from-cyan-500 to-cyan-600" }
+              ].map((company, index) => (
+                <div key={company.name} className="group relative">
+                  <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
+                    {/* Logo */}
+                    <div className={`w-12 h-12 bg-gradient-to-r ${company.color} rounded-lg flex items-center justify-center text-white font-bold text-xl mx-auto mb-3 transform group-hover:rotate-6 transition-transform duration-300`}>
+                      {company.logo}
+                    </div>
+
+                    {/* Company Name */}
+                    <div className="text-gray-900 dark:text-white font-semibold text-sm">
+                      {company.name}
+                    </div>
+
+                    {/* Trust Indicator */}
+                    <div className="flex items-center justify-center mt-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                      <span className="text-green-600 dark:text-green-400 text-xs font-medium">Verified</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Trust Banner */}
+            <div className="mt-12 inline-flex items-center px-8 py-4 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-4">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full border-2 border-white dark:border-slate-800 flex items-center justify-center text-white text-xs font-semibold">
+                      {i}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-left">
+                  <div className="text-gray-900 dark:text-white font-semibold">4.9/5 Customer Satisfaction</div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">Based on 2,500+ reviews</div>
+                </div>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
