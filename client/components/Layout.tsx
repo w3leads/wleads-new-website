@@ -12,7 +12,7 @@ import {
   Eye,
   Zap,
   ArrowRight,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -39,8 +39,8 @@ const Layout = ({ children }: LayoutProps) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const productItems = [
@@ -49,50 +49,55 @@ const Layout = ({ children }: LayoutProps) => {
       title: "Domain Finder",
       description: "Find available domains for your business",
       href: "/products/domain-finder",
-      color: "text-blue-500"
+      color: "text-blue-500",
     },
     {
       icon: Mail,
       title: "Email Finder",
       description: "Discover professional email addresses",
       href: "/products/email-finder",
-      color: "text-green-500"
+      color: "text-green-500",
     },
     {
       icon: Shield,
       title: "Email Verifier",
       description: "Validate and verify email addresses",
       href: "/products/email-verifier",
-      color: "text-purple-500"
+      color: "text-purple-500",
     },
     {
       icon: Eye,
       title: "Discover",
       description: "Uncover new business opportunities",
       href: "/products/discover",
-      color: "text-orange-500"
+      color: "text-orange-500",
     },
     {
       icon: Zap,
       title: "Campaigns",
       description: "Launch targeted outreach campaigns",
       href: "/products/campaigns",
-      color: "text-red-500"
-    }
+      color: "text-red-500",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-brand-primary transition-colors duration-300">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
-        isScrolled
-          ? 'backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 shadow-lg shadow-black/5 border-b border-gray-200/50 dark:border-white/10'
-          : 'backdrop-blur-sm bg-white/60 dark:bg-slate-900/60 border-b border-gray-200/30 dark:border-white/5'
-      }`}>
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
+          isScrolled
+            ? "backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 shadow-lg shadow-black/5 border-b border-gray-200/50 dark:border-white/10"
+            : "backdrop-blur-sm bg-white/60 dark:bg-slate-900/60 border-b border-gray-200/30 dark:border-white/5"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+            <Link
+              to="/"
+              className="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
+            >
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-purple rounded-xl flex items-center justify-center shadow-lg shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
                   <span className="text-white font-bold text-lg">W3</span>
@@ -100,8 +105,12 @@ const Layout = ({ children }: LayoutProps) => {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="text-gray-900 dark:text-white font-bold text-2xl tracking-tight">Leads</span>
-                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium -mt-1">B2B Platform</span>
+                <span className="text-gray-900 dark:text-white font-bold text-2xl tracking-tight">
+                  Leads
+                </span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium -mt-1">
+                  B2B Platform
+                </span>
               </div>
             </Link>
 
@@ -121,7 +130,9 @@ const Layout = ({ children }: LayoutProps) => {
                           to={item.href}
                           className="group flex items-start space-x-4 p-3 rounded-xl hover:bg-gray-50/50 dark:hover:bg-white/5 transition-all duration-300"
                         >
-                          <div className={`p-2 rounded-lg bg-gray-100/50 dark:bg-white/5 group-hover:scale-110 transition-transform duration-300 ${item.color}`}>
+                          <div
+                            className={`p-2 rounded-lg bg-gray-100/50 dark:bg-white/5 group-hover:scale-110 transition-transform duration-300 ${item.color}`}
+                          >
                             <item.icon className="w-5 h-5" />
                           </div>
                           <div className="flex-1">
@@ -188,7 +199,11 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="hidden lg:flex items-center space-x-3">
               <ThemeToggle />
 
-              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-gray-200 hover:text-brand-primary hover:bg-gray-100/50 dark:hover:bg-white/5 rounded-xl font-medium">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-gray-700 dark:text-gray-200 hover:text-brand-primary hover:bg-gray-100/50 dark:hover:bg-white/5 rounded-xl font-medium"
+              >
                 <Search className="w-4 h-4 mr-2" />
                 Search
               </Button>
@@ -245,7 +260,9 @@ const Layout = ({ children }: LayoutProps) => {
                         className="group flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <div className={`p-2 rounded-lg bg-gray-100/50 dark:bg-white/5 group-hover:scale-110 transition-transform duration-300 ${item.color}`}>
+                        <div
+                          className={`p-2 rounded-lg bg-gray-100/50 dark:bg-white/5 group-hover:scale-110 transition-transform duration-300 ${item.color}`}
+                        >
                           <item.icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1">
@@ -301,13 +318,21 @@ const Layout = ({ children }: LayoutProps) => {
 
                 {/* Mobile Action Buttons */}
                 <div className="grid grid-cols-1 gap-3 pt-4 border-t border-gray-200/50 dark:border-white/10">
-                  <Button variant="outline" asChild className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5">
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  >
                     <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                       <Search className="w-4 h-4 mr-2" />
                       Search
                     </Link>
                   </Button>
-                  <Button variant="outline" asChild className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5">
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5"
+                  >
                     <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                       Sign In
                     </Link>
@@ -316,7 +341,11 @@ const Layout = ({ children }: LayoutProps) => {
                     asChild
                     className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-purple text-white shadow-lg shadow-brand-primary/25 border-0 rounded-xl font-semibold"
                   >
-                    <Link to="/signup" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center space-x-2">
+                    <Link
+                      to="/signup"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center justify-center space-x-2"
+                    >
                       <span>Start Free</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>

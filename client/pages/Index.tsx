@@ -205,10 +205,13 @@ export default function Index() {
 
         {/* Subtle Pattern Overlay */}
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.5) 1px, transparent 1px)`,
-            backgroundSize: '32px 32px'
-          }}></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.5) 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+            }}
+          ></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto">
@@ -223,11 +226,15 @@ export default function Index() {
 
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
               Powering Success for
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple"> Industry Leaders</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
+                {" "}
+                Industry Leaders
+              </span>
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of companies who trust our platform to deliver exceptional results and drive growth.
+              Join thousands of companies who trust our platform to deliver
+              exceptional results and drive growth.
             </p>
           </div>
 
@@ -240,8 +247,9 @@ export default function Index() {
                 sublabel: "Monthly processing",
                 icon: "✉️",
                 gradient: "from-emerald-500 to-teal-500",
-                bgGradient: "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
-                iconBg: "bg-emerald-100 dark:bg-emerald-900/30"
+                bgGradient:
+                  "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
+                iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
               },
               {
                 number: "10K+",
@@ -249,8 +257,9 @@ export default function Index() {
                 sublabel: "Across 50+ countries",
                 icon: "🏢",
                 gradient: "from-blue-500 to-cyan-500",
-                bgGradient: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-                iconBg: "bg-blue-100 dark:bg-blue-900/30"
+                bgGradient:
+                  "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
+                iconBg: "bg-blue-100 dark:bg-blue-900/30",
               },
               {
                 number: "98.5%",
@@ -258,8 +267,9 @@ export default function Index() {
                 sublabel: "Industry leading",
                 icon: "🎯",
                 gradient: "from-purple-500 to-pink-500",
-                bgGradient: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
-                iconBg: "bg-purple-100 dark:bg-purple-900/30"
+                bgGradient:
+                  "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
+                iconBg: "bg-purple-100 dark:bg-purple-900/30",
               },
               {
                 number: "24/7",
@@ -267,23 +277,32 @@ export default function Index() {
                 sublabel: "Always available",
                 icon: "🚀",
                 gradient: "from-orange-500 to-red-500",
-                bgGradient: "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
-                iconBg: "bg-orange-100 dark:bg-orange-900/30"
-              }
+                bgGradient:
+                  "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+                iconBg: "bg-orange-100 dark:bg-orange-900/30",
+              },
             ].map((metric, index) => (
               <div key={index} className="group relative">
                 {/* Subtle Glow Effect */}
-                <div className={`absolute -inset-0.5 bg-gradient-to-r ${metric.gradient} rounded-2xl blur-sm opacity-0 group-hover:opacity-20 transition-all duration-500`}></div>
+                <div
+                  className={`absolute -inset-0.5 bg-gradient-to-r ${metric.gradient} rounded-2xl blur-sm opacity-0 group-hover:opacity-20 transition-all duration-500`}
+                ></div>
 
                 {/* Main Card */}
-                <div className={`relative bg-gradient-to-br ${metric.bgGradient} backdrop-blur-sm border border-white/50 dark:border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform group-hover:scale-[1.02] group-hover:-translate-y-1`}>
+                <div
+                  className={`relative bg-gradient-to-br ${metric.bgGradient} backdrop-blur-sm border border-white/50 dark:border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-500 transform group-hover:scale-[1.02] group-hover:-translate-y-1`}
+                >
                   {/* Icon Container */}
-                  <div className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <span className="text-2xl">{metric.icon}</span>
                   </div>
 
                   {/* Metric Number */}
-                  <div className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${metric.gradient} bg-clip-text text-transparent mb-2 tracking-tight`}>
+                  <div
+                    className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${metric.gradient} bg-clip-text text-transparent mb-2 tracking-tight`}
+                  >
                     {metric.number}
                   </div>
 
@@ -299,13 +318,21 @@ export default function Index() {
 
                   {/* Progress Indicator */}
                   <div className="mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
-                    <div className={`h-full bg-gradient-to-r ${metric.gradient} rounded-full transition-all duration-1000 transform origin-left group-hover:scale-x-100`}
-                         style={{
-                           width: index === 0 ? '95%' : index === 1 ? '87%' : index === 2 ? '98%' : '100%',
-                           transform: 'scaleX(0.7)',
-                           animation: 'none'
-                         }}>
-                    </div>
+                    <div
+                      className={`h-full bg-gradient-to-r ${metric.gradient} rounded-full transition-all duration-1000 transform origin-left group-hover:scale-x-100`}
+                      style={{
+                        width:
+                          index === 0
+                            ? "95%"
+                            : index === 1
+                              ? "87%"
+                              : index === 2
+                                ? "98%"
+                                : "100%",
+                        transform: "scaleX(0.7)",
+                        animation: "none",
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -321,17 +348,43 @@ export default function Index() {
             {/* Company Logos Grid with Modern Design */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {[
-                { name: "TechCorp", logo: "T", color: "from-blue-500 to-blue-600" },
-                { name: "StartupXYZ", logo: "S", color: "from-purple-500 to-purple-600" },
-                { name: "Scale Inc", logo: "S", color: "from-emerald-500 to-emerald-600" },
-                { name: "Growth Co", logo: "G", color: "from-orange-500 to-orange-600" },
-                { name: "Lead Gen", logo: "L", color: "from-pink-500 to-pink-600" },
-                { name: "Sales Pro", logo: "P", color: "from-cyan-500 to-cyan-600" }
+                {
+                  name: "TechCorp",
+                  logo: "T",
+                  color: "from-blue-500 to-blue-600",
+                },
+                {
+                  name: "StartupXYZ",
+                  logo: "S",
+                  color: "from-purple-500 to-purple-600",
+                },
+                {
+                  name: "Scale Inc",
+                  logo: "S",
+                  color: "from-emerald-500 to-emerald-600",
+                },
+                {
+                  name: "Growth Co",
+                  logo: "G",
+                  color: "from-orange-500 to-orange-600",
+                },
+                {
+                  name: "Lead Gen",
+                  logo: "L",
+                  color: "from-pink-500 to-pink-600",
+                },
+                {
+                  name: "Sales Pro",
+                  logo: "P",
+                  color: "from-cyan-500 to-cyan-600",
+                },
               ].map((company, index) => (
                 <div key={company.name} className="group relative">
                   <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
                     {/* Logo */}
-                    <div className={`w-12 h-12 bg-gradient-to-r ${company.color} rounded-lg flex items-center justify-center text-white font-bold text-xl mx-auto mb-3 transform group-hover:rotate-6 transition-transform duration-300`}>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${company.color} rounded-lg flex items-center justify-center text-white font-bold text-xl mx-auto mb-3 transform group-hover:rotate-6 transition-transform duration-300`}
+                    >
                       {company.logo}
                     </div>
 
@@ -343,7 +396,9 @@ export default function Index() {
                     {/* Trust Indicator */}
                     <div className="flex items-center justify-center mt-2">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                      <span className="text-green-600 dark:text-green-400 text-xs font-medium">Verified</span>
+                      <span className="text-green-600 dark:text-green-400 text-xs font-medium">
+                        Verified
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -355,14 +410,21 @@ export default function Index() {
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full border-2 border-white dark:border-slate-800 flex items-center justify-center text-white text-xs font-semibold">
+                    <div
+                      key={i}
+                      className="w-8 h-8 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full border-2 border-white dark:border-slate-800 flex items-center justify-center text-white text-xs font-semibold"
+                    >
                       {i}
                     </div>
                   ))}
                 </div>
                 <div className="text-left">
-                  <div className="text-gray-900 dark:text-white font-semibold">4.9/5 Customer Satisfaction</div>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm">Based on 2,500+ reviews</div>
+                  <div className="text-gray-900 dark:text-white font-semibold">
+                    4.9/5 Customer Satisfaction
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                    Based on 2,500+ reviews
+                  </div>
                 </div>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
