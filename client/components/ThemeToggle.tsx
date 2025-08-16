@@ -21,13 +21,22 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="glass border-white/20">
-        <DropdownMenuItem onClick={() => setTheme("light")} className="text-white">
+        <DropdownMenuItem
+          onClick={() => setTheme("light")}
+          className="text-white"
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")} className="text-white">
+        <DropdownMenuItem
+          onClick={() => setTheme("dark")}
+          className="text-white"
+        >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")} className="text-white">
+        <DropdownMenuItem
+          onClick={() => setTheme("system")}
+          className="text-white"
+        >
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

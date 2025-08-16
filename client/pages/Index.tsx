@@ -200,19 +200,33 @@ export default function Index() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">50M+</div>
-              <div className="text-gray-600 dark:text-gray-300">Emails Verified</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">
+                50M+
+              </div>
+              <div className="text-gray-600 dark:text-gray-300">
+                Emails Verified
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">10K+</div>
-              <div className="text-gray-600 dark:text-gray-300">Companies Served</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">
+                10K+
+              </div>
+              <div className="text-gray-600 dark:text-gray-300">
+                Companies Served
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">98.5%</div>
-              <div className="text-gray-600 dark:text-gray-300">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">
+                98.5%
+              </div>
+              <div className="text-gray-600 dark:text-gray-300">
+                Accuracy Rate
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary dark:text-white">24/7</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">
+                24/7
+              </div>
               <div className="text-gray-600 dark:text-gray-300">Support</div>
             </div>
           </div>
@@ -229,7 +243,10 @@ export default function Index() {
               "Lead Gen",
               "Sales Pro",
             ].map((company) => (
-              <div key={company} className="text-gray-700 dark:text-white font-semibold text-lg">
+              <div
+                key={company}
+                className="text-gray-700 dark:text-white font-semibold text-lg"
+              >
                 {company}
               </div>
             ))}
@@ -256,7 +273,9 @@ export default function Index() {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-gray-900 dark:text-white">Discover</CardTitle>
+                <CardTitle className="text-gray-900 dark:text-white">
+                  Discover
+                </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
                   Find companies and decision makers in your target market
                 </CardDescription>
@@ -284,7 +303,9 @@ export default function Index() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <Search className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-gray-900 dark:text-white">Finder</CardTitle>
+                <CardTitle className="text-gray-900 dark:text-white">
+                  Finder
+                </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
                   Extract email addresses from any domain or company
                 </CardDescription>
@@ -312,7 +333,9 @@ export default function Index() {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-gray-900 dark:text-white">Verifier</CardTitle>
+                <CardTitle className="text-gray-900 dark:text-white">
+                  Verifier
+                </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
                   Ensure email deliverability with advanced verification
                 </CardDescription>
@@ -340,7 +363,9 @@ export default function Index() {
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-gray-900 dark:text-white">Campaigns</CardTitle>
+                <CardTitle className="text-gray-900 dark:text-white">
+                  Campaigns
+                </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
                   Automate outreach with personalized email sequences
                 </CardDescription>
@@ -752,7 +777,9 @@ export default function Index() {
                     <Card
                       key={index}
                       className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular ? "border-green-500 ring-2 ring-green-500/20" : ""
+                        plan.popular
+                          ? "border-green-500 ring-2 ring-green-500/20"
+                          : ""
                       }`}
                     >
                       {plan.popular && (
@@ -847,7 +874,9 @@ export default function Index() {
                     <Card
                       key={index}
                       className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular ? "border-green-500 ring-2 ring-green-500/20" : ""
+                        plan.popular
+                          ? "border-green-500 ring-2 ring-green-500/20"
+                          : ""
                       }`}
                     >
                       {plan.popular && (
@@ -866,7 +895,8 @@ export default function Index() {
                           </span>
                           {plan.originalPrice && (
                             <div className="text-sm text-gray-500 line-through">
-                              was {plan.originalPrice}{plan.period}
+                              was {plan.originalPrice}
+                              {plan.period}
                             </div>
                           )}
                         </div>

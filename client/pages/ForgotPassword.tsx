@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Layout from "@/components/Layout";
@@ -22,7 +28,7 @@ export default function ForgotPassword() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate sending reset email
     setTimeout(() => {
       setIsLoading(false);
@@ -47,7 +53,7 @@ export default function ForgotPassword() {
                 <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto">
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
-                
+
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
                   Check Your Email
                 </CardTitle>
@@ -74,7 +80,8 @@ export default function ForgotPassword() {
                         Link expires in 1 hour
                       </p>
                       <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">
-                        For security reasons, this reset link will expire in 60 minutes.
+                        For security reasons, this reset link will expire in 60
+                        minutes.
                       </p>
                     </div>
                   </div>
@@ -86,7 +93,8 @@ export default function ForgotPassword() {
                         Check your spam folder
                       </p>
                       <p className="text-xs text-amber-700 dark:text-amber-400 mt-1">
-                        Sometimes emails end up in spam. Check all your email folders.
+                        Sometimes emails end up in spam. Check all your email
+                        folders.
                       </p>
                     </div>
                   </div>
@@ -149,21 +157,27 @@ export default function ForgotPassword() {
                 <div className="w-10 h-10 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">W3</span>
                 </div>
-                <span className="text-2xl font-bold text-gray-900 dark:text-white">Leads</span>
+                <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Leads
+                </span>
               </div>
-              
+
               <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
                 Reset Your Password
               </CardTitle>
               <CardDescription className="text-gray-600 dark:text-gray-400">
-                Enter your email address and we'll send you a link to reset your password.
+                Enter your email address and we'll send you a link to reset your
+                password.
               </CardDescription>
             </CardHeader>
 
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-900 dark:text-white">
+                  <Label
+                    htmlFor="email"
+                    className="text-gray-900 dark:text-white"
+                  >
                     Email Address
                   </Label>
                   <div className="relative">
@@ -207,14 +221,19 @@ export default function ForgotPassword() {
                       Secure Password Reset
                     </p>
                     <p className="text-xs text-gray-600 dark:text-gray-400">
-                      We'll send a secure link that expires in 1 hour for your protection.
+                      We'll send a secure link that expires in 1 hour for your
+                      protection.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center justify-center">
-                <Button asChild variant="ghost" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
                   <Link to="/login" className="flex items-center space-x-2">
                     <ArrowLeft className="w-4 h-4" />
                     <span>Back to Sign In</span>
@@ -239,7 +258,8 @@ export default function ForgotPassword() {
           {/* Security Notice */}
           <div className="mt-6 text-center">
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              For your security, password reset links expire after 1 hour and can only be used once.
+              For your security, password reset links expire after 1 hour and
+              can only be used once.
             </p>
           </div>
         </div>
