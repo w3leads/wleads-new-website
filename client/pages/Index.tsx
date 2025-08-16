@@ -279,28 +279,28 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-brand-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-success rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <Search className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white">Finder</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-gray-900 dark:text-white">Finder</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">
                   Extract email addresses from any domain or company
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Bulk domain processing
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Department mapping
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Contact enrichment
                   </li>
                 </ul>
