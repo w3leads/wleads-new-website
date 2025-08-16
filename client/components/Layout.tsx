@@ -38,15 +38,15 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="hidden md:flex items-center space-x-8">
               {/* Products Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-brand-success transition-colors">
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-700 dark:text-white hover:text-brand-primary transition-colors">
                   <span>Products</span>
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="glass border border-white/20">
+                <DropdownMenuContent className="glass-card border border-gray-200 dark:border-white/20">
                   <DropdownMenuItem asChild>
                     <Link
                       to="/products/domain-finder"
-                      className="text-white hover:text-brand-success"
+                      className="text-gray-700 dark:text-white hover:text-brand-primary"
                     >
                       Domain Finder
                     </Link>
@@ -54,7 +54,7 @@ const Layout = ({ children }: LayoutProps) => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/products/email-finder"
-                      className="text-white hover:text-brand-success"
+                      className="text-gray-700 dark:text-white hover:text-brand-primary"
                     >
                       Email Finder
                     </Link>
@@ -62,7 +62,7 @@ const Layout = ({ children }: LayoutProps) => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/products/email-verifier"
-                      className="text-white hover:text-brand-success"
+                      className="text-gray-700 dark:text-white hover:text-brand-primary"
                     >
                       Email Verifier
                     </Link>
@@ -70,7 +70,7 @@ const Layout = ({ children }: LayoutProps) => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/products/discover"
-                      className="text-white hover:text-brand-success"
+                      className="text-gray-700 dark:text-white hover:text-brand-primary"
                     >
                       Discover
                     </Link>
@@ -78,7 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/products/campaigns"
-                      className="text-white hover:text-brand-success"
+                      className="text-gray-700 dark:text-white hover:text-brand-primary"
                     >
                       Campaigns
                     </Link>
@@ -88,25 +88,25 @@ const Layout = ({ children }: LayoutProps) => {
 
               <Link
                 to="/pricing"
-                className={`text-white hover:text-brand-success transition-colors ${isActive("/pricing") ? "text-brand-success" : ""}`}
+                className={`text-gray-700 dark:text-white hover:text-brand-primary transition-colors ${isActive("/pricing") ? "text-brand-primary" : ""}`}
               >
                 Pricing
               </Link>
               <Link
                 to="/blog"
-                className={`text-white hover:text-brand-success transition-colors ${isActive("/blog") ? "text-brand-success" : ""}`}
+                className={`text-gray-700 dark:text-white hover:text-brand-primary transition-colors ${isActive("/blog") ? "text-brand-primary" : ""}`}
               >
                 Blog
               </Link>
               <Link
                 to="/about"
-                className={`text-white hover:text-brand-success transition-colors ${isActive("/about") ? "text-brand-success" : ""}`}
+                className={`text-gray-700 dark:text-white hover:text-brand-primary transition-colors ${isActive("/about") ? "text-brand-primary" : ""}`}
               >
                 About
               </Link>
               <Link
                 to="/login"
-                className="text-white hover:text-brand-success transition-colors"
+                className="text-gray-700 dark:text-white hover:text-brand-primary transition-colors"
               >
                 Sign In
               </Link>
