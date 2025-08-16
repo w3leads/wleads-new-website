@@ -286,27 +286,42 @@ export default function Index() {
 
                 {/* Results */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm animate-in fade-in-50 duration-500">
-                  <div className="bg-brand-accent/10 p-3 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
-                    <div className="font-semibold text-brand-accent">
-                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.emailsFound.toLocaleString() : "1,247"} Emails Found
+                  <div className="bg-brand-accent/10 p-4 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center">
+                        <Mail className="w-4 h-4 text-brand-accent" />
+                      </div>
+                      <div className="font-semibold text-brand-accent">
+                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.emailsFound.toLocaleString() : "1,247"} Emails Found
+                      </div>
                     </div>
-                    <div className="text-gray-600 dark:text-gray-400">
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
                       {isHeroSearching ? "Searching..." : "Verified contacts"}
                     </div>
                   </div>
-                  <div className="bg-brand-primary/10 p-3 rounded-lg border border-brand-primary/20 transition-all duration-300 hover:bg-brand-primary/15">
-                    <div className="font-semibold text-brand-primary">
-                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.accuracy + "%" : "98.2%"} Accuracy
+                  <div className="bg-brand-primary/10 p-4 rounded-lg border border-brand-primary/20 transition-all duration-300 hover:bg-brand-primary/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-primary/20 rounded-lg flex items-center justify-center">
+                        <Shield className="w-4 h-4 text-brand-primary" />
+                      </div>
+                      <div className="font-semibold text-brand-primary">
+                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.accuracy + "%" : "98.2%"} Accuracy
+                      </div>
                     </div>
-                    <div className="text-gray-600 dark:text-gray-400">
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
                       {isHeroSearching ? "Calculating..." : "Verification rate"}
                     </div>
                   </div>
-                  <div className="bg-brand-secondary/10 p-3 rounded-lg border border-brand-secondary/20 transition-all duration-300 hover:bg-brand-secondary/15">
-                    <div className="font-semibold text-brand-secondary">
-                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.departments : "156"} Departments
+                  <div className="bg-brand-secondary/10 p-4 rounded-lg border border-brand-secondary/20 transition-all duration-300 hover:bg-brand-secondary/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-secondary/20 rounded-lg flex items-center justify-center">
+                        <Building className="w-4 h-4 text-brand-secondary" />
+                      </div>
+                      <div className="font-semibold text-brand-secondary">
+                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.departments : "156"} Departments
+                      </div>
                     </div>
-                    <div className="text-gray-600 dark:text-gray-400">
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
                       {isHeroSearching ? "Mapping..." : "Mapped structure"}
                     </div>
                   </div>
