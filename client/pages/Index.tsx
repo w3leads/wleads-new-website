@@ -40,6 +40,7 @@ export default function Index() {
   const [searchDomain, setSearchDomain] = useState("");
   const [verifyEmail, setVerifyEmail] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [activeTab, setActiveTab] = useState('domain');
 
   const testimonials = [
     {
