@@ -251,28 +251,28 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-brand-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-success to-brand-purple rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white">Discover</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-gray-900 dark:text-white">Discover</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">
                   Find companies and decision makers in your target market
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Advanced search filters
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Real-time data updates
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Export capabilities
                   </li>
                 </ul>
