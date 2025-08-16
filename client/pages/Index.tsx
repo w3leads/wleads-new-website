@@ -672,10 +672,10 @@ export default function Index() {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
+                    className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 ${
                       index === currentTestimonial
-                        ? "bg-brand-primary"
-                        : "bg-gray-300 dark:bg-white/30"
+                        ? "bg-brand-primary scale-110"
+                        : "bg-gray-300 dark:bg-white/30 hover:bg-brand-primary/50"
                     }`}
                   />
                 ))}
@@ -794,11 +794,102 @@ export default function Index() {
               </TabsContent>
 
               <TabsContent value="yearly" className="mt-12">
-                <div className="text-center text-gray-300">
-                  <p>
-                    Yearly pricing with 20% discount - same features, better
-                    value!
-                  </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {[
+                    {
+                      name: "Starter",
+                      price: "$23",
+                      period: "/month",
+                      originalPrice: "$29",
+                      features: [
+                        "1,000 email verifications",
+                        "Basic domain search",
+                        "Email support",
+                        "Standard integrations",
+                      ],
+                      popular: false,
+                    },
+                    {
+                      name: "Professional",
+                      price: "$79",
+                      period: "/month",
+                      originalPrice: "$99",
+                      features: [
+                        "10,000 email verifications",
+                        "Advanced search filters",
+                        "Campaign automation",
+                        "Priority support",
+                        "All integrations",
+                      ],
+                      popular: true,
+                    },
+                    {
+                      name: "Enterprise",
+                      price: "Custom",
+                      period: "",
+                      originalPrice: "",
+                      features: [
+                        "Unlimited verifications",
+                        "Custom integrations",
+                        "Dedicated support",
+                        "Advanced analytics",
+                        "White-label options",
+                      ],
+                      popular: false,
+                    },
+                  ].map((plan, index) => (
+                    <Card
+                      key={index}
+                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
+                        plan.popular ? "border-green-500 ring-2 ring-green-500/20" : ""
+                      }`}
+                    >
+                      {plan.popular && (
+                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
+                          Most Popular
+                        </Badge>
+                      )}
+                      <CardHeader>
+                        <CardTitle className="text-gray-900 dark:text-white text-xl">
+                          {plan.name}
+                        </CardTitle>
+                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
+                          {plan.price}
+                          <span className="text-lg text-gray-600 dark:text-gray-300">
+                            {plan.period}
+                          </span>
+                          {plan.originalPrice && (
+                            <div className="text-sm text-gray-500 line-through">
+                              was {plan.originalPrice}{plan.period}
+                            </div>
+                          )}
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-3">
+                          {plan.features.map((feature, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-600 dark:text-gray-300"
+                            >
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        <Button
+                          className={`w-full mt-6 ${
+                            plan.popular
+                              ? "bg-green-500 hover:bg-green-600"
+                              : "bg-blue-600 hover:bg-blue-700"
+                          } text-white`}
+                          asChild
+                        >
+                          <Link to="/signup">Get Started</Link>
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
               </TabsContent>
             </Tabs>
