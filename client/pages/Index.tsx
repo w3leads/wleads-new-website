@@ -1936,9 +1936,9 @@ export default function Index() {
                         key={index}
                         className={`group relative ${plan.highlight ? "lg:scale-105 lg:z-10" : ""}`}
                       >
-                        {/* Sophisticated Glow Effect */}
+                        {/* Subtle Glow Effect */}
                         <div
-                          className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}
+                          className={`absolute -inset-0.5 bg-gradient-to-r ${plan.borderGlow} rounded-2xl blur-sm opacity-20 group-hover:opacity-40 transition-all duration-500`}
                         ></div>
 
                         {/* Most Popular Badge */}
