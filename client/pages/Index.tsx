@@ -41,7 +41,7 @@ export default function Index() {
   const [searchDomain, setSearchDomain] = useState("");
   const [verifyEmail, setVerifyEmail] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [activeTab, setActiveTab] = useState('domain');
+  const [activeTab, setActiveTab] = useState("domain");
 
   const testimonials = [
     {
@@ -518,7 +518,9 @@ export default function Index() {
           {/* Header Section */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 mb-6">
-              <span className="text-brand-primary text-sm font-medium">Interactive Experience</span>
+              <span className="text-brand-primary text-sm font-medium">
+                Interactive Experience
+              </span>
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Try It{" "}
@@ -527,7 +529,8 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Experience the power of our platform with live demo data. See real results in real-time.
+              Experience the power of our platform with live demo data. See real
+              results in real-time.
             </p>
           </div>
 
@@ -548,7 +551,9 @@ export default function Index() {
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     </div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm font-mono">w3leads.com/demo</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm font-mono">
+                      w3leads.com/demo
+                    </div>
                   </div>
                   <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -560,22 +565,22 @@ export default function Index() {
                 <div className="mb-8">
                   <div className="flex space-x-1 bg-gray-100/80 dark:bg-white/5 rounded-xl p-1 mb-6 w-fit">
                     <button
-                      onClick={() => setActiveTab('domain')}
+                      onClick={() => setActiveTab("domain")}
                       className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                        activeTab === 'domain'
-                          ? 'bg-brand-primary text-white shadow-lg'
-                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10'
+                        activeTab === "domain"
+                          ? "bg-brand-primary text-white shadow-lg"
+                          : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10"
                       }`}
                     >
                       <Globe className="w-4 h-4 inline mr-2" />
                       Domain Search
                     </button>
                     <button
-                      onClick={() => setActiveTab('email')}
+                      onClick={() => setActiveTab("email")}
                       className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                        activeTab === 'email'
-                          ? 'bg-brand-success text-white shadow-lg'
-                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10'
+                        activeTab === "email"
+                          ? "bg-brand-success text-white shadow-lg"
+                          : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10"
                       }`}
                     >
                       <Shield className="w-4 h-4 inline mr-2" />
@@ -584,7 +589,7 @@ export default function Index() {
                   </div>
 
                   {/* Domain Search Tab */}
-                  {activeTab === 'domain' && (
+                  {activeTab === "domain" && (
                     <div className="space-y-6 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
@@ -612,7 +617,9 @@ export default function Index() {
                         <div className="space-y-6 animate-in slide-in-from-bottom-4 duration-700">
                           {/* Results Header */}
                           <div className="flex items-center justify-between">
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Analysis Results</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                              Analysis Results
+                            </h3>
                             <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                               <span>Processing: {searchDomain}</span>
@@ -628,11 +635,19 @@ export default function Index() {
                                   <div className="w-12 h-12 bg-brand-success/20 rounded-xl flex items-center justify-center">
                                     <Mail className="w-6 h-6 text-brand-success" />
                                   </div>
-                                  <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">Live</Badge>
+                                  <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">
+                                    Live
+                                  </Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">1,247</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">Email contacts found</div>
-                                <div className="text-xs text-brand-success mt-2">+23% from last scan</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                                  1,247
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">
+                                  Email contacts found
+                                </div>
+                                <div className="text-xs text-brand-success mt-2">
+                                  +23% from last scan
+                                </div>
                               </div>
                             </div>
 
@@ -643,11 +658,19 @@ export default function Index() {
                                   <div className="w-12 h-12 bg-brand-purple/20 rounded-xl flex items-center justify-center">
                                     <Building className="w-6 h-6 text-brand-purple" />
                                   </div>
-                                  <Badge className="bg-brand-purple/20 text-brand-purple border-brand-purple/30">Updated</Badge>
+                                  <Badge className="bg-brand-purple/20 text-brand-purple border-brand-purple/30">
+                                    Updated
+                                  </Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">156</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">Department structure</div>
-                                <div className="text-xs text-brand-purple mt-2">Mapped hierarchy</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                                  156
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">
+                                  Department structure
+                                </div>
+                                <div className="text-xs text-brand-purple mt-2">
+                                  Mapped hierarchy
+                                </div>
                               </div>
                             </div>
 
@@ -658,11 +681,19 @@ export default function Index() {
                                   <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
                                     <CheckCircle className="w-6 h-6 text-brand-primary" />
                                   </div>
-                                  <Badge className="bg-brand-primary/20 text-brand-primary border-brand-primary/30">Verified</Badge>
+                                  <Badge className="bg-brand-primary/20 text-brand-primary border-brand-primary/30">
+                                    Verified
+                                  </Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">98.2%</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">Accuracy rate</div>
-                                <div className="text-xs text-brand-primary mt-2">Industry leading</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                                  98.2%
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">
+                                  Accuracy rate
+                                </div>
+                                <div className="text-xs text-brand-primary mt-2">
+                                  Industry leading
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -672,7 +703,7 @@ export default function Index() {
                   )}
 
                   {/* Email Verification Tab */}
-                  {activeTab === 'email' && (
+                  {activeTab === "email" && (
                     <div className="space-y-6 animate-in fade-in-50 duration-500">
                       {/* Verification Input */}
                       <div className="relative">
@@ -702,42 +733,68 @@ export default function Index() {
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl blur opacity-30"></div>
                             <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-8">
                               <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Verification Complete</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                  Verification Complete
+                                </h3>
                                 <div className="flex items-center space-x-2">
                                   <CheckCircle className="w-5 h-5 text-brand-success" />
-                                  <span className="text-brand-success font-medium">Verified</span>
+                                  <span className="text-brand-success font-medium">
+                                    Verified
+                                  </span>
                                 </div>
                               </div>
 
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-4">
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Status</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      Status
+                                    </span>
                                     <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30 px-3 py-1">
                                       Valid
                                     </Badge>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Confidence</span>
-                                    <span className="text-gray-900 dark:text-white font-semibold">98.5%</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      Confidence
+                                    </span>
+                                    <span className="text-gray-900 dark:text-white font-semibold">
+                                      98.5%
+                                    </span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Deliverability</span>
-                                    <span className="text-brand-success font-semibold">High</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      Deliverability
+                                    </span>
+                                    <span className="text-brand-success font-semibold">
+                                      High
+                                    </span>
                                   </div>
                                 </div>
                                 <div className="space-y-4">
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Domain Check</span>
-                                    <span className="text-brand-success">✓ Valid</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      Domain Check
+                                    </span>
+                                    <span className="text-brand-success">
+                                      ✓ Valid
+                                    </span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Syntax Check</span>
-                                    <span className="text-brand-success">✓ Valid</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      Syntax Check
+                                    </span>
+                                    <span className="text-brand-success">
+                                      ✓ Valid
+                                    </span>
                                   </div>
                                   <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">MX Records</span>
-                                    <span className="text-brand-success">✓ Found</span>
+                                    <span className="text-gray-600 dark:text-gray-300">
+                                      MX Records
+                                    </span>
+                                    <span className="text-brand-success">
+                                      ✓ Found
+                                    </span>
                                   </div>
                                 </div>
                               </div>
@@ -796,7 +853,9 @@ export default function Index() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/10 backdrop-blur-sm mb-8">
               <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-blue-300 text-sm font-medium tracking-wide uppercase">Performance Metrics</span>
+              <span className="text-blue-300 text-sm font-medium tracking-wide uppercase">
+                Performance Metrics
+              </span>
             </div>
 
             <h2 className="text-6xl md:text-7xl font-bold mb-6">
@@ -810,14 +869,14 @@ export default function Index() {
             </h2>
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of companies who've transformed their lead generation with our platform.
-              These aren't just numbers – they're real business outcomes.
+              Join thousands of companies who've transformed their lead
+              generation with our platform. These aren't just numbers – they're
+              real business outcomes.
             </p>
           </div>
 
           {/* Advanced Metrics Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-
             {/* Metric 1: Time Savings */}
             <div className="group relative">
               {/* Background Glow Effect */}
@@ -841,11 +900,18 @@ export default function Index() {
                     <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-blue-300 transition-colors duration-500">
                       20+
                     </span>
-                    <span className="text-xl text-blue-300 font-medium">hrs</span>
+                    <span className="text-xl text-blue-300 font-medium">
+                      hrs
+                    </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-2">Time Saved</h3>
-                  <p className="text-gray-300 leading-relaxed">Per week, per sales rep. Automated prospecting and verification eliminates manual research.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Time Saved
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Per week, per sales rep. Automated prospecting and
+                    verification eliminates manual research.
+                  </p>
 
                   {/* Progress Indicator */}
                   <div className="pt-4">
@@ -884,11 +950,18 @@ export default function Index() {
                     <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-emerald-300 transition-colors duration-500">
                       340
                     </span>
-                    <span className="text-xl text-emerald-300 font-medium">%</span>
+                    <span className="text-xl text-emerald-300 font-medium">
+                      %
+                    </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-2">Lead Quality Boost</h3>
-                  <p className="text-gray-300 leading-relaxed">Increase in qualified leads through precise targeting and verified contact data.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Lead Quality Boost
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Increase in qualified leads through precise targeting and
+                    verified contact data.
+                  </p>
 
                   {/* Performance Chart Simulation */}
                   <div className="pt-4">
@@ -901,7 +974,9 @@ export default function Index() {
                         ></div>
                       ))}
                     </div>
-                    <div className="text-xs text-gray-400 text-center mt-2">Monthly Performance</div>
+                    <div className="text-xs text-gray-400 text-center mt-2">
+                      Monthly Performance
+                    </div>
                   </div>
                 </div>
               </div>
@@ -930,17 +1005,34 @@ export default function Index() {
                     <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-purple-300 transition-colors duration-500">
                       85
                     </span>
-                    <span className="text-xl text-purple-300 font-medium">%</span>
+                    <span className="text-xl text-purple-300 font-medium">
+                      %
+                    </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-2">Deliverability Rate</h3>
-                  <p className="text-gray-300 leading-relaxed">Email deliverability improvement through advanced verification and reputation management.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Deliverability Rate
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Email deliverability improvement through advanced
+                    verification and reputation management.
+                  </p>
 
                   {/* Circular Progress */}
                   <div className="pt-4 flex justify-center">
                     <div className="relative w-16 h-16">
-                      <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.1)" strokeWidth="8" fill="none"/>
+                      <svg
+                        className="w-16 h-16 transform -rotate-90"
+                        viewBox="0 0 100 100"
+                      >
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          stroke="rgba(255,255,255,0.1)"
+                          strokeWidth="8"
+                          fill="none"
+                        />
                         <circle
                           cx="50"
                           cy="50"
@@ -953,14 +1045,22 @@ export default function Index() {
                           className="transition-all duration-1000"
                         />
                         <defs>
-                          <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#8b5cf6"/>
-                            <stop offset="100%" stopColor="#ec4899"/>
+                          <linearGradient
+                            id="gradient-purple"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                          >
+                            <stop offset="0%" stopColor="#8b5cf6" />
+                            <stop offset="100%" stopColor="#ec4899" />
                           </linearGradient>
                         </defs>
                       </svg>
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-xs font-semibold text-purple-300">85%</span>
+                        <span className="text-xs font-semibold text-purple-300">
+                          85%
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -974,13 +1074,20 @@ export default function Index() {
             <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10">
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
-                  {[1,2,3,4].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-white/20"></div>
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-white/20"
+                    ></div>
                   ))}
                 </div>
                 <div className="text-left">
-                  <div className="text-white font-semibold">Join 10,000+ companies</div>
-                  <div className="text-gray-300 text-sm">Already seeing these results</div>
+                  <div className="text-white font-semibold">
+                    Join 10,000+ companies
+                  </div>
+                  <div className="text-gray-300 text-sm">
+                    Already seeing these results
+                  </div>
                 </div>
               </div>
             </div>
@@ -996,17 +1103,46 @@ export default function Index() {
 
         {/* Animated Network Lines */}
         <div className="absolute inset-0 overflow-hidden">
-          <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 600">
+          <svg
+            className="absolute inset-0 w-full h-full opacity-20"
+            viewBox="0 0 1000 600"
+          >
             <defs>
-              <linearGradient id="network-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3"/>
-                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.2"/>
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.3"/>
+              <linearGradient
+                id="network-gradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.3" />
               </linearGradient>
             </defs>
-            <path d="M100,300 Q300,100 500,300 T900,300" stroke="url(#network-gradient)" strokeWidth="2" fill="none" className="animate-pulse"/>
-            <path d="M200,400 Q400,200 600,400 T1000,400" stroke="url(#network-gradient)" strokeWidth="1.5" fill="none" className="animate-pulse" style={{animationDelay: '1s'}}/>
-            <path d="M50,200 Q250,400 450,200 T850,200" stroke="url(#network-gradient)" strokeWidth="1" fill="none" className="animate-pulse" style={{animationDelay: '2s'}}/>
+            <path
+              d="M100,300 Q300,100 500,300 T900,300"
+              stroke="url(#network-gradient)"
+              strokeWidth="2"
+              fill="none"
+              className="animate-pulse"
+            />
+            <path
+              d="M200,400 Q400,200 600,400 T1000,400"
+              stroke="url(#network-gradient)"
+              strokeWidth="1.5"
+              fill="none"
+              className="animate-pulse"
+              style={{ animationDelay: "1s" }}
+            />
+            <path
+              d="M50,200 Q250,400 450,200 T850,200"
+              stroke="url(#network-gradient)"
+              strokeWidth="1"
+              fill="none"
+              className="animate-pulse"
+              style={{ animationDelay: "2s" }}
+            />
           </svg>
         </div>
 
@@ -1015,7 +1151,9 @@ export default function Index() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100/80 dark:bg-blue-500/10 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-sm mb-8">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-blue-600 dark:text-blue-400 text-sm font-medium tracking-wide uppercase">Ecosystem Integration</span>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-medium tracking-wide uppercase">
+                Ecosystem Integration
+              </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -1026,8 +1164,8 @@ export default function Index() {
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Native integrations with 100+ platforms. No complex setup, no data silos.
-              Your existing workflow, supercharged.
+              Native integrations with 100+ platforms. No complex setup, no data
+              silos. Your existing workflow, supercharged.
             </p>
           </div>
 
@@ -1066,7 +1204,9 @@ export default function Index() {
                         {/* Status Indicator */}
                         <div className="mt-2 inline-flex items-center px-2 py-1 rounded-full bg-green-100/80 dark:bg-green-500/20 border border-green-200 dark:border-green-500/30">
                           <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1 animate-pulse"></div>
-                          <span className="text-green-600 dark:text-green-400 text-xs font-medium">Active</span>
+                          <span className="text-green-600 dark:text-green-400 text-xs font-medium">
+                            Active
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1079,16 +1219,26 @@ export default function Index() {
           {/* Integration Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="group">
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
-              <div className="text-gray-600 dark:text-gray-400">Native integrations</div>
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                100+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400">
+                Native integrations
+              </div>
             </div>
             <div className="group">
-              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">&lt; 5min</div>
+              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                &lt; 5min
+              </div>
               <div className="text-gray-600 dark:text-gray-400">Setup time</div>
             </div>
             <div className="group">
-              <div className="text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
-              <div className="text-gray-600 dark:text-gray-400">Uptime reliability</div>
+              <div className="text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                99.9%
+              </div>
+              <div className="text-gray-600 dark:text-gray-400">
+                Uptime reliability
+              </div>
             </div>
           </div>
         </div>
@@ -1098,10 +1248,13 @@ export default function Index() {
       <section className="py-32 px-4 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
         {/* Security Pattern Background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 2px)`,
-            backgroundSize: '50px 50px'
-          }}></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 2px)`,
+              backgroundSize: "50px 50px",
+            }}
+          ></div>
         </div>
 
         {/* Floating Security Elements */}
@@ -1114,7 +1267,9 @@ export default function Index() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm mb-8">
               <Shield className="w-4 h-4 text-green-400 mr-3" />
-              <span className="text-green-400 text-sm font-medium tracking-wide uppercase">Enterprise Security</span>
+              <span className="text-green-400 text-sm font-medium tracking-wide uppercase">
+                Enterprise Security
+              </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
@@ -1125,8 +1280,9 @@ export default function Index() {
             </h2>
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Your data deserves fortress-level protection. We meet and exceed the highest security standards
-              so you can focus on growing your business with complete peace of mind.
+              Your data deserves fortress-level protection. We meet and exceed
+              the highest security standards so you can focus on growing your
+              business with complete peace of mind.
             </p>
           </div>
 
@@ -1138,39 +1294,45 @@ export default function Index() {
                 title: "SPF/DKIM Authentication",
                 desc: "Email authentication protocols ensure deliverability and reputation protection",
                 color: "from-green-500 to-emerald-500",
-                bgColor: "from-green-500/20 to-emerald-500/20"
+                bgColor: "from-green-500/20 to-emerald-500/20",
               },
               {
                 icon: Shield,
                 title: "GDPR Compliance",
                 desc: "Full European data protection regulation compliance with automated consent management",
                 color: "from-blue-500 to-cyan-500",
-                bgColor: "from-blue-500/20 to-cyan-500/20"
+                bgColor: "from-blue-500/20 to-cyan-500/20",
               },
               {
                 icon: Award,
                 title: "SOC 2 Type II",
                 desc: "Certified security controls for availability, processing integrity, and confidentiality",
                 color: "from-purple-500 to-violet-500",
-                bgColor: "from-purple-500/20 to-violet-500/20"
+                bgColor: "from-purple-500/20 to-violet-500/20",
               },
               {
                 icon: Eye,
                 title: "Zero-Trust Architecture",
                 desc: "Advanced privacy controls with end-to-end encryption and access verification",
                 color: "from-orange-500 to-red-500",
-                bgColor: "from-orange-500/20 to-red-500/20"
+                bgColor: "from-orange-500/20 to-red-500/20",
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
                 {/* Glow Effect */}
-                <div className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}></div>
+                <div
+                  className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}
+                ></div>
 
                 <div className="relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/[0.12] transition-all duration-500">
                   {/* Icon Container */}
                   <div className="relative mb-6">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}></div>
-                    <div className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500`}>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}
+                    ></div>
+                    <div
+                      className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500`}
+                    >
                       <item.icon className="w-8 h-8 text-white" />
                     </div>
 
@@ -1190,7 +1352,9 @@ export default function Index() {
                   {/* Verification Badge */}
                   <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30">
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                    <span className="text-green-400 text-xs font-medium">Verified</span>
+                    <span className="text-green-400 text-xs font-medium">
+                      Verified
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1200,8 +1364,13 @@ export default function Index() {
           {/* Trust Indicators */}
           <div className="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-12">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-white mb-4">Trusted by Enterprise Leaders</h3>
-              <p className="text-gray-300">Join Fortune 500 companies who trust us with their most sensitive data</p>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Trusted by Enterprise Leaders
+              </h3>
+              <p className="text-gray-300">
+                Join Fortune 500 companies who trust us with their most
+                sensitive data
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -1210,24 +1379,36 @@ export default function Index() {
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">ISO 27001 Certified</h4>
-                <p className="text-gray-400 text-sm">International security management standards</p>
+                <h4 className="text-white font-semibold mb-2">
+                  ISO 27001 Certified
+                </h4>
+                <p className="text-gray-400 text-sm">
+                  International security management standards
+                </p>
               </div>
 
               <div className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">CCPA Compliant</h4>
-                <p className="text-gray-400 text-sm">California Consumer Privacy Act adherence</p>
+                <h4 className="text-white font-semibold mb-2">
+                  CCPA Compliant
+                </h4>
+                <p className="text-gray-400 text-sm">
+                  California Consumer Privacy Act adherence
+                </p>
               </div>
 
               <div className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   <Lock className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">256-bit Encryption</h4>
-                <p className="text-gray-400 text-sm">Military-grade data protection</p>
+                <h4 className="text-white font-semibold mb-2">
+                  256-bit Encryption
+                </h4>
+                <p className="text-gray-400 text-sm">
+                  Military-grade data protection
+                </p>
               </div>
             </div>
           </div>
@@ -1241,8 +1422,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,69,19,0.1),transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,rgba(139,69,19,0.15),transparent_70%)]"></div>
 
         {/* Floating Quote Elements */}
-        <div className="absolute top-20 left-1/4 text-6xl text-purple-200/20 dark:text-purple-400/10 font-serif">"</div>
-        <div className="absolute bottom-20 right-1/4 text-6xl text-blue-200/20 dark:text-blue-400/10 font-serif transform rotate-180">"</div>
+        <div className="absolute top-20 left-1/4 text-6xl text-purple-200/20 dark:text-purple-400/10 font-serif">
+          "
+        </div>
+        <div className="absolute bottom-20 right-1/4 text-6xl text-blue-200/20 dark:text-blue-400/10 font-serif transform rotate-180">
+          "
+        </div>
         <div className="absolute top-1/2 left-10 w-32 h-32 bg-purple-200/10 dark:bg-purple-400/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-10 w-40 h-40 bg-blue-200/10 dark:bg-blue-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
@@ -1251,7 +1436,9 @@ export default function Index() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-purple-100/80 dark:bg-purple-500/10 border border-purple-200/50 dark:border-purple-500/20 backdrop-blur-sm mb-8">
               <MessageSquare className="w-4 h-4 text-purple-600 dark:text-purple-400 mr-3" />
-              <span className="text-purple-600 dark:text-purple-400 text-sm font-medium tracking-wide uppercase">Customer Success</span>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-medium tracking-wide uppercase">
+                Customer Success
+              </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -1262,8 +1449,8 @@ export default function Index() {
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover how industry leaders are revolutionizing their lead generation and
-              achieving unprecedented growth with our platform.
+              Discover how industry leaders are revolutionizing their lead
+              generation and achieving unprecedented growth with our platform.
             </p>
           </div>
 
@@ -1287,8 +1474,10 @@ export default function Index() {
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
                       <div key={i} className="relative">
-                        <Star className="w-8 h-8 text-yellow-400 fill-current transform hover:scale-125 transition-transform duration-300"
-                              style={{animationDelay: `${i * 100}ms`}} />
+                        <Star
+                          className="w-8 h-8 text-yellow-400 fill-current transform hover:scale-125 transition-transform duration-300"
+                          style={{ animationDelay: `${i * 100}ms` }}
+                        />
                         <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-sm animate-pulse"></div>
                       </div>
                     ))}
@@ -1298,9 +1487,13 @@ export default function Index() {
                 {/* Testimonial Content */}
                 <div className="text-center mb-12">
                   <blockquote className="text-2xl md:text-3xl text-gray-900 dark:text-white font-medium leading-relaxed mb-8">
-                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute -ml-4 -mt-2">"</span>
+                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute -ml-4 -mt-2">
+                      "
+                    </span>
                     {testimonials[currentTestimonial].content}
-                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute ml-2 mt-2">"</span>
+                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute ml-2 mt-2">
+                      "
+                    </span>
                   </blockquote>
                 </div>
 
@@ -1327,7 +1520,9 @@ export default function Index() {
                       {testimonials[currentTestimonial].role}
                     </div>
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100/80 dark:bg-purple-500/20 border border-purple-200/50 dark:border-purple-500/30">
-                      <span className="text-purple-700 dark:text-purple-300 text-sm font-medium">Verified Customer</span>
+                      <span className="text-purple-700 dark:text-purple-300 text-sm font-medium">
+                        Verified Customer
+                      </span>
                     </div>
                   </div>
 
@@ -1340,16 +1535,28 @@ export default function Index() {
                 {/* Results Metrics */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200/50 dark:border-white/10">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">340%</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm">Lead Quality Increase</div>
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                      340%
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">
+                      Lead Quality Increase
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm">Hours Saved Weekly</div>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                      20+
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">
+                      Hours Saved Weekly
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">85%</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm">Deliverability Rate</div>
+                    <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">
+                      85%
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">
+                      Deliverability Rate
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1364,14 +1571,18 @@ export default function Index() {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`group relative transition-all duration-500 ${
-                      index === currentTestimonial ? 'scale-110' : 'hover:scale-105'
+                      index === currentTestimonial
+                        ? "scale-110"
+                        : "hover:scale-105"
                     }`}
                   >
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${
-                      index === currentTestimonial
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
-                        : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/20'
-                    }`}>
+                    <div
+                      className={`w-16 h-16 rounded-2xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${
+                        index === currentTestimonial
+                          ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg"
+                          : "bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/20"
+                      }`}
+                    >
                       {testimonials[index].avatar}
                     </div>
 
@@ -1385,13 +1596,25 @@ export default function Index() {
               {/* Navigation Arrows */}
               <div className="flex space-x-4">
                 <button
-                  onClick={() => setCurrentTestimonial(currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1)}
+                  onClick={() =>
+                    setCurrentTestimonial(
+                      currentTestimonial === 0
+                        ? testimonials.length - 1
+                        : currentTestimonial - 1,
+                    )
+                  }
                   className="w-12 h-12 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl flex items-center justify-center hover:bg-white dark:hover:bg-white/20 transition-all duration-300 group"
                 >
                   <ArrowRight className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transform rotate-180 transition-colors duration-300" />
                 </button>
                 <button
-                  onClick={() => setCurrentTestimonial(currentTestimonial === testimonials.length - 1 ? 0 : currentTestimonial + 1)}
+                  onClick={() =>
+                    setCurrentTestimonial(
+                      currentTestimonial === testimonials.length - 1
+                        ? 0
+                        : currentTestimonial + 1,
+                    )
+                  }
                   className="w-12 h-12 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl flex items-center justify-center hover:bg-white dark:hover:bg-white/20 transition-all duration-300 group"
                 >
                   <ArrowRight className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
@@ -1405,15 +1628,22 @@ export default function Index() {
             <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-500/10 dark:to-blue-500/10 backdrop-blur-sm border border-purple-200/50 dark:border-white/10">
               <div className="flex items-center space-x-6">
                 <div className="flex -space-x-3">
-                  {[1,2,3,4,5].map((i) => (
-                    <div key={i} className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white font-semibold text-sm">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div
+                      key={i}
+                      className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white font-semibold text-sm"
+                    >
                       {String.fromCharCode(64 + i)}
                     </div>
                   ))}
                 </div>
                 <div className="text-left">
-                  <div className="text-gray-900 dark:text-white font-bold">Join 10,000+ satisfied customers</div>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm">Average rating: 4.9/5 ⭐</div>
+                  <div className="text-gray-900 dark:text-white font-bold">
+                    Join 10,000+ satisfied customers
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                    Average rating: 4.9/5 ⭐
+                  </div>
                 </div>
               </div>
             </div>
@@ -1428,8 +1658,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.1),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.15),transparent_50%)]"></div>
 
         {/* Floating Price Elements */}
-        <div className="absolute top-20 right-1/4 text-4xl text-green-200/20 dark:text-green-400/10 font-bold">$</div>
-        <div className="absolute bottom-20 left-1/4 text-3xl text-blue-200/20 dark:text-blue-400/10 font-bold">€</div>
+        <div className="absolute top-20 right-1/4 text-4xl text-green-200/20 dark:text-green-400/10 font-bold">
+          $
+        </div>
+        <div className="absolute bottom-20 left-1/4 text-3xl text-blue-200/20 dark:text-blue-400/10 font-bold">
+          €
+        </div>
         <div className="absolute top-1/2 right-10 w-24 h-24 bg-green-200/10 dark:bg-green-400/5 rounded-full blur-2xl animate-pulse"></div>
 
         <div className="relative max-w-7xl mx-auto">
@@ -1437,7 +1671,9 @@ export default function Index() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-100/80 dark:bg-green-500/10 border border-green-200/50 dark:border-green-500/20 backdrop-blur-sm mb-8">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-green-600 dark:text-green-400 text-sm font-medium tracking-wide uppercase">Investment Plans</span>
+              <span className="text-green-600 dark:text-green-400 text-sm font-medium tracking-wide uppercase">
+                Investment Plans
+              </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -1448,8 +1684,8 @@ export default function Index() {
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Choose the investment level that matches your growth ambitions. Every plan is designed
-              to deliver measurable ROI from day one.
+              Choose the investment level that matches your growth ambitions.
+              Every plan is designed to deliver measurable ROI from day one.
             </p>
 
             <Tabs defaultValue="monthly" className="mt-8">
