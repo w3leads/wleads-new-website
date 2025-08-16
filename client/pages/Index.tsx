@@ -212,6 +212,7 @@ export default function Index() {
               size="lg"
               variant="outline"
               className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-brand-primary text-lg px-8 py-6 transition-all duration-300"
+              onClick={() => setIsVideoModalOpen(true)}
             >
               <PlayCircle className="w-5 h-5 mr-2" />
               Watch Demo
