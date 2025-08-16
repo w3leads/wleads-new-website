@@ -2954,6 +2954,15 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl="https://www.youtube.com/watch?v=0yVgZWgR2dQ"
+        title="W3Leads Platform Demo"
+        description="See how our B2B lead generation platform works in action"
+      />
     </Layout>
   );
 }
