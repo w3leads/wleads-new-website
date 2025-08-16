@@ -589,13 +589,13 @@ export default function Index() {
                       {/* Search Input */}
                       <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur"></div>
-                        <div className="relative flex items-center space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                        <div className="relative flex items-center space-x-4 bg-gray-50/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6">
                           <Globe className="w-6 h-6 text-brand-primary flex-shrink-0" />
                           <Input
                             placeholder="Enter domain (e.g., microsoft.com, google.com, salesforce.com)"
                             value={searchDomain}
                             onChange={(e) => setSearchDomain(e.target.value)}
-                            className="flex-1 bg-transparent border-none text-white text-lg placeholder:text-gray-400 focus:ring-0 focus:outline-none"
+                            className="flex-1 bg-transparent border-none text-gray-900 dark:text-white text-lg placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-0 focus:outline-none"
                           />
                           <Button
                             onClick={handleDomainSearch}
@@ -612,8 +612,8 @@ export default function Index() {
                         <div className="space-y-6 animate-in slide-in-from-bottom-4 duration-700">
                           {/* Results Header */}
                           <div className="flex items-center justify-between">
-                            <h3 className="text-xl font-semibold text-white">Analysis Results</h3>
-                            <div className="flex items-center space-x-2 text-sm text-gray-300">
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Analysis Results</h3>
+                            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                               <span>Processing: {searchDomain}</span>
                             </div>
