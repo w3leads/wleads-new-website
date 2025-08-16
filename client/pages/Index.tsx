@@ -110,17 +110,17 @@ export default function Index() {
     <Layout>
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-purple opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/10 to-brand-purple/10 dark:from-brand-primary dark:via-brand-secondary dark:to-brand-purple dark:opacity-90"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Find{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-success to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
               B2B Leads
             </span>
             <br />
             That Actually Convert
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-200 mb-8 max-w-3xl mx-auto">
             Advanced domain intelligence and email verification platform that
             helps sales teams discover, verify, and engage with qualified
             prospects at scale.
@@ -129,14 +129,14 @@ export default function Index() {
             <Button
               size="lg"
               asChild
-              className="bg-brand-success hover:bg-brand-success/90 text-white text-lg px-8 py-6"
+              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Link to="/signup">Start Free Trial</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-primary text-lg px-8 py-6"
+              className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-brand-primary text-lg px-8 py-6 transition-all duration-300"
             >
               <PlayCircle className="w-5 h-5 mr-2" />
               Watch Demo
@@ -144,8 +144,8 @@ export default function Index() {
           </div>
 
           {/* Product Screenshot Mockup */}
-          <div className="glass rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl p-6 shadow-2xl">
+          <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-2xl border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
