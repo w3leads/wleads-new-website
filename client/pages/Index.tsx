@@ -35,6 +35,7 @@ import {
   Lock,
   Award,
   ChevronRight,
+  X,
 } from "lucide-react";
 
 export default function Index() {
