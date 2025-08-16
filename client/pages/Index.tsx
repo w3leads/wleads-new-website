@@ -407,7 +407,7 @@ export default function Index() {
                 number: "98.5%",
                 label: "Accuracy Rate",
                 sublabel: "Industry leading",
-                icon: "🎯",
+                icon: Target,
                 gradient: "from-brand-secondary to-brand-secondary",
                 bgGradient:
                   "from-brand-secondary/5 to-brand-secondary/10 dark:from-brand-secondary/10 dark:to-brand-secondary/20",
