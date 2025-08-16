@@ -2289,16 +2289,11 @@ export default function Index() {
                 <div className="relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-2xl transition-all duration-500 transform group-hover:scale-[1.02] group-hover:-translate-y-1">
                   {/* Advanced Header with Visual Element */}
                   <div className="relative p-8 pb-6">
-                    {/* Floating Icon with Complex Design */}
+                    {/* Clean Icon Design */}
                     <div className="relative mb-6">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-50"></div>
-                      <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                        <span className="text-4xl">{post.image}</span>
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-300">
+                        <span className="text-3xl">{post.image}</span>
                       </div>
-
-                      {/* Orbiting Elements */}
-                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-400 rounded-full animate-bounce group-hover:animate-ping transition-all duration-300"></div>
-                      <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse group-hover:animate-bounce transition-all duration-300"></div>
                     </div>
 
                     {/* Enhanced Typography */}
