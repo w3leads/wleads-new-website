@@ -257,33 +257,67 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Search className="w-5 h-5 text-brand-primary" />
-                  <div className="flex-1 bg-gray-100 rounded-lg px-4 py-2 text-left text-gray-600">
-                    Search domain: techcorp.com
-                  </div>
-                  <Button className="bg-brand-primary text-white">
-                    Search
+                  <Input
+                    placeholder="Enter domain (e.g., microsoft.com, google.com)"
+                    value={heroSearchQuery}
+                    onChange={(e) => setHeroSearchQuery(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleHeroSearch()}
+                    className="flex-1 bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:border-brand-primary focus:ring-brand-primary/50"
+                    disabled={isHeroSearching}
+                  />
+                  <Button
+                    className="bg-brand-primary text-white hover:bg-brand-secondary transition-all duration-300"
+                    onClick={handleHeroSearch}
+                    disabled={!heroSearchQuery.trim() || isHeroSearching}
+                  >
+                    {isHeroSearching ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                        Searching...
+                      </>
+                    ) : (
+                      <>
+                        <Search className="w-4 h-4 mr-2" />
+                        Search
+                      </>
+                    )}
                   </Button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="bg-brand-accent/10 p-3 rounded-lg">
+
+                {/* Results */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm animate-in fade-in-50 duration-500">
+                  <div className="bg-brand-accent/10 p-3 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
                     <div className="font-semibold text-brand-accent">
-                      1,247 Emails Found
+                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.emailsFound.toLocaleString() : "1,247"} Emails Found
                     </div>
-                    <div className="text-gray-600">Verified contacts</div>
+                    <div className="text-gray-600 dark:text-gray-400">
+                      {isHeroSearching ? "Searching..." : "Verified contacts"}
+                    </div>
                   </div>
-                  <div className="bg-brand-primary/10 p-3 rounded-lg">
+                  <div className="bg-brand-primary/10 p-3 rounded-lg border border-brand-primary/20 transition-all duration-300 hover:bg-brand-primary/15">
                     <div className="font-semibold text-brand-primary">
-                      98.2% Accuracy
+                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.accuracy + "%" : "98.2%"} Accuracy
                     </div>
-                    <div className="text-gray-600">Verification rate</div>
+                    <div className="text-gray-600 dark:text-gray-400">
+                      {isHeroSearching ? "Calculating..." : "Verification rate"}
+                    </div>
                   </div>
-                  <div className="bg-brand-secondary/10 p-3 rounded-lg">
+                  <div className="bg-brand-secondary/10 p-3 rounded-lg border border-brand-secondary/20 transition-all duration-300 hover:bg-brand-secondary/15">
                     <div className="font-semibold text-brand-secondary">
-                      156 Departments
+                      {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.departments : "156"} Departments
                     </div>
-                    <div className="text-gray-600">Mapped structure</div>
+                    <div className="text-gray-600 dark:text-gray-400">
+                      {isHeroSearching ? "Mapping..." : "Mapped structure"}
+                    </div>
                   </div>
                 </div>
+
+                {/* Search Status */}
+                {heroSearchResults && !isHeroSearching && (
+                  <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    ✓ Search completed for <span className="font-medium text-brand-primary">{heroSearchResults.domain}</span> at {heroSearchResults.timestamp}
+                  </div>
+                )}
               </div>
             </div>
           </div>
