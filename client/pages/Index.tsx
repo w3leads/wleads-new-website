@@ -1799,7 +1799,7 @@ export default function Index() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-        <div className="relative max-w-8xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Elite Header Section */}
           <div className="text-center mb-24">
             <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-12">
