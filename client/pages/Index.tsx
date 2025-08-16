@@ -1234,57 +1234,190 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 9. Testimonials */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">
-            What Our Customers Say
-          </h2>
+      {/* 9. Customer Success Stories - Advanced Testimonials */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Sophisticated Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-purple-50/30 to-blue-50/20 dark:from-slate-900 dark:via-purple-900/20 dark:to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,69,19,0.1),transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,rgba(139,69,19,0.15),transparent_70%)]"></div>
 
-          <Card className="glass-card border-gray-200 dark:border-white/20 p-8">
-            <CardContent className="space-y-6">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-6 h-6 text-yellow-500 fill-current"
-                  />
-                ))}
-              </div>
+        {/* Floating Quote Elements */}
+        <div className="absolute top-20 left-1/4 text-6xl text-purple-200/20 dark:text-purple-400/10 font-serif">"</div>
+        <div className="absolute bottom-20 right-1/4 text-6xl text-blue-200/20 dark:text-blue-400/10 font-serif transform rotate-180">"</div>
+        <div className="absolute top-1/2 left-10 w-32 h-32 bg-purple-200/10 dark:bg-purple-400/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-10 w-40 h-40 bg-blue-200/10 dark:bg-blue-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-              <blockquote className="text-xl text-gray-900 dark:text-white italic">
-                "{testimonials[currentTestimonial].content}"
-              </blockquote>
+        <div className="relative max-w-7xl mx-auto">
+          {/* Advanced Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-purple-100/80 dark:bg-purple-500/10 border border-purple-200/50 dark:border-purple-500/20 backdrop-blur-sm mb-8">
+              <MessageSquare className="w-4 h-4 text-purple-600 dark:text-purple-400 mr-3" />
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-medium tracking-wide uppercase">Customer Success</span>
+            </div>
 
-              <div className="flex items-center justify-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full flex items-center justify-center text-white font-bold">
-                  {testimonials[currentTestimonial].avatar}
-                </div>
-                <div className="text-left">
-                  <div className="text-gray-900 dark:text-white font-semibold">
-                    {testimonials[currentTestimonial].name}
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+              <span className="block">Stories of</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+                Transformation
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Discover how industry leaders are revolutionizing their lead generation and
+              achieving unprecedented growth with our platform.
+            </p>
+          </div>
+
+          {/* Advanced Testimonial Showcase */}
+          <div className="relative">
+            {/* Main Testimonial Display */}
+            <div className="relative mb-16">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 rounded-3xl blur-2xl opacity-60"></div>
+
+              <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl p-12 md:p-16">
+                {/* Quote Icon */}
+                <div className="absolute -top-6 left-8">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center transform rotate-12">
+                    <span className="text-white text-2xl font-serif">"</span>
                   </div>
-                  <div className="text-gray-600 dark:text-gray-300 text-sm">
-                    {testimonials[currentTestimonial].role}
+                </div>
+
+                {/* Star Rating with Animation */}
+                <div className="flex justify-center mb-8">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="relative">
+                        <Star className="w-8 h-8 text-yellow-400 fill-current transform hover:scale-125 transition-transform duration-300"
+                              style={{animationDelay: `${i * 100}ms`}} />
+                        <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-sm animate-pulse"></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial Content */}
+                <div className="text-center mb-12">
+                  <blockquote className="text-2xl md:text-3xl text-gray-900 dark:text-white font-medium leading-relaxed mb-8">
+                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute -ml-4 -mt-2">"</span>
+                    {testimonials[currentTestimonial].content}
+                    <span className="text-purple-600 dark:text-purple-400 text-4xl font-serif absolute ml-2 mt-2">"</span>
+                  </blockquote>
+                </div>
+
+                {/* Enhanced Author Section */}
+                <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+                  {/* Avatar with Advanced Styling */}
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full blur opacity-70 animate-pulse"></div>
+                    <div className="relative w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-2xl border-4 border-white/20">
+                      {testimonials[currentTestimonial].avatar}
+                    </div>
+                    {/* Status Indicator */}
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Author Info */}
+                  <div className="text-center md:text-left">
+                    <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                      {testimonials[currentTestimonial].name}
+                    </div>
+                    <div className="text-lg text-purple-600 dark:text-purple-400 mb-2">
+                      {testimonials[currentTestimonial].role}
+                    </div>
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100/80 dark:bg-purple-500/20 border border-purple-200/50 dark:border-purple-500/30">
+                      <span className="text-purple-700 dark:text-purple-300 text-sm font-medium">Verified Customer</span>
+                    </div>
+                  </div>
+
+                  {/* Company Logo Placeholder */}
+                  <div className="w-16 h-16 bg-gray-100 dark:bg-white/10 rounded-2xl flex items-center justify-center">
+                    <Building className="w-8 h-8 text-gray-400 dark:text-gray-600" />
+                  </div>
+                </div>
+
+                {/* Results Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200/50 dark:border-white/10">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">340%</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">Lead Quality Increase</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">Hours Saved Weekly</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">85%</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">Deliverability Rate</div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="flex justify-center space-x-2">
+            {/* Advanced Navigation */}
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              {/* Testimonial Indicators */}
+              <div className="flex space-x-4 mb-8 md:mb-0">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 ${
-                      index === currentTestimonial
-                        ? "bg-brand-primary scale-110"
-                        : "bg-gray-300 dark:bg-white/30 hover:bg-brand-primary/50"
+                    className={`group relative transition-all duration-500 ${
+                      index === currentTestimonial ? 'scale-110' : 'hover:scale-105'
                     }`}
-                  />
+                  >
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${
+                      index === currentTestimonial
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
+                        : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/20'
+                    }`}>
+                      {testimonials[index].avatar}
+                    </div>
+
+                    {index === currentTestimonial && (
+                      <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur opacity-50 animate-pulse"></div>
+                    )}
+                  </button>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+
+              {/* Navigation Arrows */}
+              <div className="flex space-x-4">
+                <button
+                  onClick={() => setCurrentTestimonial(currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1)}
+                  className="w-12 h-12 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl flex items-center justify-center hover:bg-white dark:hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <ArrowRight className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transform rotate-180 transition-colors duration-300" />
+                </button>
+                <button
+                  onClick={() => setCurrentTestimonial(currentTestimonial === testimonials.length - 1 ? 0 : currentTestimonial + 1)}
+                  className="w-12 h-12 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl flex items-center justify-center hover:bg-white dark:hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <ArrowRight className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Proof Banner */}
+          <div className="mt-20 text-center">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-500/10 dark:to-blue-500/10 backdrop-blur-sm border border-purple-200/50 dark:border-white/10">
+              <div className="flex items-center space-x-6">
+                <div className="flex -space-x-3">
+                  {[1,2,3,4,5].map((i) => (
+                    <div key={i} className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white font-semibold text-sm">
+                      {String.fromCharCode(64 + i)}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-left">
+                  <div className="text-gray-900 dark:text-white font-bold">Join 10,000+ satisfied customers</div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">Average rating: 4.9/5 ⭐</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
