@@ -43,58 +43,73 @@ const Layout = ({ children }: LayoutProps) => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="glass border border-white/20">
                   <DropdownMenuItem asChild>
-                    <Link to="/products/domain-finder" className="text-white hover:text-brand-success">
+                    <Link
+                      to="/products/domain-finder"
+                      className="text-white hover:text-brand-success"
+                    >
                       Domain Finder
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/products/email-finder" className="text-white hover:text-brand-success">
+                    <Link
+                      to="/products/email-finder"
+                      className="text-white hover:text-brand-success"
+                    >
                       Email Finder
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/products/email-verifier" className="text-white hover:text-brand-success">
+                    <Link
+                      to="/products/email-verifier"
+                      className="text-white hover:text-brand-success"
+                    >
                       Email Verifier
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/products/discover" className="text-white hover:text-brand-success">
+                    <Link
+                      to="/products/discover"
+                      className="text-white hover:text-brand-success"
+                    >
                       Discover
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/products/campaigns" className="text-white hover:text-brand-success">
+                    <Link
+                      to="/products/campaigns"
+                      className="text-white hover:text-brand-success"
+                    >
                       Campaigns
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Link 
-                to="/pricing" 
-                className={`text-white hover:text-brand-success transition-colors ${isActive('/pricing') ? 'text-brand-success' : ''}`}
+              <Link
+                to="/pricing"
+                className={`text-white hover:text-brand-success transition-colors ${isActive("/pricing") ? "text-brand-success" : ""}`}
               >
                 Pricing
               </Link>
-              <Link 
-                to="/blog" 
-                className={`text-white hover:text-brand-success transition-colors ${isActive('/blog') ? 'text-brand-success' : ''}`}
+              <Link
+                to="/blog"
+                className={`text-white hover:text-brand-success transition-colors ${isActive("/blog") ? "text-brand-success" : ""}`}
               >
                 Blog
               </Link>
-              <Link 
-                to="/about" 
-                className={`text-white hover:text-brand-success transition-colors ${isActive('/about') ? 'text-brand-success' : ''}`}
+              <Link
+                to="/about"
+                className={`text-white hover:text-brand-success transition-colors ${isActive("/about") ? "text-brand-success" : ""}`}
               >
                 About
               </Link>
-              <Link 
-                to="/login" 
+              <Link
+                to="/login"
                 className="text-white hover:text-brand-success transition-colors"
               >
                 Sign In
               </Link>
-              <Button 
+              <Button
                 asChild
                 className="bg-gradient-to-r from-brand-success to-brand-purple hover:from-brand-purple hover:to-brand-success text-white border-0"
               >
@@ -107,7 +122,11 @@ const Layout = ({ children }: LayoutProps) => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-white p-2"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
@@ -117,36 +136,63 @@ const Layout = ({ children }: LayoutProps) => {
               <div className="space-y-2">
                 <div className="text-white font-medium">Products</div>
                 <div className="pl-4 space-y-2">
-                  <Link to="/products/domain-finder" className="block text-gray-300 hover:text-brand-success">
+                  <Link
+                    to="/products/domain-finder"
+                    className="block text-gray-300 hover:text-brand-success"
+                  >
                     Domain Finder
                   </Link>
-                  <Link to="/products/email-finder" className="block text-gray-300 hover:text-brand-success">
+                  <Link
+                    to="/products/email-finder"
+                    className="block text-gray-300 hover:text-brand-success"
+                  >
                     Email Finder
                   </Link>
-                  <Link to="/products/email-verifier" className="block text-gray-300 hover:text-brand-success">
+                  <Link
+                    to="/products/email-verifier"
+                    className="block text-gray-300 hover:text-brand-success"
+                  >
                     Email Verifier
                   </Link>
-                  <Link to="/products/discover" className="block text-gray-300 hover:text-brand-success">
+                  <Link
+                    to="/products/discover"
+                    className="block text-gray-300 hover:text-brand-success"
+                  >
                     Discover
                   </Link>
-                  <Link to="/products/campaigns" className="block text-gray-300 hover:text-brand-success">
+                  <Link
+                    to="/products/campaigns"
+                    className="block text-gray-300 hover:text-brand-success"
+                  >
                     Campaigns
                   </Link>
                 </div>
               </div>
-              <Link to="/pricing" className="block text-white hover:text-brand-success">
+              <Link
+                to="/pricing"
+                className="block text-white hover:text-brand-success"
+              >
                 Pricing
               </Link>
-              <Link to="/blog" className="block text-white hover:text-brand-success">
+              <Link
+                to="/blog"
+                className="block text-white hover:text-brand-success"
+              >
                 Blog
               </Link>
-              <Link to="/about" className="block text-white hover:text-brand-success">
+              <Link
+                to="/about"
+                className="block text-white hover:text-brand-success"
+              >
                 About
               </Link>
-              <Link to="/login" className="block text-white hover:text-brand-success">
+              <Link
+                to="/login"
+                className="block text-white hover:text-brand-success"
+              >
                 Sign In
               </Link>
-              <Button 
+              <Button
                 asChild
                 className="bg-gradient-to-r from-brand-success to-brand-purple hover:from-brand-purple hover:to-brand-success text-white border-0 w-full"
               >
@@ -158,9 +204,7 @@ const Layout = ({ children }: LayoutProps) => {
       </nav>
 
       {/* Main content */}
-      <main className="pt-16">
-        {children}
-      </main>
+      <main className="pt-16">{children}</main>
 
       {/* Footer */}
       <footer className="bg-slate-900/90 border-t border-white/10">
@@ -183,19 +227,34 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-white font-semibold mb-4">Products</h3>
               <div className="space-y-2">
-                <Link to="/products/domain-finder" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/products/domain-finder"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Domain Finder
                 </Link>
-                <Link to="/products/email-finder" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/products/email-finder"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Email Finder
                 </Link>
-                <Link to="/products/email-verifier" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/products/email-verifier"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Email Verifier
                 </Link>
-                <Link to="/products/discover" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/products/discover"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Discover
                 </Link>
-                <Link to="/products/campaigns" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/products/campaigns"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Campaigns
                 </Link>
               </div>
@@ -205,16 +264,28 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-white font-semibold mb-4">Company</h3>
               <div className="space-y-2">
-                <Link to="/about" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/about"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   About Us
                 </Link>
-                <Link to="/blog" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/blog"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Blog
                 </Link>
-                <Link to="/pricing" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/pricing"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Pricing
                 </Link>
-                <Link to="/contact" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/contact"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Contact
                 </Link>
               </div>
@@ -224,13 +295,22 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h3 className="text-white font-semibold mb-4">Legal</h3>
               <div className="space-y-2">
-                <Link to="/privacy" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/privacy"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/terms"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   Terms of Service
                 </Link>
-                <Link to="/gdpr" className="block text-gray-400 hover:text-brand-success text-sm">
+                <Link
+                  to="/gdpr"
+                  className="block text-gray-400 hover:text-brand-success text-sm"
+                >
                   GDPR
                 </Link>
               </div>

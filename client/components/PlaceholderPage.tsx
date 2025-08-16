@@ -17,9 +17,10 @@ const PlaceholderPage = ({ title, description }: PlaceholderPageProps) => {
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">{title}</h1>
           <p className="text-gray-300 mb-6">
-            {description || "This page is under construction. Continue prompting to have me build it out!"}
+            {description ||
+              "This page is under construction. Continue prompting to have me build it out!"}
           </p>
-          <Button 
+          <Button
             className="bg-gradient-to-r from-brand-success to-brand-purple hover:from-brand-purple hover:to-brand-success text-white border-0"
             onClick={() => window.history.back()}
           >

@@ -13,8 +13,8 @@ const Products = () => {
   const productTitles: { [key: string]: string } = {
     "email-finder": "Email Finder",
     "email-verifier": "Email Verifier",
-    "discover": "Discover",
-    "campaigns": "Campaigns"
+    discover: "Discover",
+    campaigns: "Campaigns",
   };
 
   const title = product ? productTitles[product] || "Product" : "Products";
