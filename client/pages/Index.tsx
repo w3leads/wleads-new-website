@@ -25,6 +25,7 @@ import {
   ArrowRight,
   Users,
   Globe,
+  Building,
   Zap,
   TrendingUp,
   Eye,
