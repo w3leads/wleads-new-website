@@ -329,10 +329,10 @@ export default function Index() {
                 label: "Accuracy Rate",
                 sublabel: "Industry leading",
                 icon: "🎯",
-                gradient: "from-purple-500 to-pink-500",
+                gradient: "from-brand-secondary to-brand-secondary",
                 bgGradient:
-                  "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
-                iconBg: "bg-purple-100 dark:bg-purple-900/30",
+                  "from-brand-secondary/5 to-brand-secondary/10 dark:from-brand-secondary/10 dark:to-brand-secondary/20",
+                iconBg: "bg-brand-secondary/20 dark:bg-brand-secondary/30",
               },
               {
                 number: "24/7",
