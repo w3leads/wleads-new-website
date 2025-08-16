@@ -417,7 +417,7 @@ export default function Index() {
                 number: "24/7",
                 label: "Expert Support",
                 sublabel: "Always available",
-                icon: "🚀",
+                icon: Zap,
                 gradient: "from-brand-primary to-brand-secondary",
                 bgGradient:
                   "from-brand-primary/5 to-brand-secondary/10 dark:from-brand-primary/10 dark:to-brand-secondary/20",
