@@ -387,7 +387,7 @@ export default function Index() {
                 number: "50M+",
                 label: "Emails Verified",
                 sublabel: "Monthly processing",
-                icon: "✉️",
+                icon: Mail,
                 gradient: "from-brand-accent to-brand-accent",
                 bgGradient:
                   "from-brand-accent/5 to-brand-accent/10 dark:from-brand-accent/10 dark:to-brand-accent/20",
