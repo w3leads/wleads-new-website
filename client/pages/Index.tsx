@@ -48,6 +48,7 @@ export default function Index() {
   const [isVerifying, setIsVerifying] = useState(false);
   const [searchResults, setSearchResults] = useState<any>(null);
   const [verificationResults, setVerificationResults] = useState<any>(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const testimonials = [
     {
