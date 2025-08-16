@@ -233,7 +233,7 @@ const Layout = ({ children }: LayoutProps) => {
               <Button
                 asChild
                 size="sm"
-                className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-purple text-white shadow-lg shadow-brand-primary/25 hover:shadow-brand-primary/40 border-0 rounded-xl px-6 py-2 font-semibold transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white shadow-lg shadow-brand-primary/25 hover:shadow-brand-primary/40 border-0 rounded-xl px-6 py-2 font-semibold transition-all duration-300 hover:scale-105"
               >
                 <Link to="/signup" className="flex items-center space-x-2">
                   <span>Start Free</span>
