@@ -137,7 +137,7 @@ export default function Index() {
             <Button
               size="lg"
               asChild
-              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
             >
               <Link to="/signup">Start Free Trial</Link>
             </Button>
@@ -196,7 +196,7 @@ export default function Index() {
       </section>
 
       {/* 2. Social Proof */}
-      <section className="py-12 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-12 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-12">
             <div className="text-center">
@@ -238,13 +238,13 @@ export default function Index() {
       </section>
 
       {/* 3. Feature Pillars */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Powerful Lead Generation Suite
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Everything you need to find, verify, and engage with your ideal
               prospects
             </p>
