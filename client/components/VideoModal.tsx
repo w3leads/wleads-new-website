@@ -15,32 +15,32 @@ export const VideoModal = ({
   onClose,
   videoUrl,
   title = "W3Leads Platform Demo",
-  description = "See how our B2B lead generation platform works"
+  description = "See how our B2B lead generation platform works",
 }: VideoModalProps) => {
-
   // Handle escape key to close modal
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   // Using a professional demo video (you can replace with your own)
-  const demoVideoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=1";
+  const demoVideoUrl =
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=1";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -57,7 +57,6 @@ export const VideoModal = ({
       >
         {/* Main Modal */}
         <div className="relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-slate-700">
-
           {/* Clean Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800">
             <div className="flex items-center space-x-3">
@@ -65,8 +64,12 @@ export const VideoModal = ({
                 <Play className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {description}
+                </p>
               </div>
             </div>
 
@@ -90,7 +93,7 @@ export const VideoModal = ({
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 title={title}
-                style={{ border: 'none' }}
+                style={{ border: "none" }}
               />
             </div>
           </div>
@@ -116,7 +119,7 @@ export const VideoModal = ({
                 <Button
                   size="sm"
                   className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white"
-                  onClick={() => window.open('/signup', '_blank')}
+                  onClick={() => window.open("/signup", "_blank")}
                 >
                   Start Free Trial
                 </Button>
@@ -127,9 +130,7 @@ export const VideoModal = ({
 
         {/* Subtle hint */}
         <div className="absolute -bottom-8 left-0 right-0 text-center">
-          <p className="text-white/80 text-sm">
-            Press ESC to close
-          </p>
+          <p className="text-white/80 text-sm">Press ESC to close</p>
         </div>
       </div>
     </div>

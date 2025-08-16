@@ -157,11 +157,11 @@ export default function Index() {
     setIsHeroSearching(true);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Generate realistic dummy data
     const emailCount = Math.floor(Math.random() * 2000) + 800;
-    const accuracy = (Math.random() * 5) + 95;
+    const accuracy = Math.random() * 5 + 95;
     const departments = Math.floor(Math.random() * 150) + 80;
 
     setHeroSearchResults({
@@ -169,7 +169,7 @@ export default function Index() {
       emailsFound: emailCount,
       accuracy: accuracy.toFixed(1),
       departments: departments,
-      timestamp: new Date().toLocaleString()
+      timestamp: new Date().toLocaleString(),
     });
 
     setIsHeroSearching(false);
@@ -261,7 +261,7 @@ export default function Index() {
                     placeholder="Enter domain (e.g., microsoft.com, google.com)"
                     value={heroSearchQuery}
                     onChange={(e) => setHeroSearchQuery(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleHeroSearch()}
+                    onKeyPress={(e) => e.key === "Enter" && handleHeroSearch()}
                     className="flex-1 bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:border-brand-primary focus:ring-brand-primary/50"
                     disabled={isHeroSearching}
                   />
@@ -292,7 +292,12 @@ export default function Index() {
                         <Mail className="w-4 h-4 text-brand-accent" />
                       </div>
                       <div className="font-semibold text-brand-accent">
-                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.emailsFound.toLocaleString() : "1,247"} Emails Found
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.emailsFound.toLocaleString()
+                            : "1,247"}{" "}
+                        Emails Found
                       </div>
                     </div>
                     <div className="text-gray-600 dark:text-gray-400 text-xs">
@@ -305,7 +310,12 @@ export default function Index() {
                         <Shield className="w-4 h-4 text-brand-primary" />
                       </div>
                       <div className="font-semibold text-brand-primary">
-                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.accuracy + "%" : "98.2%"} Accuracy
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.accuracy + "%"
+                            : "98.2%"}{" "}
+                        Accuracy
                       </div>
                     </div>
                     <div className="text-gray-600 dark:text-gray-400 text-xs">
@@ -318,7 +328,12 @@ export default function Index() {
                         <Building className="w-4 h-4 text-brand-secondary" />
                       </div>
                       <div className="font-semibold text-brand-secondary">
-                        {isHeroSearching ? "..." : heroSearchResults ? heroSearchResults.departments : "156"} Departments
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.departments
+                            : "156"}{" "}
+                        Departments
                       </div>
                     </div>
                     <div className="text-gray-600 dark:text-gray-400 text-xs">
@@ -330,7 +345,11 @@ export default function Index() {
                 {/* Search Status */}
                 {heroSearchResults && !isHeroSearching && (
                   <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                    ✓ Search completed for <span className="font-medium text-brand-primary">{heroSearchResults.domain}</span> at {heroSearchResults.timestamp}
+                    ✓ Search completed for{" "}
+                    <span className="font-medium text-brand-primary">
+                      {heroSearchResults.domain}
+                    </span>{" "}
+                    at {heroSearchResults.timestamp}
                   </div>
                 )}
               </div>
@@ -438,7 +457,7 @@ export default function Index() {
                   <div
                     className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {typeof metric.icon === 'string' ? (
+                    {typeof metric.icon === "string" ? (
                       <span className="text-2xl">{metric.icon}</span>
                     ) : (
                       <metric.icon className="w-7 h-7 text-brand-primary" />
