@@ -1777,9 +1777,9 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.1),transparent_70%)]"></div>
 
         <div className="relative max-w-7xl mx-auto">
-          {/* Elite Header Section */}
-          <div className="text-center mb-24">
-            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-12">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 mb-8">
               <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mr-4 animate-pulse shadow-lg shadow-emerald-400/50"></div>
               <span className="text-emerald-300 text-sm font-semibold tracking-[0.2em] uppercase">
                 Investment Tiers
