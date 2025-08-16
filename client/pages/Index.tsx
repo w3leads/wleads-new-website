@@ -1666,10 +1666,14 @@ export default function Index() {
 
         {/* Floating Currency Symbols with Gradients */}
         <div className="absolute top-32 right-1/6 text-5xl font-bold opacity-10">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">$</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            $
+          </span>
         </div>
         <div className="absolute bottom-40 left-1/6 text-4xl font-bold opacity-8">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">€</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            €
+          </span>
         </div>
 
         {/* Large Ambient Light Effects */}
@@ -1695,9 +1699,18 @@ export default function Index() {
             </h2>
 
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-16 font-light">
-              Transparent, value-driven pricing designed for ambitious teams who demand
-              <span className="text-emerald-400 font-medium"> exceptional ROI</span> and
-              <span className="text-blue-400 font-medium"> measurable growth</span>.
+              Transparent, value-driven pricing designed for ambitious teams who
+              demand
+              <span className="text-emerald-400 font-medium">
+                {" "}
+                exceptional ROI
+              </span>{" "}
+              and
+              <span className="text-blue-400 font-medium">
+                {" "}
+                measurable growth
+              </span>
+              .
             </p>
 
             {/* Advanced Billing Toggle with Enhanced Design */}
@@ -1731,20 +1744,21 @@ export default function Index() {
                         originalPrice: null,
                         currency: "$",
                         period: "/month",
-                        description: "Perfect for small teams starting their lead generation journey",
+                        description:
+                          "Perfect for small teams starting their lead generation journey",
                         features: [
                           "5,000 email verifications",
                           "Basic domain intelligence",
                           "Standard email support",
                           "Core integrations (5+)",
                           "Export to CSV/Excel",
-                          "Basic analytics dashboard"
+                          "Basic analytics dashboard",
                         ],
                         highlight: false,
                         ctaText: "Start Free Trial",
                         gradient: "from-slate-600 to-gray-700",
                         accentColor: "text-gray-400",
-                        borderGlow: "from-gray-500/30 to-slate-500/30"
+                        borderGlow: "from-gray-500/30 to-slate-500/30",
                       },
                       {
                         tier: "Professional",
@@ -1753,7 +1767,8 @@ export default function Index() {
                         originalPrice: null,
                         currency: "$",
                         period: "/month",
-                        description: "Advanced features for high-performing sales teams",
+                        description:
+                          "Advanced features for high-performing sales teams",
                         features: [
                           "25,000 email verifications",
                           "Advanced domain mapping",
@@ -1763,13 +1778,13 @@ export default function Index() {
                           "Advanced analytics & reporting",
                           "A/B testing capabilities",
                           "Custom email templates",
-                          "Bulk processing tools"
+                          "Bulk processing tools",
                         ],
                         highlight: true,
                         ctaText: "Upgrade to Pro",
                         gradient: "from-emerald-500 to-blue-600",
                         accentColor: "text-emerald-400",
-                        borderGlow: "from-emerald-500/50 to-blue-500/50"
+                        borderGlow: "from-emerald-500/50 to-blue-500/50",
                       },
                       {
                         tier: "Enterprise",
@@ -1778,7 +1793,8 @@ export default function Index() {
                         originalPrice: null,
                         currency: "",
                         period: "",
-                        description: "White-glove service for enterprise organizations",
+                        description:
+                          "White-glove service for enterprise organizations",
                         features: [
                           "Unlimited verifications",
                           "Custom domain intelligence",
@@ -1788,18 +1804,23 @@ export default function Index() {
                           "Advanced security (SSO/SAML)",
                           "White-label solutions",
                           "API rate limit increases",
-                          "Custom onboarding & training"
+                          "Custom onboarding & training",
                         ],
                         highlight: false,
                         ctaText: "Contact Sales",
                         gradient: "from-purple-600 to-pink-600",
                         accentColor: "text-purple-400",
-                        borderGlow: "from-purple-500/30 to-pink-500/30"
-                      }
+                        borderGlow: "from-purple-500/30 to-pink-500/30",
+                      },
                     ].map((plan, index) => (
-                      <div key={index} className={`group relative ${plan.highlight ? 'lg:scale-110 lg:-mt-8' : ''}`}>
+                      <div
+                        key={index}
+                        className={`group relative ${plan.highlight ? "lg:scale-110 lg:-mt-8" : ""}`}
+                      >
                         {/* Sophisticated Glow Effect */}
-                        <div className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}></div>
+                        <div
+                          className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}
+                        ></div>
 
                         {/* Most Popular Badge */}
                         {plan.highlight && (
@@ -1814,17 +1835,24 @@ export default function Index() {
                         )}
 
                         {/* Premium Card Design */}
-                        <div className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? 'ring-2 ring-emerald-500/30' : ''}`}>
-
+                        <div
+                          className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? "ring-2 ring-emerald-500/30" : ""}`}
+                        >
                           {/* Header Section */}
                           <div className="text-center mb-8">
-                            <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}>
-                              <span className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}>
+                            <div
+                              className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}
+                            >
+                              <span
+                                className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}
+                              >
                                 {plan.subtitle}
                               </span>
                             </div>
 
-                            <h3 className="text-3xl font-bold text-white mb-2">{plan.tier}</h3>
+                            <h3 className="text-3xl font-bold text-white mb-2">
+                              {plan.tier}
+                            </h3>
                             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
                               {plan.description}
                             </p>
@@ -1834,7 +1862,9 @@ export default function Index() {
                           <div className="text-center mb-10">
                             <div className="flex items-baseline justify-center mb-4">
                               {plan.currency && (
-                                <span className={`text-3xl font-semibold ${plan.accentColor} mr-1`}>
+                                <span
+                                  className={`text-3xl font-semibold ${plan.accentColor} mr-1`}
+                                >
                                   {plan.currency}
                                 </span>
                               )}
@@ -1850,8 +1880,12 @@ export default function Index() {
 
                             {plan.originalPrice && (
                               <div className="text-gray-500">
-                                <span className="line-through text-lg">${plan.originalPrice}/month</span>
-                                <span className="ml-2 text-emerald-400 font-medium">Save 25%</span>
+                                <span className="line-through text-lg">
+                                  ${plan.originalPrice}/month
+                                </span>
+                                <span className="ml-2 text-emerald-400 font-medium">
+                                  Save 25%
+                                </span>
                               </div>
                             )}
                           </div>
@@ -1859,8 +1893,13 @@ export default function Index() {
                           {/* Features List */}
                           <div className="space-y-4 mb-10">
                             {plan.features.map((feature, idx) => (
-                              <div key={idx} className="flex items-start group/item">
-                                <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
+                              <div
+                                key={idx}
+                                className="flex items-start group/item"
+                              >
+                                <div
+                                  className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}
+                                >
                                   <CheckCircle className="w-3 h-3 text-white" />
                                 </div>
                                 <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
@@ -1875,11 +1914,14 @@ export default function Index() {
                             asChild
                             className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
                               plan.highlight
-                                ? 'bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white'
+                                ? "bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white"
                                 : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
                             }`}
                           >
-                            <Link to="/signup" className="flex items-center justify-center">
+                            <Link
+                              to="/signup"
+                              className="flex items-center justify-center"
+                            >
                               {plan.ctaText}
                               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                             </Link>
@@ -1914,20 +1956,21 @@ export default function Index() {
                         originalPrice: "49",
                         currency: "$",
                         period: "/month",
-                        description: "Perfect for small teams starting their lead generation journey",
+                        description:
+                          "Perfect for small teams starting their lead generation journey",
                         features: [
                           "5,000 email verifications",
                           "Basic domain intelligence",
                           "Standard email support",
                           "Core integrations (5+)",
                           "Export to CSV/Excel",
-                          "Basic analytics dashboard"
+                          "Basic analytics dashboard",
                         ],
                         highlight: false,
                         ctaText: "Start Free Trial",
                         gradient: "from-slate-600 to-gray-700",
                         accentColor: "text-gray-400",
-                        borderGlow: "from-gray-500/30 to-slate-500/30"
+                        borderGlow: "from-gray-500/30 to-slate-500/30",
                       },
                       {
                         tier: "Professional",
@@ -1936,7 +1979,8 @@ export default function Index() {
                         originalPrice: "149",
                         currency: "$",
                         period: "/month",
-                        description: "Advanced features for high-performing sales teams",
+                        description:
+                          "Advanced features for high-performing sales teams",
                         features: [
                           "25,000 email verifications",
                           "Advanced domain mapping",
@@ -1946,13 +1990,13 @@ export default function Index() {
                           "Advanced analytics & reporting",
                           "A/B testing capabilities",
                           "Custom email templates",
-                          "Bulk processing tools"
+                          "Bulk processing tools",
                         ],
                         highlight: true,
                         ctaText: "Upgrade to Pro",
                         gradient: "from-emerald-500 to-blue-600",
                         accentColor: "text-emerald-400",
-                        borderGlow: "from-emerald-500/50 to-blue-500/50"
+                        borderGlow: "from-emerald-500/50 to-blue-500/50",
                       },
                       {
                         tier: "Enterprise",
@@ -1961,7 +2005,8 @@ export default function Index() {
                         originalPrice: null,
                         currency: "",
                         period: "",
-                        description: "White-glove service for enterprise organizations",
+                        description:
+                          "White-glove service for enterprise organizations",
                         features: [
                           "Unlimited verifications",
                           "Custom domain intelligence",
@@ -1971,18 +2016,23 @@ export default function Index() {
                           "Advanced security (SSO/SAML)",
                           "White-label solutions",
                           "API rate limit increases",
-                          "Custom onboarding & training"
+                          "Custom onboarding & training",
                         ],
                         highlight: false,
                         ctaText: "Contact Sales",
                         gradient: "from-purple-600 to-pink-600",
                         accentColor: "text-purple-400",
-                        borderGlow: "from-purple-500/30 to-pink-500/30"
-                      }
+                        borderGlow: "from-purple-500/30 to-pink-500/30",
+                      },
                     ].map((plan, index) => (
-                      <div key={index} className={`group relative ${plan.highlight ? 'lg:scale-110 lg:-mt-8' : ''}`}>
+                      <div
+                        key={index}
+                        className={`group relative ${plan.highlight ? "lg:scale-110 lg:-mt-8" : ""}`}
+                      >
                         {/* Sophisticated Glow Effect */}
-                        <div className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}></div>
+                        <div
+                          className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}
+                        ></div>
 
                         {/* Most Popular Badge */}
                         {plan.highlight && (
@@ -1997,17 +2047,24 @@ export default function Index() {
                         )}
 
                         {/* Premium Card Design */}
-                        <div className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? 'ring-2 ring-emerald-500/30' : ''}`}>
-
+                        <div
+                          className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? "ring-2 ring-emerald-500/30" : ""}`}
+                        >
                           {/* Header Section */}
                           <div className="text-center mb-8">
-                            <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}>
-                              <span className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}>
+                            <div
+                              className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}
+                            >
+                              <span
+                                className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}
+                              >
                                 {plan.subtitle}
                               </span>
                             </div>
 
-                            <h3 className="text-3xl font-bold text-white mb-2">{plan.tier}</h3>
+                            <h3 className="text-3xl font-bold text-white mb-2">
+                              {plan.tier}
+                            </h3>
                             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
                               {plan.description}
                             </p>
@@ -2017,7 +2074,9 @@ export default function Index() {
                           <div className="text-center mb-10">
                             <div className="flex items-baseline justify-center mb-4">
                               {plan.currency && (
-                                <span className={`text-3xl font-semibold ${plan.accentColor} mr-1`}>
+                                <span
+                                  className={`text-3xl font-semibold ${plan.accentColor} mr-1`}
+                                >
                                   {plan.currency}
                                 </span>
                               )}
@@ -2033,8 +2092,12 @@ export default function Index() {
 
                             {plan.originalPrice && (
                               <div className="text-gray-500">
-                                <span className="line-through text-lg">${plan.originalPrice}/month</span>
-                                <span className="ml-2 text-emerald-400 font-medium">Save 25%</span>
+                                <span className="line-through text-lg">
+                                  ${plan.originalPrice}/month
+                                </span>
+                                <span className="ml-2 text-emerald-400 font-medium">
+                                  Save 25%
+                                </span>
                               </div>
                             )}
                           </div>
@@ -2042,8 +2105,13 @@ export default function Index() {
                           {/* Features List */}
                           <div className="space-y-4 mb-10">
                             {plan.features.map((feature, idx) => (
-                              <div key={idx} className="flex items-start group/item">
-                                <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
+                              <div
+                                key={idx}
+                                className="flex items-start group/item"
+                              >
+                                <div
+                                  className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}
+                                >
                                   <CheckCircle className="w-3 h-3 text-white" />
                                 </div>
                                 <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
@@ -2058,11 +2126,14 @@ export default function Index() {
                             asChild
                             className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
                               plan.highlight
-                                ? 'bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white'
+                                ? "bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white"
                                 : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
                             }`}
                           >
-                            <Link to="/signup" className="flex items-center justify-center">
+                            <Link
+                              to="/signup"
+                              className="flex items-center justify-center"
+                            >
                               {plan.ctaText}
                               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                             </Link>
@@ -2100,8 +2171,12 @@ export default function Index() {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-left">
-                    <div className="text-white font-semibold text-lg">Enterprise Ready</div>
-                    <div className="text-gray-400 text-sm">SOC 2 Type II Certified</div>
+                    <div className="text-white font-semibold text-lg">
+                      Enterprise Ready
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      SOC 2 Type II Certified
+                    </div>
                   </div>
                 </div>
 
@@ -2121,8 +2196,12 @@ export default function Index() {
             </div>
 
             <p className="text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
-              All plans include 14-day free trial • No setup fees • Cancel anytime •
-              <span className="text-emerald-400 font-medium"> 99.9% uptime SLA</span>
+              All plans include 14-day free trial • No setup fees • Cancel
+              anytime •
+              <span className="text-emerald-400 font-medium">
+                {" "}
+                99.9% uptime SLA
+              </span>
             </p>
           </div>
         </div>
@@ -2144,8 +2223,8 @@ export default function Index() {
                                linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
                                linear-gradient(45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%),
                                linear-gradient(-45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%)`,
-              backgroundSize: '60px 60px',
-              backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+              backgroundSize: "60px 60px",
+              backgroundPosition: "0 0, 0 30px, 30px -30px, -30px 0px",
             }}
           ></div>
         </div>
@@ -2170,7 +2249,9 @@ export default function Index() {
             </div>
 
             <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
-              <span className="block text-gray-900 dark:text-white mb-2">Expert</span>
+              <span className="block text-gray-900 dark:text-white mb-2">
+                Expert
+              </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative">
                 Insights
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-xl -z-10"></div>
@@ -2179,9 +2260,21 @@ export default function Index() {
 
             <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
               Stay ahead of the curve with
-              <span className="text-blue-600 dark:text-blue-400 font-medium"> cutting-edge strategies</span>,
-              <span className="text-purple-600 dark:text-purple-400 font-medium"> industry insights</span>, and
-              <span className="text-pink-600 dark:text-pink-400 font-medium"> proven methodologies</span> from our experts.
+              <span className="text-blue-600 dark:text-blue-400 font-medium">
+                {" "}
+                cutting-edge strategies
+              </span>
+              ,
+              <span className="text-purple-600 dark:text-purple-400 font-medium">
+                {" "}
+                industry insights
+              </span>
+              , and
+              <span className="text-pink-600 dark:text-pink-400 font-medium">
+                {" "}
+                proven methodologies
+              </span>{" "}
+              from our experts.
             </p>
           </div>
 
@@ -2194,7 +2287,6 @@ export default function Index() {
 
                 {/* Premium Card Design */}
                 <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl overflow-hidden hover:bg-white dark:hover:bg-white/10 transition-all duration-700 transform group-hover:scale-105 group-hover:-translate-y-4">
-
                   {/* Advanced Header with Visual Element */}
                   <div className="relative p-8 pb-6">
                     {/* Floating Icon with Complex Design */}
@@ -2263,8 +2355,12 @@ export default function Index() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg"></div>
               <div className="relative flex items-center space-x-6">
                 <div className="text-left">
-                  <div className="text-gray-900 dark:text-white font-semibold text-lg">Explore Our Complete Library</div>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm">50+ expert articles & case studies</div>
+                  <div className="text-gray-900 dark:text-white font-semibold text-lg">
+                    Explore Our Complete Library
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                    50+ expert articles & case studies
+                  </div>
                 </div>
 
                 <Button
@@ -2300,7 +2396,7 @@ export default function Index() {
                 radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)
-              `
+              `,
             }}
           ></div>
         </div>
@@ -2315,7 +2411,7 @@ export default function Index() {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${2 + Math.random() * 2}s`
+                animationDuration: `${2 + Math.random() * 2}s`,
               }}
             ></div>
           ))}
@@ -2346,9 +2442,21 @@ export default function Index() {
 
           <p className="text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16 font-light">
             Join
-            <span className="text-emerald-400 font-semibold"> 10,000+ sales professionals</span> who've already
-            <span className="text-blue-400 font-semibold"> transformed their prospecting</span> and achieved
-            <span className="text-purple-400 font-semibold"> exponential growth</span> with W3Leads.
+            <span className="text-emerald-400 font-semibold">
+              {" "}
+              10,000+ sales professionals
+            </span>{" "}
+            who've already
+            <span className="text-blue-400 font-semibold">
+              {" "}
+              transformed their prospecting
+            </span>{" "}
+            and achieved
+            <span className="text-purple-400 font-semibold">
+              {" "}
+              exponential growth
+            </span>{" "}
+            with W3Leads.
           </p>
 
           {/* Advanced CTA Button Group */}
@@ -2386,9 +2494,21 @@ export default function Index() {
           {/* Trust Indicators with Advanced Design */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
             {[
-              { icon: Shield, text: "Enterprise Security", subtext: "SOC 2 Type II Certified" },
-              { icon: Award, text: "Industry Leading", subtext: "98.5% Accuracy Rate" },
-              { icon: Users, text: "Trusted Globally", subtext: "10K+ Companies" }
+              {
+                icon: Shield,
+                text: "Enterprise Security",
+                subtext: "SOC 2 Type II Certified",
+              },
+              {
+                icon: Award,
+                text: "Industry Leading",
+                subtext: "98.5% Accuracy Rate",
+              },
+              {
+                icon: Users,
+                text: "Trusted Globally",
+                subtext: "10K+ Companies",
+              },
             ].map((item, index) => (
               <div key={index} className="group text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-white/10 to-white/20 backdrop-blur-xl border border-white/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
