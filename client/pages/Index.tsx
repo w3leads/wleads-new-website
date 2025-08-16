@@ -1772,32 +1772,9 @@ export default function Index() {
 
       {/* 10. Pricing Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        {/* Sophisticated Multi-Layer Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/80 to-purple-950/70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_40%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,69,19,0.12),transparent_40%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(34,197,94,0.08)_50%,transparent_70%)]"></div>
-
-        {/* Animated Geometric Elements */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-32 right-32 w-1 h-1 bg-emerald-400 rounded-full animate-pulse opacity-80"></div>
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
-
-        {/* Floating Currency Symbols with Gradients */}
-        <div className="absolute top-32 right-1/6 text-5xl font-bold opacity-10">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
-            $
-          </span>
-        </div>
-        <div className="absolute bottom-40 left-1/6 text-4xl font-bold opacity-8">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-            €
-          </span>
-        </div>
-
-        {/* Large Ambient Light Effects */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* Clean Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.1),transparent_70%)]"></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Elite Header Section */}
