@@ -188,28 +188,28 @@ export default function Index() {
       </section>
 
       {/* 2. Social Proof */}
-      <section className="py-12 px-4 bg-white/5">
+      <section className="py-12 px-4 bg-gray-50 dark:bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">50M+</div>
-              <div className="text-gray-300">Emails Verified</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">50M+</div>
+              <div className="text-gray-600 dark:text-gray-300">Emails Verified</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">10K+</div>
-              <div className="text-gray-300">Companies Served</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">10K+</div>
+              <div className="text-gray-600 dark:text-gray-300">Companies Served</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">98.5%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">98.5%</div>
+              <div className="text-gray-600 dark:text-gray-300">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-3xl font-bold text-brand-primary dark:text-white">24/7</div>
+              <div className="text-gray-600 dark:text-gray-300">Support</div>
             </div>
           </div>
 
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             Trusted by leading companies worldwide
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
@@ -221,7 +221,7 @@ export default function Index() {
               "Lead Gen",
               "Sales Pro",
             ].map((company) => (
-              <div key={company} className="text-white font-semibold text-lg">
+              <div key={company} className="text-gray-700 dark:text-white font-semibold text-lg">
                 {company}
               </div>
             ))}
