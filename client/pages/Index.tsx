@@ -564,7 +564,7 @@ export default function Index() {
                       className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                         activeTab === 'domain'
                           ? 'bg-brand-primary text-white shadow-lg'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10'
                       }`}
                     >
                       <Globe className="w-4 h-4 inline mr-2" />
@@ -575,7 +575,7 @@ export default function Index() {
                       className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                         activeTab === 'email'
                           ? 'bg-brand-success text-white shadow-lg'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10'
                       }`}
                     >
                       <Shield className="w-4 h-4 inline mr-2" />
