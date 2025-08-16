@@ -2128,88 +2128,297 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 11. Blog Highlights */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Latest from Our Blog
+      {/* 11. Premium Knowledge Hub - Advanced Blog Showcase */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Ultra-sophisticated Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/40 dark:to-purple-900/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(147,51,234,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_75%_75%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+
+        {/* Dynamic Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+                               linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+                               linear-gradient(45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%),
+                               linear-gradient(-45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%)`,
+              backgroundSize: '60px 60px',
+              backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+            }}
+          ></div>
+        </div>
+
+        {/* Floating Accent Elements */}
+        <div className="absolute top-32 left-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-40"></div>
+        <div className="absolute bottom-40 right-32 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-1/2 right-20 w-1 h-1 bg-emerald-400 rounded-full animate-bounce opacity-50"></div>
+
+        {/* Large Ambient Effects */}
+        <div className="absolute top-20 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-l from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="relative max-w-8xl mx-auto">
+          {/* Elite Header Section */}
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-blue-100/80 dark:bg-blue-500/10 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-xl mb-12">
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-4 animate-pulse shadow-lg shadow-blue-400/50"></div>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-[0.2em] uppercase">
+                Knowledge Hub
+              </span>
+            </div>
+
+            <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
+              <span className="block text-gray-900 dark:text-white mb-2">Expert</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative">
+                Insights
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-xl -z-10"></div>
+              </span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Stay updated with the latest lead generation insights and
-              strategies
+
+            <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+              Stay ahead of the curve with
+              <span className="text-blue-600 dark:text-blue-400 font-medium"> cutting-edge strategies</span>,
+              <span className="text-purple-600 dark:text-purple-400 font-medium"> industry insights</span>, and
+              <span className="text-pink-600 dark:text-pink-400 font-medium"> proven methodologies</span> from our experts.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Advanced Blog Cards Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
-              <Card
-                key={index}
-                className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300"
-              >
-                <CardHeader>
-                  <div className="text-4xl mb-4">{post.image}</div>
-                  <CardTitle className="text-white text-lg leading-tight">
-                    {post.title}
-                  </CardTitle>
-                  <div className="text-gray-400 text-sm">{post.date}</div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm mb-4">{post.excerpt}</p>
-                  <Button
-                    variant="ghost"
-                    className="text-brand-success hover:text-brand-success/90 p-0"
-                  >
-                    Read More <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </CardContent>
-              </Card>
+              <article key={index} className="group relative">
+                {/* Sophisticated Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700"></div>
+
+                {/* Premium Card Design */}
+                <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl overflow-hidden hover:bg-white dark:hover:bg-white/10 transition-all duration-700 transform group-hover:scale-105 group-hover:-translate-y-4">
+
+                  {/* Advanced Header with Visual Element */}
+                  <div className="relative p-8 pb-6">
+                    {/* Floating Icon with Complex Design */}
+                    <div className="relative mb-6">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-50"></div>
+                      <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                        <span className="text-4xl">{post.image}</span>
+                      </div>
+
+                      {/* Orbiting Elements */}
+                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-400 rounded-full animate-bounce group-hover:animate-ping transition-all duration-300"></div>
+                      <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse group-hover:animate-bounce transition-all duration-300"></div>
+                    </div>
+
+                    {/* Enhanced Typography */}
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <Badge className="bg-blue-100/80 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/30 px-3 py-1">
+                          Strategy
+                        </Badge>
+                        <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {post.date}
+                        </div>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="px-8 pb-8">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300">
+                      {post.excerpt}
+                    </p>
+
+                    {/* Advanced CTA */}
+                    <div className="flex items-center justify-between">
+                      <Button
+                        variant="ghost"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 font-semibold group/btn"
+                      >
+                        <span>Read Full Article</span>
+                        <ChevronRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Button>
+
+                      <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                        <Eye className="w-4 h-4" />
+                        <span>5 min read</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Interactive Bottom Border */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+              </article>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button
-              asChild
-              className="bg-transparent border-2 border-brand-success text-brand-success hover:bg-brand-success hover:text-white"
-            >
-              <Link to="/blog">View All Posts</Link>
-            </Button>
+          {/* Advanced Footer CTA */}
+          <div className="mt-24 text-center">
+            <div className="relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-white/90 to-white/95 dark:from-white/[0.08] dark:to-white/[0.12] backdrop-blur-xl border border-gray-200/50 dark:border-white/20 rounded-2xl shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg"></div>
+              <div className="relative flex items-center space-x-6">
+                <div className="text-left">
+                  <div className="text-gray-900 dark:text-white font-semibold text-lg">Explore Our Complete Library</div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">50+ expert articles & case studies</div>
+                </div>
+
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link to="/blog" className="flex items-center">
+                    View All Insights
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 12. Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Ready to 10x Your Lead Generation?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Join thousands of sales teams who've transformed their prospecting
-            with W3Leads
-          </p>
+      {/* 12. Ultimate Conversion CTA - Hero-Level Design */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Ultra-Premium Background Architecture */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.2),transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(16,185,129,0.12),transparent_50%)]"></div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              asChild
-              className="bg-white text-brand-primary hover:bg-gray-100 text-lg px-8 py-6"
-            >
-              <Link to="/signup">Start Free Trial</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-primary text-lg px-8 py-6"
-            >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Book a Demo
-            </Button>
+        {/* Dynamic Mesh Gradient Overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div
+            className="absolute inset-0 animate-pulse"
+            style={{
+              background: `
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)
+              `
+            }}
+          ></div>
+        </div>
+
+        {/* Sophisticated Particle System */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`,
+                animationDuration: `${2 + Math.random() * 2}s`
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Large Ambient Light Sources */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/15 to-blue-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto text-center">
+          {/* Premium Badge */}
+          <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-16">
+            <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mr-4 animate-pulse shadow-lg shadow-emerald-400/50"></div>
+            <span className="text-emerald-300 text-sm font-semibold tracking-[0.2em] uppercase">
+              Ready to Transform?
+            </span>
           </div>
 
-          <p className="text-gray-200 text-sm mt-6">
-            No credit card required • 14-day free trial • Cancel anytime
+          {/* Hero-Level Typography */}
+          <h2 className="text-7xl md:text-9xl font-bold mb-8 leading-none">
+            <span className="block text-white mb-4">Scale Your</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 relative">
+              Success
+              <div className="absolute -inset-6 bg-gradient-to-r from-emerald-400/20 via-blue-400/20 to-purple-400/20 blur-2xl -z-10"></div>
+            </span>
+          </h2>
+
+          <p className="text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16 font-light">
+            Join
+            <span className="text-emerald-400 font-semibold"> 10,000+ sales professionals</span> who've already
+            <span className="text-blue-400 font-semibold"> transformed their prospecting</span> and achieved
+            <span className="text-purple-400 font-semibold"> exponential growth</span> with W3Leads.
           </p>
+
+          {/* Advanced CTA Button Group */}
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
+            {/* Primary CTA with Complex Design */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition-all duration-700"></div>
+              <Button
+                size="lg"
+                asChild
+                className="relative bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white text-xl px-12 py-6 rounded-2xl font-bold shadow-2xl transform group-hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/signup" className="flex items-center">
+                  <Sparkles className="w-6 h-6 mr-3" />
+                  Start Free Trial Now
+                  <ChevronRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Secondary CTA with Glass Morphism */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/30 rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-all duration-700"></div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="relative bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white hover:bg-white/20 text-xl px-12 py-6 rounded-2xl font-bold transform group-hover:scale-105 transition-all duration-300"
+              >
+                <PlayCircle className="w-6 h-6 mr-3" />
+                Watch Live Demo
+              </Button>
+            </div>
+          </div>
+
+          {/* Trust Indicators with Advanced Design */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+            {[
+              { icon: Shield, text: "Enterprise Security", subtext: "SOC 2 Type II Certified" },
+              { icon: Award, text: "Industry Leading", subtext: "98.5% Accuracy Rate" },
+              { icon: Users, text: "Trusted Globally", subtext: "10K+ Companies" }
+            ].map((item, index) => (
+              <div key={index} className="group text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-white/10 to-white/20 backdrop-blur-xl border border-white/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-white font-semibold">{item.text}</div>
+                <div className="text-gray-400 text-sm">{item.subtext}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Premium Footer Note */}
+          <div className="inline-flex items-center px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
+            <div className="flex items-center space-x-6 text-gray-300">
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-emerald-400" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="w-px h-6 bg-white/20"></div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-blue-400" />
+                <span>No credit card required</span>
+              </div>
+              <div className="w-px h-6 bg-white/20"></div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-purple-400" />
+                <span>Cancel anytime</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
