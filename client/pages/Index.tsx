@@ -438,7 +438,11 @@ export default function Index() {
                   <div
                     className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <span className="text-2xl">{metric.icon}</span>
+                    {typeof metric.icon === 'string' ? (
+                      <span className="text-2xl">{metric.icon}</span>
+                    ) : (
+                      <metric.icon className="w-7 h-7 text-brand-primary" />
+                    )}
                   </div>
 
                   {/* Metric Number */}
