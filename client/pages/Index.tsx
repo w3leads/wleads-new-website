@@ -1770,8 +1770,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. Ultra-Premium Pricing Architecture */}
-      <section className="py-40 px-4 relative overflow-hidden">
+      {/* 10. Pricing Section */}
+      <section className="py-20 px-4 relative overflow-hidden">
         {/* Sophisticated Multi-Layer Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/80 to-purple-950/70"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_40%)]"></div>
