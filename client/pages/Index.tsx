@@ -1333,18 +1333,18 @@ export default function Index() {
             {/* Metric 1: Time Savings */}
             <div className="group relative">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-primary to-brand-secondary rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
 
               <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
                 {/* Floating Icon Container */}
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-lg opacity-50"></div>
-                  <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <Clock className="w-10 h-10 text-white" />
                   </div>
                   {/* Orbiting Elements */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-bounce"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-secondary rounded-full animate-bounce"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-primary rounded-full animate-pulse"></div>
                 </div>
 
                 {/* Metric Display */}
