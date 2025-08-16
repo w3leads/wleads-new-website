@@ -41,22 +41,6 @@ export default function Index() {
   const [verifyEmail, setVerifyEmail] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  const handleDomainSearch = () => {
-    console.log("Searching domain:", searchDomain);
-  };
-
-  const handleEmailVerify = () => {
-    console.log("Verifying email:", verifyEmail);
-  };
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -80,6 +64,22 @@ export default function Index() {
       avatar: "ER",
     },
   ];
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const handleDomainSearch = () => {
+    console.log("Searching domain:", searchDomain);
+  };
+
+  const handleEmailVerify = () => {
+    console.log("Verifying email:", verifyEmail);
+  };
 
   const integrations = [
     { name: "Gmail", logo: "📧" },
