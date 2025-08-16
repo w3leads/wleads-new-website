@@ -623,45 +623,45 @@ export default function Index() {
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="group relative">
                               <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
                                 <div className="flex items-center justify-between mb-3">
                                   <div className="w-12 h-12 bg-brand-success/20 rounded-xl flex items-center justify-center">
                                     <Mail className="w-6 h-6 text-brand-success" />
                                   </div>
                                   <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">Live</Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-white mb-1">1,247</div>
-                                <div className="text-sm text-gray-300">Email contacts found</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">1,247</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">Email contacts found</div>
                                 <div className="text-xs text-brand-success mt-2">+23% from last scan</div>
                               </div>
                             </div>
 
                             <div className="group relative">
                               <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-purple to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
                                 <div className="flex items-center justify-between mb-3">
                                   <div className="w-12 h-12 bg-brand-purple/20 rounded-xl flex items-center justify-center">
                                     <Building className="w-6 h-6 text-brand-purple" />
                                   </div>
                                   <Badge className="bg-brand-purple/20 text-brand-purple border-brand-purple/30">Updated</Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-white mb-1">156</div>
-                                <div className="text-sm text-gray-300">Department structure</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">156</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">Department structure</div>
                                 <div className="text-xs text-brand-purple mt-2">Mapped hierarchy</div>
                               </div>
                             </div>
 
                             <div className="group relative">
                               <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-primary to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
                                 <div className="flex items-center justify-between mb-3">
                                   <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
                                     <CheckCircle className="w-6 h-6 text-brand-primary" />
                                   </div>
                                   <Badge className="bg-brand-primary/20 text-brand-primary border-brand-primary/30">Verified</Badge>
                                 </div>
-                                <div className="text-3xl font-bold text-white mb-1">98.2%</div>
-                                <div className="text-sm text-gray-300">Accuracy rate</div>
+                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">98.2%</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">Accuracy rate</div>
                                 <div className="text-xs text-brand-primary mt-2">Industry leading</div>
                               </div>
                             </div>
