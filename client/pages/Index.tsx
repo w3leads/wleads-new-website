@@ -235,20 +235,20 @@ export default function Index() {
                   </Button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="bg-brand-success/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-success">
+                  <div className="bg-brand-accent/10 p-3 rounded-lg">
+                    <div className="font-semibold text-brand-accent">
                       1,247 Emails Found
                     </div>
                     <div className="text-gray-600">Verified contacts</div>
                   </div>
-                  <div className="bg-brand-purple/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-purple">
+                  <div className="bg-brand-primary/10 p-3 rounded-lg">
+                    <div className="font-semibold text-brand-primary">
                       98.2% Accuracy
                     </div>
                     <div className="text-gray-600">Verification rate</div>
                   </div>
-                  <div className="bg-brand-primary/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-primary">
+                  <div className="bg-brand-secondary/10 p-3 rounded-lg">
+                    <div className="font-semibold text-brand-secondary">
                       156 Departments
                     </div>
                     <div className="text-gray-600">Mapped structure</div>
