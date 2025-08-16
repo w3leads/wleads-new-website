@@ -751,20 +751,22 @@ export default function Index() {
                   ].map((plan, index) => (
                     <Card
                       key={index}
-                      className={`glass border-white/20 p-6 relative ${plan.popular ? "border-brand-success" : ""}`}
+                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
+                        plan.popular ? "border-green-500 ring-2 ring-green-500/20" : ""
+                      }`}
                     >
                       {plan.popular && (
-                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-success text-white">
+                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
                           Most Popular
                         </Badge>
                       )}
                       <CardHeader>
-                        <CardTitle className="text-white text-xl">
+                        <CardTitle className="text-gray-900 dark:text-white text-xl">
                           {plan.name}
                         </CardTitle>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
                           {plan.price}
-                          <span className="text-lg text-gray-300">
+                          <span className="text-lg text-gray-600 dark:text-gray-300">
                             {plan.period}
                           </span>
                         </div>
@@ -774,15 +776,19 @@ export default function Index() {
                           {plan.features.map((feature, idx) => (
                             <li
                               key={idx}
-                              className="flex items-center text-gray-300"
+                              className="flex items-center text-gray-600 dark:text-gray-300"
                             >
-                              <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                         <Button
-                          className={`w-full mt-6 ${plan.popular ? "bg-brand-success hover:bg-brand-success/90" : "bg-brand-primary hover:bg-brand-primary/90"} text-white`}
+                          className={`w-full mt-6 ${
+                            plan.popular
+                              ? "bg-green-500 hover:bg-green-600"
+                              : "bg-blue-600 hover:bg-blue-700"
+                          } text-white`}
                           asChild
                         >
                           <Link to="/signup">Get Started</Link>
