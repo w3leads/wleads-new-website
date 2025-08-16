@@ -376,127 +376,278 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="pt-16">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-slate-900/90 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company */}
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">W3</span>
+      <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary/10 border-t border-white/10 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.4)_1px,transparent_0)] bg-[size:24px_24px]"></div>
+        </div>
+
+        {/* Gradient Overlays */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-slate-900/50"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-brand-secondary/5 to-transparent rounded-full blur-2xl"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Footer Content */}
+          <div className="py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              {/* Company Info & Newsletter - Takes up more space */}
+              <div className="lg:col-span-5 space-y-8">
+                {/* Brand Section */}
+                <div className="space-y-6">
+                  <Link to="/" className="group inline-flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-purple rounded-2xl flex items-center justify-center shadow-2xl shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
+                        <span className="text-white font-bold text-xl">W3</span>
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-brand-success rounded-full opacity-80 animate-pulse"></div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-white font-bold text-3xl tracking-tight">
+                        Leads
+                      </span>
+                      <span className="text-sm text-brand-secondary font-medium -mt-1">
+                        B2B Platform
+                      </span>
+                    </div>
+                  </Link>
+
+                  <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+                    The most advanced B2B lead generation and email verification platform.
+                    Trusted by <span className="text-brand-success font-semibold">50,000+</span> businesses worldwide.
+                  </p>
+
+                  {/* Trust Indicators */}
+                  <div className="flex flex-wrap gap-3">
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
+                      <CheckCircle className="w-4 h-4 text-brand-success" />
+                      <span className="text-xs text-brand-success font-medium">GDPR Compliant</span>
+                    </div>
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
+                      <Shield className="w-4 h-4 text-brand-success" />
+                      <span className="text-xs text-brand-success font-medium">SOC 2 Certified</span>
+                    </div>
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
+                      <Award className="w-4 h-4 text-brand-success" />
+                      <span className="text-xs text-brand-success font-medium">99.9% Uptime</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-white font-bold text-xl">Leads</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                Advanced B2B lead generation and email verification platform.
-              </p>
-            </div>
 
-            {/* Products */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Products</h3>
-              <div className="space-y-2">
-                <Link
-                  to="/products/domain-finder"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Domain Finder
-                </Link>
-                <Link
-                  to="/products/email-finder"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Email Finder
-                </Link>
-                <Link
-                  to="/products/email-verifier"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Email Verifier
-                </Link>
-                <Link
-                  to="/products/discover"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Discover
-                </Link>
-                <Link
-                  to="/products/campaigns"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Campaigns
-                </Link>
-              </div>
-            </div>
+                {/* Newsletter Signup */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-white font-semibold text-lg flex items-center space-x-2">
+                      <Sparkles className="w-5 h-5 text-brand-secondary" />
+                      <span>Stay Updated</span>
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      Get the latest updates, tips, and exclusive offers delivered to your inbox.
+                    </p>
+                  </div>
+                  <div className="flex space-x-2">
+                    <div className="flex-1 relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
+                      />
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-purple text-white shadow-lg shadow-brand-primary/25 border-0 rounded-xl px-6 transition-all duration-300 hover:scale-105">
+                      <Send className="w-4 h-4" />
+                    </Button>
+                  </div>
+                  <p className="text-xs text-gray-500">
+                    Join 25,000+ subscribers. Unsubscribe anytime.
+                  </p>
+                </div>
 
-            {/* Company */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Company</h3>
-              <div className="space-y-2">
-                <Link
-                  to="/about"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  About Us
-                </Link>
-                <Link
-                  to="/blog"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  to="/contact"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Contact
-                </Link>
+                {/* Contact Info */}
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <MapPin className="w-4 h-4 text-brand-secondary" />
+                    <span className="text-sm">San Francisco, CA & Remote Worldwide</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <Mail className="w-4 h-4 text-brand-secondary" />
+                    <span className="text-sm">hello@w3leads.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <Clock className="w-4 h-4 text-brand-secondary" />
+                    <span className="text-sm">24/7 Customer Support</span>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Legal */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Legal</h3>
-              <div className="space-y-2">
-                <Link
-                  to="/privacy"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  to="/terms"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  to="/gdpr"
-                  className="block text-gray-400 hover:text-brand-success text-sm"
-                >
-                  GDPR
-                </Link>
+              {/* Navigation Links */}
+              <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+                {/* Products */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg mb-6 relative">
+                    Products
+                    <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: "Domain Finder", href: "/products/domain-finder", badge: "Popular" },
+                      { name: "Email Finder", href: "/products/email-finder", badge: "New" },
+                      { name: "Email Verifier", href: "/products/email-verifier" },
+                      { name: "Discover", href: "/products/discover" },
+                      { name: "Campaigns", href: "/products/campaigns", badge: "Beta" },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                      >
+                        <span>{item.name}</span>
+                        {item.badge && (
+                          <span className="text-xs bg-brand-secondary/20 text-brand-secondary px-2 py-0.5 rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Company */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg mb-6 relative">
+                    Company
+                    <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: "About Us", href: "/about" },
+                      { name: "Careers", href: "/careers", badge: "We're hiring!" },
+                      { name: "Blog", href: "/blog" },
+                      { name: "Press Kit", href: "/press" },
+                      { name: "Contact", href: "/contact" },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                      >
+                        <span>{item.name}</span>
+                        {item.badge && (
+                          <span className="text-xs bg-brand-success/20 text-brand-success px-2 py-0.5 rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resources */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg mb-6 relative">
+                    Resources
+                    <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: "Documentation", href: "/docs" },
+                      { name: "API Reference", href: "/api" },
+                      { name: "Help Center", href: "/help" },
+                      { name: "Pricing", href: "/pricing" },
+                      { name: "Status Page", href: "/status" },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                      >
+                        <span>{item.name}</span>
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Legal */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-lg mb-6 relative">
+                    Legal
+                    <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: "Privacy Policy", href: "/privacy" },
+                      { name: "Terms of Service", href: "/terms" },
+                      { name: "Cookie Policy", href: "/cookies" },
+                      { name: "GDPR", href: "/gdpr" },
+                      { name: "Security", href: "/security" },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                      >
+                        <span>{item.name}</span>
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 W3Leads. All rights reserved.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <span className="text-xs text-gray-500 bg-brand-success/20 px-2 py-1 rounded">
-                GDPR Compliant
-              </span>
-              <span className="text-xs text-gray-500 bg-brand-success/20 px-2 py-1 rounded">
-                SPF/DKIM Ready
-              </span>
+          {/* Bottom Section */}
+          <div className="border-t border-white/10 py-8">
+            <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+              {/* Copyright & Rating */}
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                <p className="text-gray-400 text-sm">
+                  © 2024 W3Leads, Inc. All rights reserved.
+                </p>
+                <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-400">4.9/5 from 2,500+ reviews</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-400 text-sm mr-2">Follow us:</span>
+                {[
+                  { icon: Twitter, href: "https://twitter.com/w3leads", label: "Twitter" },
+                  { icon: Linkedin, href: "https://linkedin.com/company/w3leads", label: "LinkedIn" },
+                  { icon: Github, href: "https://github.com/w3leads", label: "GitHub" },
+                  { icon: Youtube, href: "https://youtube.com/w3leads", label: "YouTube" },
+                  { icon: Instagram, href: "https://instagram.com/w3leads", label: "Instagram" },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-brand-primary/20 hover:border-brand-primary/30 transition-all duration-300 hover:scale-110"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Made with Love */}
+            <div className="text-center mt-8 pt-6 border-t border-white/5">
+              <p className="text-gray-500 text-xs flex items-center justify-center space-x-1">
+                <span>Made with</span>
+                <Heart className="w-3 h-3 text-red-400 fill-current animate-pulse" />
+                <span>in San Francisco</span>
+              </p>
             </div>
           </div>
         </div>
