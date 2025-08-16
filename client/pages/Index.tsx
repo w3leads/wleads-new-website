@@ -151,6 +151,30 @@ export default function Index() {
     setIsVerifying(false);
   };
 
+  const handleHeroSearch = async () => {
+    if (!heroSearchQuery.trim()) return;
+
+    setIsHeroSearching(true);
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // Generate realistic dummy data
+    const emailCount = Math.floor(Math.random() * 2000) + 800;
+    const accuracy = (Math.random() * 5) + 95;
+    const departments = Math.floor(Math.random() * 150) + 80;
+
+    setHeroSearchResults({
+      domain: heroSearchQuery,
+      emailsFound: emailCount,
+      accuracy: accuracy.toFixed(1),
+      departments: departments,
+      timestamp: new Date().toLocaleString()
+    });
+
+    setIsHeroSearching(false);
+  };
+
   const integrations = [
     { name: "Gmail", logo: "📧" },
     { name: "Outlook", logo: "���" },
