@@ -57,18 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // W3Leads brand colors
+        // W3Leads brand colors using CSS variables
         brand: {
-          primary: "#4A60A1",
-          secondary: "#8A4AF3",
-          success: "#2ECC71",
-          purple: "#9B59B6",
-          "gradient-start": "#4A60A1",
-          "gradient-end": "#8A4AF3",
-        },
-        glass: {
-          white: "rgba(255, 255, 255, 0.1)",
-          dark: "rgba(0, 0, 0, 0.1)",
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          success: "hsl(var(--brand-success))",
+          purple: "hsl(var(--brand-purple))",
+          "gradient-start": "hsl(var(--brand-gradient-start))",
+          "gradient-end": "hsl(var(--brand-gradient-end))",
         },
       },
       borderRadius: {
