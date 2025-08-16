@@ -339,10 +339,10 @@ export default function Index() {
                 label: "Expert Support",
                 sublabel: "Always available",
                 icon: "🚀",
-                gradient: "from-orange-500 to-red-500",
+                gradient: "from-brand-primary to-brand-secondary",
                 bgGradient:
-                  "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
-                iconBg: "bg-orange-100 dark:bg-orange-900/30",
+                  "from-brand-primary/5 to-brand-secondary/10 dark:from-brand-primary/10 dark:to-brand-secondary/20",
+                iconBg: "bg-brand-primary/20 dark:bg-brand-primary/30",
               },
             ].map((metric, index) => (
               <div key={index} className="group relative">
