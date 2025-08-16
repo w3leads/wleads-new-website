@@ -1,7 +1,4 @@
-import "./global.css";
-
 import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -46,9 +43,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-// Ensure createRoot is only called once
-const container = document.getElementById("root")!;
-if (!container._reactRoot) {
-  container._reactRoot = createRoot(container);
-}
-container._reactRoot.render(<App />);
+export default App;
