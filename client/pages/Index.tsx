@@ -1373,7 +1373,7 @@ export default function Index() {
                       <span>Automated</span>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-5/6 transition-all duration-1000"></div>
+                      <div className="bg-gradient-to-r from-brand-primary to-brand-secondary h-2 rounded-full w-5/6 transition-all duration-1000"></div>
                     </div>
                   </div>
                 </div>
