@@ -778,38 +778,211 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 6. ROI/Metrics Band */}
-      <section className="py-20 px-4 bg-gradient-to-r from-brand-primary to-brand-secondary">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">
-            Proven Results That Matter
-          </h2>
+      {/* 6. ROI/Metrics Band - Sophisticated Results Showcase */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Complex Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(139,69,19,0.05)_50%,transparent_70%)]"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">
-                20+ Hours
-              </div>
-              <div className="text-gray-200">Saved per week</div>
+        {/* Animated Background Elements */}
+        <div className="absolute top-20 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-70"></div>
+        <div className="absolute bottom-20 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-1/2 left-10 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-l from-emerald-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Header with Sophisticated Typography */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/10 backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-blue-300 text-sm font-medium tracking-wide uppercase">Performance Metrics</span>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+            <h2 className="text-6xl md:text-7xl font-bold mb-6">
+              <span className="text-white">Proven</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400">
+                Results That
+              </span>
+              <br />
+              <span className="text-white">Matter</span>
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Join thousands of companies who've transformed their lead generation with our platform.
+              These aren't just numbers – they're real business outcomes.
+            </p>
+          </div>
+
+          {/* Advanced Metrics Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+
+            {/* Metric 1: Time Savings */}
+            <div className="group relative">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+
+              <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
+                {/* Floating Icon Container */}
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                    <Clock className="w-10 h-10 text-white" />
+                  </div>
+                  {/* Orbiting Elements */}
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-bounce"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                </div>
+
+                {/* Metric Display */}
+                <div className="space-y-4">
+                  <div className="flex items-baseline space-x-2">
+                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-blue-300 transition-colors duration-500">
+                      20+
+                    </span>
+                    <span className="text-xl text-blue-300 font-medium">hrs</span>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">Time Saved</h3>
+                  <p className="text-gray-300 leading-relaxed">Per week, per sales rep. Automated prospecting and verification eliminates manual research.</p>
+
+                  {/* Progress Indicator */}
+                  <div className="pt-4">
+                    <div className="flex justify-between text-sm text-gray-400 mb-2">
+                      <span>Manual Process</span>
+                      <span>Automated</span>
+                    </div>
+                    <div className="w-full bg-white/10 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-5/6 transition-all duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">340%</div>
-              <div className="text-gray-200">Increase in qualified leads</div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+            {/* Metric 2: Lead Quality */}
+            <div className="group relative">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+
+              <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
+                {/* Floating Icon Container */}
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                    <TrendingUp className="w-10 h-10 text-white" />
+                  </div>
+                  {/* Orbiting Elements */}
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-teal-400 rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-emerald-400 rounded-full animate-pulse delay-500"></div>
+                </div>
+
+                {/* Metric Display */}
+                <div className="space-y-4">
+                  <div className="flex items-baseline space-x-2">
+                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-emerald-300 transition-colors duration-500">
+                      340
+                    </span>
+                    <span className="text-xl text-emerald-300 font-medium">%</span>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">Lead Quality Boost</h3>
+                  <p className="text-gray-300 leading-relaxed">Increase in qualified leads through precise targeting and verified contact data.</p>
+
+                  {/* Performance Chart Simulation */}
+                  <div className="pt-4">
+                    <div className="flex items-end space-x-1 h-16">
+                      {[30, 45, 60, 85, 100].map((height, index) => (
+                        <div
+                          key={index}
+                          className="bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-sm flex-1 transition-all duration-1000 delay-200"
+                          style={{ height: `${height}%` }}
+                        ></div>
+                      ))}
+                    </div>
+                    <div className="text-xs text-gray-400 text-center mt-2">Monthly Performance</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">85%</div>
-              <div className="text-gray-200">Improvement in deliverability</div>
+            </div>
+
+            {/* Metric 3: Deliverability */}
+            <div className="group relative">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-violet-500 to-pink-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+
+              <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
+                {/* Floating Icon Container */}
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                    <Zap className="w-10 h-10 text-white" />
+                  </div>
+                  {/* Orbiting Elements */}
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-400 rounded-full animate-bounce delay-700"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
+                </div>
+
+                {/* Metric Display */}
+                <div className="space-y-4">
+                  <div className="flex items-baseline space-x-2">
+                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-purple-300 transition-colors duration-500">
+                      85
+                    </span>
+                    <span className="text-xl text-purple-300 font-medium">%</span>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">Deliverability Rate</h3>
+                  <p className="text-gray-300 leading-relaxed">Email deliverability improvement through advanced verification and reputation management.</p>
+
+                  {/* Circular Progress */}
+                  <div className="pt-4 flex justify-center">
+                    <div className="relative w-16 h-16">
+                      <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.1)" strokeWidth="8" fill="none"/>
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          stroke="url(#gradient-purple)"
+                          strokeWidth="8"
+                          fill="none"
+                          strokeDasharray="283"
+                          strokeDashoffset="42"
+                          className="transition-all duration-1000"
+                        />
+                        <defs>
+                          <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#8b5cf6"/>
+                            <stop offset="100%" stopColor="#ec4899"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-xs font-semibold text-purple-300">85%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA Section */}
+          <div className="text-center mt-20">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10">
+              <div className="flex items-center space-x-4">
+                <div className="flex -space-x-2">
+                  {[1,2,3,4].map((i) => (
+                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-white/20"></div>
+                  ))}
+                </div>
+                <div className="text-left">
+                  <div className="text-white font-semibold">Join 10,000+ companies</div>
+                  <div className="text-gray-300 text-sm">Already seeing these results</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
