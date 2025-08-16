@@ -1790,19 +1790,8 @@ export default function Index() {
               Choose Your Plan
             </h2>
 
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-16 font-light">
-              Transparent, value-driven pricing designed for ambitious teams who
-              demand
-              <span className="text-emerald-400 font-medium">
-                {" "}
-                exceptional ROI
-              </span>{" "}
-              and
-              <span className="text-blue-400 font-medium">
-                {" "}
-                measurable growth
-              </span>
-              .
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+              Simple, transparent pricing that scales with your business needs.
             </p>
 
             {/* Advanced Billing Toggle with Enhanced Design */}
