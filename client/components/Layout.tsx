@@ -426,21 +426,21 @@ const Layout = ({ children }: LayoutProps) => {
 
                   {/* Trust Indicators */}
                   <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
-                      <CheckCircle className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
+                      <CheckCircle className="w-4 h-4 text-brand-accent" />
+                      <span className="text-xs text-brand-accent font-medium">
                         GDPR Compliant
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
-                      <Shield className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
+                      <Shield className="w-4 h-4 text-brand-accent" />
+                      <span className="text-xs text-brand-accent font-medium">
                         SOC 2 Certified
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
-                      <Award className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
+                      <Award className="w-4 h-4 text-brand-accent" />
+                      <span className="text-xs text-brand-accent font-medium">
                         99.9% Uptime
                       </span>
                     </div>
