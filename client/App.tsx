@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Pricing from "./pages/Pricing";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -31,8 +32,7 @@ const App = () => (
             {/* Main Pages */}
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
-            {/* Temporarily comment out Pricing page */}
-            {/* <Route path="/pricing" element={<Pricing />} /> */}
+            <Route path="/pricing" element={<Pricing />} />
             
             {/* Authentication */}
             <Route path="/login" element={<Login />} />
