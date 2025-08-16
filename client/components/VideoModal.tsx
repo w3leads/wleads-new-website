@@ -50,9 +50,9 @@ export const VideoModal = ({
         onClick={onClose}
       />
 
-      {/* Modal Container - Professional size */}
+      {/* Modal Container - Compact size (75% of original) */}
       <div
-        className="relative w-full max-w-4xl mx-4 transition-all duration-300 transform scale-100"
+        className="relative w-full max-w-3xl mx-4 transition-all duration-300 transform scale-100"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Main Modal */}
