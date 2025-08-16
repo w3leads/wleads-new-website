@@ -307,56 +307,56 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-brand-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-secondary to-brand-purple rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white">Verifier</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-gray-900 dark:text-white">Verifier</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">
                   Ensure email deliverability with advanced verification
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     98.5% accuracy rate
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Real-time verification
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Bounce protection
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-brand-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-primary rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white">Campaigns</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-gray-900 dark:text-white">Campaigns</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">
                   Automate outreach with personalized email sequences
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Smart scheduling
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     A/B testing
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-brand-success mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Performance analytics
                   </li>
                 </ul>
