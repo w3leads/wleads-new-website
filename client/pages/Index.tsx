@@ -779,7 +779,7 @@ export default function Index() {
             <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
               <span className="text-white">Experience the</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-success via-brand-secondary to-brand-purple">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
                 Power in Action
               </span>
             </h2>
