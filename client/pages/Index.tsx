@@ -87,12 +87,12 @@ export default function Index() {
     setSearchResults(null);
 
     // Simulate API call with realistic delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // Generate realistic dummy data based on domain
     const emailCount = Math.floor(Math.random() * 2000) + 500;
     const departments = Math.floor(Math.random() * 200) + 50;
-    const accuracy = (Math.random() * 5) + 95;
+    const accuracy = Math.random() * 5 + 95;
 
     setSearchResults({
       domain: searchDomain,
@@ -103,10 +103,10 @@ export default function Index() {
       breakdown: {
         executives: Math.floor(emailCount * 0.15),
         sales: Math.floor(emailCount * 0.25),
-        marketing: Math.floor(emailCount * 0.20),
-        engineering: Math.floor(emailCount * 0.30),
-        other: Math.floor(emailCount * 0.10)
-      }
+        marketing: Math.floor(emailCount * 0.2),
+        engineering: Math.floor(emailCount * 0.3),
+        other: Math.floor(emailCount * 0.1),
+      },
     });
 
     setIsSearching(false);
@@ -119,26 +119,28 @@ export default function Index() {
     setVerificationResults(null);
 
     // Simulate API call with realistic delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Generate realistic verification results
     const isValid = Math.random() > 0.2; // 80% chance of valid email
-    const confidence = isValid ? (Math.random() * 10) + 90 : (Math.random() * 30) + 20;
+    const confidence = isValid
+      ? Math.random() * 10 + 90
+      : Math.random() * 30 + 20;
 
     setVerificationResults({
       email: verifyEmail,
       isValid: isValid,
       confidence: confidence.toFixed(1),
-      status: isValid ? 'Valid' : 'Invalid',
-      deliverability: isValid ? 'High' : 'Low',
+      status: isValid ? "Valid" : "Invalid",
+      deliverability: isValid ? "High" : "Low",
       checks: {
         syntax: isValid,
         domain: isValid,
         mxRecords: isValid,
-        smtpCheck: isValid ? Math.random() > 0.1 : false
+        smtpCheck: isValid ? Math.random() > 0.1 : false,
       },
-      riskLevel: isValid ? 'Low' : 'High',
-      lastChecked: new Date().toLocaleString()
+      riskLevel: isValid ? "Low" : "High",
+      lastChecked: new Date().toLocaleString(),
     });
 
     setIsVerifying(false);
@@ -782,7 +784,9 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Test our platform with real data processing. Enter any domain or email address and watch our AI-powered engine deliver instant, accurate results.
+              Test our platform with real data processing. Enter any domain or
+              email address and watch our AI-powered engine deliver instant,
+              accurate results.
             </p>
           </div>
 
@@ -805,15 +809,21 @@ export default function Index() {
                       <div className="w-4 h-4 bg-green-400 rounded-full shadow-lg"></div>
                     </div>
                     <div className="bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                      <span className="text-gray-300 text-sm font-mono">w3leads.com/demo</span>
+                      <span className="text-gray-300 text-sm font-mono">
+                        w3leads.com/demo
+                      </span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="flex items-center space-x-2 bg-brand-success/20 border border-brand-success/30 px-3 py-1 rounded-full">
                       <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse"></div>
-                      <span className="text-brand-success text-xs font-medium">Live System</span>
+                      <span className="text-brand-success text-xs font-medium">
+                        Live System
+                      </span>
                     </div>
-                    <div className="text-xs text-gray-400">Real-time processing</div>
+                    <div className="text-xs text-gray-400">
+                      Real-time processing
+                    </div>
                   </div>
                 </div>
 
@@ -821,7 +831,11 @@ export default function Index() {
                 <div className="mb-12">
                   <div className="flex space-x-2 bg-white/10 rounded-2xl p-2 mb-8 w-fit mx-auto backdrop-blur-sm">
                     <button
-                      onClick={() => {setActiveTab("domain"); setSearchResults(null); setVerificationResults(null);}}
+                      onClick={() => {
+                        setActiveTab("domain");
+                        setSearchResults(null);
+                        setVerificationResults(null);
+                      }}
                       className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "domain"
                           ? "bg-gradient-to-r from-brand-primary to-brand-secondary text-white shadow-xl shadow-brand-primary/25"
@@ -830,12 +844,20 @@ export default function Index() {
                     >
                       <Globe className="w-5 h-5" />
                       <span>Domain Intelligence</span>
-                      <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        activeTab === "domain" ? "bg-white/80" : "bg-brand-primary/60 group-hover:bg-white/60"
-                      }`}></div>
+                      <div
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          activeTab === "domain"
+                            ? "bg-white/80"
+                            : "bg-brand-primary/60 group-hover:bg-white/60"
+                        }`}
+                      ></div>
                     </button>
                     <button
-                      onClick={() => {setActiveTab("email"); setSearchResults(null); setVerificationResults(null);}}
+                      onClick={() => {
+                        setActiveTab("email");
+                        setSearchResults(null);
+                        setVerificationResults(null);
+                      }}
                       className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "email"
                           ? "bg-gradient-to-r from-brand-success to-emerald-600 text-white shadow-xl shadow-brand-success/25"
@@ -844,9 +866,13 @@ export default function Index() {
                     >
                       <Shield className="w-5 h-5" />
                       <span>Email Verification</span>
-                      <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        activeTab === "email" ? "bg-white/80" : "bg-brand-success/60 group-hover:bg-white/60"
-                      }`}></div>
+                      <div
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          activeTab === "email"
+                            ? "bg-white/80"
+                            : "bg-brand-success/60 group-hover:bg-white/60"
+                        }`}
+                      ></div>
                     </button>
                   </div>
 
@@ -864,12 +890,18 @@ export default function Index() {
                               </div>
                             </div>
                             <div className="flex-1">
-                              <label className="block text-white text-sm font-medium mb-2">Domain Intelligence Search</label>
+                              <label className="block text-white text-sm font-medium mb-2">
+                                Domain Intelligence Search
+                              </label>
                               <Input
                                 placeholder="Enter any domain (e.g., microsoft.com, google.com, salesforce.com)"
                                 value={searchDomain}
-                                onChange={(e) => setSearchDomain(e.target.value)}
-                                onKeyPress={(e) => e.key === 'Enter' && handleDomainSearch()}
+                                onChange={(e) =>
+                                  setSearchDomain(e.target.value)
+                                }
+                                onKeyPress={(e) =>
+                                  e.key === "Enter" && handleDomainSearch()
+                                }
                                 className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
                                 disabled={isSearching}
                               />
@@ -901,9 +933,13 @@ export default function Index() {
                           {/* Results Header */}
                           <div className="text-center">
                             <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl px-6 py-4">
-                              <div className={`w-3 h-3 rounded-full ${isSearching ? 'bg-yellow-400 animate-pulse' : 'bg-brand-success'}`}></div>
+                              <div
+                                className={`w-3 h-3 rounded-full ${isSearching ? "bg-yellow-400 animate-pulse" : "bg-brand-success"}`}
+                              ></div>
                               <span className="text-white font-medium">
-                                {isSearching ? `Analyzing ${searchDomain}...` : `Analysis Complete: ${searchResults?.domain}`}
+                                {isSearching
+                                  ? `Analyzing ${searchDomain}...`
+                                  : `Analysis Complete: ${searchResults?.domain}`}
                               </span>
                               {!isSearching && searchResults && (
                                 <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">
@@ -937,7 +973,10 @@ export default function Index() {
                                   </div>
                                   <div className="flex items-center text-brand-success text-sm">
                                     <TrendingUp className="w-4 h-4 mr-1" />
-                                    <span>+{Math.floor(Math.random() * 30) + 10}% from last scan</span>
+                                    <span>
+                                      +{Math.floor(Math.random() * 30) + 10}%
+                                      from last scan
+                                    </span>
                                   </div>
                                 </div>
                               </div>
@@ -993,18 +1032,22 @@ export default function Index() {
                           {/* Department Breakdown */}
                           {searchResults && (
                             <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-                              <h4 className="text-xl font-semibold text-white mb-6 text-center">Department Breakdown</h4>
+                              <h4 className="text-xl font-semibold text-white mb-6 text-center">
+                                Department Breakdown
+                              </h4>
                               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                                {Object.entries(searchResults.breakdown).map(([dept, count], index) => (
-                                  <div key={dept} className="text-center">
-                                    <div className="text-2xl font-bold text-white mb-1">
-                                      {(count as number).toLocaleString()}
+                                {Object.entries(searchResults.breakdown).map(
+                                  ([dept, count], index) => (
+                                    <div key={dept} className="text-center">
+                                      <div className="text-2xl font-bold text-white mb-1">
+                                        {(count as number).toLocaleString()}
+                                      </div>
+                                      <div className="text-gray-400 text-sm capitalize">
+                                        {dept}
+                                      </div>
                                     </div>
-                                    <div className="text-gray-400 text-sm capitalize">
-                                      {dept}
-                                    </div>
-                                  </div>
-                                ))}
+                                  ),
+                                )}
                               </div>
                             </div>
                           )}
@@ -1027,12 +1070,16 @@ export default function Index() {
                               </div>
                             </div>
                             <div className="flex-1">
-                              <label className="block text-white text-sm font-medium mb-2">Email Verification Engine</label>
+                              <label className="block text-white text-sm font-medium mb-2">
+                                Email Verification Engine
+                              </label>
                               <Input
                                 placeholder="Enter any email address (e.g., john.doe@company.com)"
                                 value={verifyEmail}
                                 onChange={(e) => setVerifyEmail(e.target.value)}
-                                onKeyPress={(e) => e.key === 'Enter' && handleEmailVerify()}
+                                onKeyPress={(e) =>
+                                  e.key === "Enter" && handleEmailVerify()
+                                }
                                 className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-success focus:ring-brand-success/50 transition-all duration-300"
                                 disabled={isVerifying}
                               />
@@ -1064,12 +1111,18 @@ export default function Index() {
                           {/* Status Header */}
                           <div className="text-center">
                             <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl px-6 py-4">
-                              <div className={`w-3 h-3 rounded-full ${isVerifying ? 'bg-yellow-400 animate-pulse' : verificationResults?.isValid ? 'bg-brand-success' : 'bg-red-400'}`}></div>
+                              <div
+                                className={`w-3 h-3 rounded-full ${isVerifying ? "bg-yellow-400 animate-pulse" : verificationResults?.isValid ? "bg-brand-success" : "bg-red-400"}`}
+                              ></div>
                               <span className="text-white font-medium">
-                                {isVerifying ? `Verifying ${verifyEmail}...` : `Verification Complete: ${verificationResults?.email}`}
+                                {isVerifying
+                                  ? `Verifying ${verifyEmail}...`
+                                  : `Verification Complete: ${verificationResults?.email}`}
                               </span>
                               {!isVerifying && verificationResults && (
-                                <Badge className={`${verificationResults.isValid ? 'bg-brand-success/20 text-brand-success border-brand-success/30' : 'bg-red-500/20 text-red-400 border-red-500/30'}`}>
+                                <Badge
+                                  className={`${verificationResults.isValid ? "bg-brand-success/20 text-brand-success border-brand-success/30" : "bg-red-500/20 text-red-400 border-red-500/30"}`}
+                                >
                                   {verificationResults.status}
                                 </Badge>
                               )}
@@ -1079,11 +1132,15 @@ export default function Index() {
                           {/* Detailed Results */}
                           {verificationResults && (
                             <div className="relative">
-                              <div className={`absolute -inset-1 bg-gradient-to-r ${verificationResults.isValid ? 'from-brand-success to-emerald-600' : 'from-red-500 to-orange-500'} rounded-3xl blur-lg opacity-40`}></div>
+                              <div
+                                className={`absolute -inset-1 bg-gradient-to-r ${verificationResults.isValid ? "from-brand-success to-emerald-600" : "from-red-500 to-orange-500"} rounded-3xl blur-lg opacity-40`}
+                              ></div>
                               <div className="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-10">
                                 {/* Main Status */}
                                 <div className="text-center mb-8">
-                                  <div className={`w-20 h-20 mx-auto mb-4 rounded-3xl flex items-center justify-center ${verificationResults.isValid ? 'bg-gradient-to-r from-brand-success to-emerald-600' : 'bg-gradient-to-r from-red-500 to-orange-500'}`}>
+                                  <div
+                                    className={`w-20 h-20 mx-auto mb-4 rounded-3xl flex items-center justify-center ${verificationResults.isValid ? "bg-gradient-to-r from-brand-success to-emerald-600" : "bg-gradient-to-r from-red-500 to-orange-500"}`}
+                                  >
                                     {verificationResults.isValid ? (
                                       <CheckCircle className="w-10 h-10 text-white" />
                                     ) : (
@@ -1094,31 +1151,62 @@ export default function Index() {
                                     Email {verificationResults.status}
                                   </h3>
                                   <p className="text-gray-300">
-                                    Confidence Score: <span className="text-white font-semibold">{verificationResults.confidence}%</span>
+                                    Confidence Score:{" "}
+                                    <span className="text-white font-semibold">
+                                      {verificationResults.confidence}%
+                                    </span>
                                   </p>
                                 </div>
 
                                 {/* Detailed Checks Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                   <div className="space-y-4">
-                                    <h4 className="text-lg font-semibold text-white mb-4">Verification Details</h4>
+                                    <h4 className="text-lg font-semibold text-white mb-4">
+                                      Verification Details
+                                    </h4>
                                     {[
-                                      { label: 'Deliverability', value: verificationResults.deliverability, icon: Mail },
-                                      { label: 'Risk Level', value: verificationResults.riskLevel, icon: Shield },
-                                      { label: 'Last Checked', value: verificationResults.lastChecked, icon: Clock }
+                                      {
+                                        label: "Deliverability",
+                                        value:
+                                          verificationResults.deliverability,
+                                        icon: Mail,
+                                      },
+                                      {
+                                        label: "Risk Level",
+                                        value: verificationResults.riskLevel,
+                                        icon: Shield,
+                                      },
+                                      {
+                                        label: "Last Checked",
+                                        value: verificationResults.lastChecked,
+                                        icon: Clock,
+                                      },
                                     ].map((item, index) => (
-                                      <div key={index} className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0">
+                                      <div
+                                        key={index}
+                                        className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0"
+                                      >
                                         <div className="flex items-center space-x-3">
                                           <item.icon className="w-5 h-5 text-gray-400" />
-                                          <span className="text-gray-300">{item.label}</span>
+                                          <span className="text-gray-300">
+                                            {item.label}
+                                          </span>
                                         </div>
-                                        <span className={`font-semibold ${
-                                          item.label === 'Risk Level'
-                                            ? verificationResults.riskLevel === 'Low' ? 'text-brand-success' : 'text-red-400'
-                                            : item.label === 'Deliverability'
-                                              ? verificationResults.deliverability === 'High' ? 'text-brand-success' : 'text-red-400'
-                                              : 'text-white'
-                                        }`}>
+                                        <span
+                                          className={`font-semibold ${
+                                            item.label === "Risk Level"
+                                              ? verificationResults.riskLevel ===
+                                                "Low"
+                                                ? "text-brand-success"
+                                                : "text-red-400"
+                                              : item.label === "Deliverability"
+                                                ? verificationResults.deliverability ===
+                                                  "High"
+                                                  ? "text-brand-success"
+                                                  : "text-red-400"
+                                                : "text-white"
+                                          }`}
+                                        >
                                           {item.value}
                                         </span>
                                       </div>
@@ -1126,22 +1214,35 @@ export default function Index() {
                                   </div>
 
                                   <div className="space-y-4">
-                                    <h4 className="text-lg font-semibold text-white mb-4">Technical Checks</h4>
-                                    {Object.entries(verificationResults.checks).map(([check, passed], index) => (
-                                      <div key={index} className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0">
+                                    <h4 className="text-lg font-semibold text-white mb-4">
+                                      Technical Checks
+                                    </h4>
+                                    {Object.entries(
+                                      verificationResults.checks,
+                                    ).map(([check, passed], index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0"
+                                      >
                                         <span className="text-gray-300 capitalize">
-                                          {check.replace(/([A-Z])/g, ' $1').trim()}
+                                          {check
+                                            .replace(/([A-Z])/g, " $1")
+                                            .trim()}
                                         </span>
                                         <div className="flex items-center space-x-2">
                                           {passed ? (
                                             <>
                                               <CheckCircle className="w-5 h-5 text-brand-success" />
-                                              <span className="text-brand-success font-medium">Passed</span>
+                                              <span className="text-brand-success font-medium">
+                                                Passed
+                                              </span>
                                             </>
                                           ) : (
                                             <>
                                               <X className="w-5 h-5 text-red-400" />
-                                              <span className="text-red-400 font-medium">Failed</span>
+                                              <span className="text-red-400 font-medium">
+                                                Failed
+                                              </span>
                                             </>
                                           )}
                                         </div>
