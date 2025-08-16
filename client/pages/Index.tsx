@@ -2282,11 +2282,11 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
               <article key={index} className="group relative">
-                {/* Sophisticated Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700"></div>
+                {/* Subtle Glow Effect - Reduced */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl blur-sm opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
 
-                {/* Premium Card Design */}
-                <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl overflow-hidden hover:bg-white dark:hover:bg-white/10 transition-all duration-700 transform group-hover:scale-105 group-hover:-translate-y-4">
+                {/* Clean Card Design */}
+                <div className="relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-2xl transition-all duration-500 transform group-hover:scale-[1.02] group-hover:-translate-y-1">
                   {/* Advanced Header with Visual Element */}
                   <div className="relative p-8 pb-6">
                     {/* Floating Icon with Complex Design */}
