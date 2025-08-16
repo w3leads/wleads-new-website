@@ -83,7 +83,7 @@ export default function Index() {
 
   const integrations = [
     { name: "Gmail", logo: "📧" },
-    { name: "Outlook", logo: "📮" },
+    { name: "Outlook", logo: "���" },
     { name: "Zapier", logo: "⚡" },
     { name: "HubSpot", logo: "🎯" },
     { name: "Salesforce", logo: "☁️" },
@@ -392,58 +392,100 @@ export default function Index() {
       </section>
 
       {/* 4. How it Works */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-20 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">How It Works</h2>
-            <p className="text-xl text-gray-300">
-              Simple 4-step process to supercharge your lead generation
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">How It Works</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Simple 4-step process to supercharge your lead generation and start converting prospects into customers
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {[
               {
-                step: "1",
+                step: "01",
                 title: "Create Campaign",
-                desc: "Set up your target criteria and campaign parameters",
+                desc: "Set up your target criteria and campaign parameters with our intuitive builder",
                 icon: Sparkles,
+                color: "from-blue-500 to-purple-600",
               },
               {
-                step: "2",
+                step: "02",
                 title: "Add Audience",
-                desc: "Import prospects or use our discovery tools",
+                desc: "Import prospects or use our advanced discovery tools to find ideal customers",
                 icon: Users,
+                color: "from-green-500 to-blue-600",
               },
               {
-                step: "3",
-                title: "Schedule",
-                desc: "Automate your outreach with smart timing",
+                step: "03",
+                title: "Schedule & Launch",
+                desc: "Automate your outreach with smart timing and personalized sequences",
                 icon: Calendar,
+                color: "from-purple-500 to-pink-600",
               },
               {
-                step: "4",
+                step: "04",
                 title: "Track Results",
-                desc: "Monitor performance and optimize campaigns",
+                desc: "Monitor performance metrics and optimize campaigns for better conversion",
                 icon: BarChart3,
+                color: "from-orange-500 to-red-600",
               },
             ].map((item, index) => (
-              <div key={index} className="text-center relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-brand-success to-brand-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-white" />
+              <div key={index} className="relative">
+                {/* Card */}
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 left-8">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                      <span className="text-white font-bold text-lg">{item.step}</span>
+                    </div>
+                  </div>
+
+                  {/* Icon */}
+                  <div className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4`}>
+                    <item.icon className="w-10 h-10 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <div className="text-2xl font-bold text-brand-success mb-2">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300">{item.desc}</p>
+
+                {/* Arrow Connector */}
                 {index < 3 && (
-                  <ArrowRight className="hidden md:block absolute top-8 -right-4 w-6 h-6 text-brand-success" />
+                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                    <div className="w-8 h-8 bg-white dark:bg-gray-900 rounded-full border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 border border-gray-200 dark:border-gray-600">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Ready to Get Started?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                Join thousands of sales teams who've automated their lead generation process and increased conversions by 340%
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white px-8 py-3 font-semibold">
+                  Start Free Trial
+                </Button>
+                <Button variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 px-8 py-3">
+                  Watch Demo
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
