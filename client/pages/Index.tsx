@@ -1794,10 +1794,10 @@ export default function Index() {
               Simple, transparent pricing that scales with your business needs.
             </p>
 
-            {/* Advanced Billing Toggle with Enhanced Design */}
-            <div className="relative inline-flex p-2 bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl">
+            {/* Billing Toggle */}
+            <div className="inline-flex p-1 bg-slate-800 border border-slate-700 rounded-xl">
               <Tabs defaultValue="monthly" className="w-full">
-                <TabsList className="bg-transparent p-0 h-auto space-x-2">
+                <TabsList className="bg-transparent p-0 h-auto space-x-1">
                   <TabsTrigger
                     value="monthly"
                     className="px-8 py-4 rounded-xl text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 font-medium"
