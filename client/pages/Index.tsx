@@ -309,10 +309,10 @@ export default function Index() {
                 label: "Emails Verified",
                 sublabel: "Monthly processing",
                 icon: "✉️",
-                gradient: "from-emerald-500 to-teal-500",
+                gradient: "from-brand-accent to-brand-accent",
                 bgGradient:
-                  "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
-                iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
+                  "from-brand-accent/5 to-brand-accent/10 dark:from-brand-accent/10 dark:to-brand-accent/20",
+                iconBg: "bg-brand-accent/20 dark:bg-brand-accent/30",
               },
               {
                 number: "10K+",
