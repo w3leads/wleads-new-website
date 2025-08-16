@@ -1854,7 +1854,7 @@ export default function Index() {
                 </TabsList>
 
                 <TabsContent value="monthly" className="mt-16">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                     {[
                       {
                         tier: "Starter",
@@ -1934,7 +1934,7 @@ export default function Index() {
                     ].map((plan, index) => (
                       <div
                         key={index}
-                        className={`group relative ${plan.highlight ? "lg:scale-110 lg:-mt-8" : ""}`}
+                        className={`group relative ${plan.highlight ? "lg:scale-105 lg:z-10" : ""}`}
                       >
                         {/* Sophisticated Glow Effect */}
                         <div
