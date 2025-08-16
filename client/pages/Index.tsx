@@ -1651,347 +1651,894 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. Premium Pricing Architecture */}
-      <section className="py-32 px-4 relative overflow-hidden">
-        {/* Sophisticated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-green-50/30 to-blue-50/20 dark:from-slate-900 dark:via-green-900/20 dark:to-blue-900/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.1),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.15),transparent_50%)]"></div>
+      {/* 10. Ultra-Premium Pricing Architecture */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Sophisticated Multi-Layer Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/80 to-purple-950/70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,69,19,0.12),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(34,197,94,0.08)_50%,transparent_70%)]"></div>
 
-        {/* Floating Price Elements */}
-        <div className="absolute top-20 right-1/4 text-4xl text-green-200/20 dark:text-green-400/10 font-bold">
-          $
-        </div>
-        <div className="absolute bottom-20 left-1/4 text-3xl text-blue-200/20 dark:text-blue-400/10 font-bold">
-          €
-        </div>
-        <div className="absolute top-1/2 right-10 w-24 h-24 bg-green-200/10 dark:bg-green-400/5 rounded-full blur-2xl animate-pulse"></div>
+        {/* Animated Geometric Elements */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-60"></div>
+        <div className="absolute bottom-32 right-32 w-1 h-1 bg-emerald-400 rounded-full animate-pulse opacity-80"></div>
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
 
-        <div className="relative max-w-7xl mx-auto">
-          {/* Premium Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-100/80 dark:bg-green-500/10 border border-green-200/50 dark:border-green-500/20 backdrop-blur-sm mb-8">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-green-600 dark:text-green-400 text-sm font-medium tracking-wide uppercase">
-                Investment Plans
+        {/* Floating Currency Symbols with Gradients */}
+        <div className="absolute top-32 right-1/6 text-5xl font-bold opacity-10">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            $
+          </span>
+        </div>
+        <div className="absolute bottom-40 left-1/6 text-4xl font-bold opacity-8">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            €
+          </span>
+        </div>
+
+        {/* Large Ambient Light Effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="relative max-w-8xl mx-auto">
+          {/* Elite Header Section */}
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-12">
+              <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mr-4 animate-pulse shadow-lg shadow-emerald-400/50"></div>
+              <span className="text-emerald-300 text-sm font-semibold tracking-[0.2em] uppercase">
+                Investment Tiers
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              <span className="block">Simple, Transparent</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-blue-600 to-purple-600">
-                ROI-Driven Pricing
+            <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
+              <span className="block text-white mb-2">Pricing That</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 relative">
+                Scales Success
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 via-blue-400/20 to-purple-400/20 blur-xl -z-10"></div>
               </span>
             </h2>
 
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Choose the investment level that matches your growth ambitions.
-              Every plan is designed to deliver measurable ROI from day one.
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-16 font-light">
+              Transparent, value-driven pricing designed for ambitious teams who
+              demand
+              <span className="text-emerald-400 font-medium">
+                {" "}
+                exceptional ROI
+              </span>{" "}
+              and
+              <span className="text-blue-400 font-medium">
+                {" "}
+                measurable growth
+              </span>
+              .
             </p>
 
-            <Tabs defaultValue="monthly" className="mt-8">
-              <TabsList className="glass border-white/20">
-                <TabsTrigger value="monthly" className="text-white">
-                  Monthly
-                </TabsTrigger>
-                <TabsTrigger value="yearly" className="text-white">
-                  Yearly{" "}
-                  <Badge className="ml-2 bg-brand-success">Save 20%</Badge>
-                </TabsTrigger>
-              </TabsList>
+            {/* Advanced Billing Toggle with Enhanced Design */}
+            <div className="relative inline-flex p-2 bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl">
+              <Tabs defaultValue="monthly" className="w-full">
+                <TabsList className="bg-transparent p-0 h-auto space-x-2">
+                  <TabsTrigger
+                    value="monthly"
+                    className="px-8 py-4 rounded-xl text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 font-medium"
+                  >
+                    Monthly Billing
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="yearly"
+                    className="px-8 py-4 rounded-xl text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 font-medium relative"
+                  >
+                    Annual Billing
+                    <Badge className="ml-3 bg-emerald-500/20 text-emerald-300 border-emerald-500/30 px-2 py-1 text-xs">
+                      Save 25%
+                    </Badge>
+                  </TabsTrigger>
+                </TabsList>
 
-              <TabsContent value="monthly" className="mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      name: "Starter",
-                      price: "$29",
-                      period: "/month",
-                      features: [
-                        "1,000 email verifications",
-                        "Basic domain search",
-                        "Email support",
-                        "Standard integrations",
-                      ],
-                      popular: false,
-                    },
-                    {
-                      name: "Professional",
-                      price: "$99",
-                      period: "/month",
-                      features: [
-                        "10,000 email verifications",
-                        "Advanced search filters",
-                        "Campaign automation",
-                        "Priority support",
-                        "All integrations",
-                      ],
-                      popular: true,
-                    },
-                    {
-                      name: "Enterprise",
-                      price: "Custom",
-                      period: "",
-                      features: [
-                        "Unlimited verifications",
-                        "Custom integrations",
-                        "Dedicated support",
-                        "Advanced analytics",
-                        "White-label options",
-                      ],
-                      popular: false,
-                    },
-                  ].map((plan, index) => (
-                    <Card
-                      key={index}
-                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular
-                          ? "border-green-500 ring-2 ring-green-500/20"
-                          : ""
-                      }`}
-                    >
-                      {plan.popular && (
-                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
-                          Most Popular
-                        </Badge>
-                      )}
-                      <CardHeader>
-                        <CardTitle className="text-gray-900 dark:text-white text-xl">
-                          {plan.name}
-                        </CardTitle>
-                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                          {plan.price}
-                          <span className="text-lg text-gray-600 dark:text-gray-300">
-                            {plan.period}
-                          </span>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-3">
-                          {plan.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-gray-600 dark:text-gray-300"
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                        <Button
-                          className={`w-full mt-6 ${
-                            plan.popular
-                              ? "bg-green-500 hover:bg-green-600"
-                              : "bg-blue-600 hover:bg-blue-700"
-                          } text-white`}
-                          asChild
-                        >
-                          <Link to="/signup">Get Started</Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
+                <TabsContent value="monthly" className="mt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {[
+                      {
+                        tier: "Starter",
+                        subtitle: "For Growing Teams",
+                        price: "49",
+                        originalPrice: null,
+                        currency: "$",
+                        period: "/month",
+                        description:
+                          "Perfect for small teams starting their lead generation journey",
+                        features: [
+                          "5,000 email verifications",
+                          "Basic domain intelligence",
+                          "Standard email support",
+                          "Core integrations (5+)",
+                          "Export to CSV/Excel",
+                          "Basic analytics dashboard",
+                        ],
+                        highlight: false,
+                        ctaText: "Start Free Trial",
+                        gradient: "from-slate-600 to-gray-700",
+                        accentColor: "text-gray-400",
+                        borderGlow: "from-gray-500/30 to-slate-500/30",
+                      },
+                      {
+                        tier: "Professional",
+                        subtitle: "Most Popular Choice",
+                        price: "149",
+                        originalPrice: null,
+                        currency: "$",
+                        period: "/month",
+                        description:
+                          "Advanced features for high-performing sales teams",
+                        features: [
+                          "25,000 email verifications",
+                          "Advanced domain mapping",
+                          "Campaign automation suite",
+                          "Priority 24/7 support",
+                          "Premium integrations (50+)",
+                          "Advanced analytics & reporting",
+                          "A/B testing capabilities",
+                          "Custom email templates",
+                          "Bulk processing tools",
+                        ],
+                        highlight: true,
+                        ctaText: "Upgrade to Pro",
+                        gradient: "from-emerald-500 to-blue-600",
+                        accentColor: "text-emerald-400",
+                        borderGlow: "from-emerald-500/50 to-blue-500/50",
+                      },
+                      {
+                        tier: "Enterprise",
+                        subtitle: "Unlimited Scale",
+                        price: "Custom",
+                        originalPrice: null,
+                        currency: "",
+                        period: "",
+                        description:
+                          "White-glove service for enterprise organizations",
+                        features: [
+                          "Unlimited verifications",
+                          "Custom domain intelligence",
+                          "Dedicated account manager",
+                          "99.9% SLA guarantee",
+                          "Custom integrations",
+                          "Advanced security (SSO/SAML)",
+                          "White-label solutions",
+                          "API rate limit increases",
+                          "Custom onboarding & training",
+                        ],
+                        highlight: false,
+                        ctaText: "Contact Sales",
+                        gradient: "from-purple-600 to-pink-600",
+                        accentColor: "text-purple-400",
+                        borderGlow: "from-purple-500/30 to-pink-500/30",
+                      },
+                    ].map((plan, index) => (
+                      <div
+                        key={index}
+                        className={`group relative ${plan.highlight ? "lg:scale-110 lg:-mt-8" : ""}`}
+                      >
+                        {/* Sophisticated Glow Effect */}
+                        <div
+                          className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}
+                        ></div>
 
-              <TabsContent value="yearly" className="mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      name: "Starter",
-                      price: "$23",
-                      period: "/month",
-                      originalPrice: "$29",
-                      features: [
-                        "1,000 email verifications",
-                        "Basic domain search",
-                        "Email support",
-                        "Standard integrations",
-                      ],
-                      popular: false,
-                    },
-                    {
-                      name: "Professional",
-                      price: "$79",
-                      period: "/month",
-                      originalPrice: "$99",
-                      features: [
-                        "10,000 email verifications",
-                        "Advanced search filters",
-                        "Campaign automation",
-                        "Priority support",
-                        "All integrations",
-                      ],
-                      popular: true,
-                    },
-                    {
-                      name: "Enterprise",
-                      price: "Custom",
-                      period: "",
-                      originalPrice: "",
-                      features: [
-                        "Unlimited verifications",
-                        "Custom integrations",
-                        "Dedicated support",
-                        "Advanced analytics",
-                        "White-label options",
-                      ],
-                      popular: false,
-                    },
-                  ].map((plan, index) => (
-                    <Card
-                      key={index}
-                      className={`bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6 relative shadow-lg ${
-                        plan.popular
-                          ? "border-green-500 ring-2 ring-green-500/20"
-                          : ""
-                      }`}
-                    >
-                      {plan.popular && (
-                        <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white">
-                          Most Popular
-                        </Badge>
-                      )}
-                      <CardHeader>
-                        <CardTitle className="text-gray-900 dark:text-white text-xl">
-                          {plan.name}
-                        </CardTitle>
-                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                          {plan.price}
-                          <span className="text-lg text-gray-600 dark:text-gray-300">
-                            {plan.period}
-                          </span>
-                          {plan.originalPrice && (
-                            <div className="text-sm text-gray-500 line-through">
-                              was {plan.originalPrice}
-                              {plan.period}
+                        {/* Most Popular Badge */}
+                        {plan.highlight && (
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                            <div className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white text-sm font-semibold shadow-2xl">
+                              <span className="flex items-center">
+                                <Star className="w-4 h-4 mr-2 fill-current" />
+                                Most Popular
+                              </span>
                             </div>
-                          )}
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-3">
-                          {plan.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-gray-600 dark:text-gray-300"
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                        <Button
-                          className={`w-full mt-6 ${
-                            plan.popular
-                              ? "bg-green-500 hover:bg-green-600"
-                              : "bg-blue-600 hover:bg-blue-700"
-                          } text-white`}
-                          asChild
+                          </div>
+                        )}
+
+                        {/* Premium Card Design */}
+                        <div
+                          className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? "ring-2 ring-emerald-500/30" : ""}`}
                         >
-                          <Link to="/signup">Get Started</Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+                          {/* Header Section */}
+                          <div className="text-center mb-8">
+                            <div
+                              className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}
+                            >
+                              <span
+                                className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}
+                              >
+                                {plan.subtitle}
+                              </span>
+                            </div>
+
+                            <h3 className="text-3xl font-bold text-white mb-2">
+                              {plan.tier}
+                            </h3>
+                            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                              {plan.description}
+                            </p>
+                          </div>
+
+                          {/* Pricing Display */}
+                          <div className="text-center mb-10">
+                            <div className="flex items-baseline justify-center mb-4">
+                              {plan.currency && (
+                                <span
+                                  className={`text-3xl font-semibold ${plan.accentColor} mr-1`}
+                                >
+                                  {plan.currency}
+                                </span>
+                              )}
+                              <span className="text-6xl font-bold text-white tracking-tight">
+                                {plan.price}
+                              </span>
+                              {plan.period && (
+                                <span className="text-xl text-gray-400 ml-2">
+                                  {plan.period}
+                                </span>
+                              )}
+                            </div>
+
+                            {plan.originalPrice && (
+                              <div className="text-gray-500">
+                                <span className="line-through text-lg">
+                                  ${plan.originalPrice}/month
+                                </span>
+                                <span className="ml-2 text-emerald-400 font-medium">
+                                  Save 25%
+                                </span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Features List */}
+                          <div className="space-y-4 mb-10">
+                            {plan.features.map((feature, idx) => (
+                              <div
+                                key={idx}
+                                className="flex items-start group/item"
+                              >
+                                <div
+                                  className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}
+                                >
+                                  <CheckCircle className="w-3 h-3 text-white" />
+                                </div>
+                                <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* CTA Button */}
+                          <Button
+                            asChild
+                            className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
+                              plan.highlight
+                                ? "bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white"
+                                : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
+                            }`}
+                          >
+                            <Link
+                              to="/signup"
+                              className="flex items-center justify-center"
+                            >
+                              {plan.ctaText}
+                              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
+                          </Button>
+
+                          {/* Trust Indicators */}
+                          <div className="mt-6 text-center">
+                            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>14-day free trial</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>No setup fees</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="yearly" className="mt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {[
+                      {
+                        tier: "Starter",
+                        subtitle: "For Growing Teams",
+                        price: "39",
+                        originalPrice: "49",
+                        currency: "$",
+                        period: "/month",
+                        description:
+                          "Perfect for small teams starting their lead generation journey",
+                        features: [
+                          "5,000 email verifications",
+                          "Basic domain intelligence",
+                          "Standard email support",
+                          "Core integrations (5+)",
+                          "Export to CSV/Excel",
+                          "Basic analytics dashboard",
+                        ],
+                        highlight: false,
+                        ctaText: "Start Free Trial",
+                        gradient: "from-slate-600 to-gray-700",
+                        accentColor: "text-gray-400",
+                        borderGlow: "from-gray-500/30 to-slate-500/30",
+                      },
+                      {
+                        tier: "Professional",
+                        subtitle: "Most Popular Choice",
+                        price: "119",
+                        originalPrice: "149",
+                        currency: "$",
+                        period: "/month",
+                        description:
+                          "Advanced features for high-performing sales teams",
+                        features: [
+                          "25,000 email verifications",
+                          "Advanced domain mapping",
+                          "Campaign automation suite",
+                          "Priority 24/7 support",
+                          "Premium integrations (50+)",
+                          "Advanced analytics & reporting",
+                          "A/B testing capabilities",
+                          "Custom email templates",
+                          "Bulk processing tools",
+                        ],
+                        highlight: true,
+                        ctaText: "Upgrade to Pro",
+                        gradient: "from-emerald-500 to-blue-600",
+                        accentColor: "text-emerald-400",
+                        borderGlow: "from-emerald-500/50 to-blue-500/50",
+                      },
+                      {
+                        tier: "Enterprise",
+                        subtitle: "Unlimited Scale",
+                        price: "Custom",
+                        originalPrice: null,
+                        currency: "",
+                        period: "",
+                        description:
+                          "White-glove service for enterprise organizations",
+                        features: [
+                          "Unlimited verifications",
+                          "Custom domain intelligence",
+                          "Dedicated account manager",
+                          "99.9% SLA guarantee",
+                          "Custom integrations",
+                          "Advanced security (SSO/SAML)",
+                          "White-label solutions",
+                          "API rate limit increases",
+                          "Custom onboarding & training",
+                        ],
+                        highlight: false,
+                        ctaText: "Contact Sales",
+                        gradient: "from-purple-600 to-pink-600",
+                        accentColor: "text-purple-400",
+                        borderGlow: "from-purple-500/30 to-pink-500/30",
+                      },
+                    ].map((plan, index) => (
+                      <div
+                        key={index}
+                        className={`group relative ${plan.highlight ? "lg:scale-110 lg:-mt-8" : ""}`}
+                      >
+                        {/* Sophisticated Glow Effect */}
+                        <div
+                          className={`absolute -inset-1 bg-gradient-to-r ${plan.borderGlow} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700`}
+                        ></div>
+
+                        {/* Most Popular Badge */}
+                        {plan.highlight && (
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                            <div className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white text-sm font-semibold shadow-2xl">
+                              <span className="flex items-center">
+                                <Star className="w-4 h-4 mr-2 fill-current" />
+                                Most Popular
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Premium Card Design */}
+                        <div
+                          className={`relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-700 transform group-hover:scale-105 ${plan.highlight ? "ring-2 ring-emerald-500/30" : ""}`}
+                        >
+                          {/* Header Section */}
+                          <div className="text-center mb-8">
+                            <div
+                              className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${plan.gradient}/20 border border-white/20 mb-4`}
+                            >
+                              <span
+                                className={`${plan.accentColor} text-sm font-medium uppercase tracking-wide`}
+                              >
+                                {plan.subtitle}
+                              </span>
+                            </div>
+
+                            <h3 className="text-3xl font-bold text-white mb-2">
+                              {plan.tier}
+                            </h3>
+                            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                              {plan.description}
+                            </p>
+                          </div>
+
+                          {/* Pricing Display */}
+                          <div className="text-center mb-10">
+                            <div className="flex items-baseline justify-center mb-4">
+                              {plan.currency && (
+                                <span
+                                  className={`text-3xl font-semibold ${plan.accentColor} mr-1`}
+                                >
+                                  {plan.currency}
+                                </span>
+                              )}
+                              <span className="text-6xl font-bold text-white tracking-tight">
+                                {plan.price}
+                              </span>
+                              {plan.period && (
+                                <span className="text-xl text-gray-400 ml-2">
+                                  {plan.period}
+                                </span>
+                              )}
+                            </div>
+
+                            {plan.originalPrice && (
+                              <div className="text-gray-500">
+                                <span className="line-through text-lg">
+                                  ${plan.originalPrice}/month
+                                </span>
+                                <span className="ml-2 text-emerald-400 font-medium">
+                                  Save 25%
+                                </span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Features List */}
+                          <div className="space-y-4 mb-10">
+                            {plan.features.map((feature, idx) => (
+                              <div
+                                key={idx}
+                                className="flex items-start group/item"
+                              >
+                                <div
+                                  className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.gradient} flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`}
+                                >
+                                  <CheckCircle className="w-3 h-3 text-white" />
+                                </div>
+                                <span className="text-gray-300 leading-relaxed group-hover/item:text-white transition-colors duration-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* CTA Button */}
+                          <Button
+                            asChild
+                            className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 ${
+                              plan.highlight
+                                ? "bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white"
+                                : `bg-gradient-to-r ${plan.gradient} hover:opacity-90 text-white`
+                            }`}
+                          >
+                            <Link
+                              to="/signup"
+                              className="flex items-center justify-center"
+                            >
+                              {plan.ctaText}
+                              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
+                          </Button>
+
+                          {/* Trust Indicators */}
+                          <div className="mt-6 text-center">
+                            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>14-day free trial</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                <span>No setup fees</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
           </div>
 
-          <div className="text-center">
-            <Button
-              size="lg"
-              asChild
-              className="bg-transparent border-2 border-brand-success text-brand-success hover:bg-brand-success hover:text-white"
-            >
-              <Link to="/pricing">View Full Pricing Details</Link>
-            </Button>
+          {/* Advanced Value Proposition Footer */}
+          <div className="mt-24 text-center">
+            <div className="relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-white/[0.08] to-white/[0.12] backdrop-blur-xl border border-white/20 rounded-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-2xl blur-lg"></div>
+              <div className="relative flex items-center space-x-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-semibold text-lg">
+                      Enterprise Ready
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      SOC 2 Type II Certified
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-px h-12 bg-white/20"></div>
+
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link to="/pricing" className="flex items-center">
+                    View Detailed Pricing
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            <p className="text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
+              All plans include 14-day free trial • No setup fees • Cancel
+              anytime •
+              <span className="text-emerald-400 font-medium">
+                {" "}
+                99.9% uptime SLA
+              </span>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 11. Blog Highlights */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Latest from Our Blog
+      {/* 11. Premium Knowledge Hub - Advanced Blog Showcase */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Ultra-sophisticated Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/40 dark:to-purple-900/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(147,51,234,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_75%_75%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+
+        {/* Dynamic Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+                               linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+                               linear-gradient(45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%),
+                               linear-gradient(-45deg, transparent 75%, rgba(147, 51, 234, 0.1) 75%)`,
+              backgroundSize: "60px 60px",
+              backgroundPosition: "0 0, 0 30px, 30px -30px, -30px 0px",
+            }}
+          ></div>
+        </div>
+
+        {/* Floating Accent Elements */}
+        <div className="absolute top-32 left-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-40"></div>
+        <div className="absolute bottom-40 right-32 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-1/2 right-20 w-1 h-1 bg-emerald-400 rounded-full animate-bounce opacity-50"></div>
+
+        {/* Large Ambient Effects */}
+        <div className="absolute top-20 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-l from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="relative max-w-8xl mx-auto">
+          {/* Elite Header Section */}
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-blue-100/80 dark:bg-blue-500/10 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-xl mb-12">
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-4 animate-pulse shadow-lg shadow-blue-400/50"></div>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-[0.2em] uppercase">
+                Knowledge Hub
+              </span>
+            </div>
+
+            <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
+              <span className="block text-gray-900 dark:text-white mb-2">
+                Expert
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative">
+                Insights
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-xl -z-10"></div>
+              </span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Stay updated with the latest lead generation insights and
-              strategies
+
+            <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+              Stay ahead of the curve with
+              <span className="text-blue-600 dark:text-blue-400 font-medium">
+                {" "}
+                cutting-edge strategies
+              </span>
+              ,
+              <span className="text-purple-600 dark:text-purple-400 font-medium">
+                {" "}
+                industry insights
+              </span>
+              , and
+              <span className="text-pink-600 dark:text-pink-400 font-medium">
+                {" "}
+                proven methodologies
+              </span>{" "}
+              from our experts.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Advanced Blog Cards Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
-              <Card
-                key={index}
-                className="glass border-white/20 hover:border-brand-success/50 transition-all duration-300"
-              >
-                <CardHeader>
-                  <div className="text-4xl mb-4">{post.image}</div>
-                  <CardTitle className="text-white text-lg leading-tight">
-                    {post.title}
-                  </CardTitle>
-                  <div className="text-gray-400 text-sm">{post.date}</div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm mb-4">{post.excerpt}</p>
-                  <Button
-                    variant="ghost"
-                    className="text-brand-success hover:text-brand-success/90 p-0"
-                  >
-                    Read More <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </CardContent>
-              </Card>
+              <article key={index} className="group relative">
+                {/* Sophisticated Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-all duration-700"></div>
+
+                {/* Premium Card Design */}
+                <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl overflow-hidden hover:bg-white dark:hover:bg-white/10 transition-all duration-700 transform group-hover:scale-105 group-hover:-translate-y-4">
+                  {/* Advanced Header with Visual Element */}
+                  <div className="relative p-8 pb-6">
+                    {/* Floating Icon with Complex Design */}
+                    <div className="relative mb-6">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-50"></div>
+                      <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                        <span className="text-4xl">{post.image}</span>
+                      </div>
+
+                      {/* Orbiting Elements */}
+                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-400 rounded-full animate-bounce group-hover:animate-ping transition-all duration-300"></div>
+                      <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse group-hover:animate-bounce transition-all duration-300"></div>
+                    </div>
+
+                    {/* Enhanced Typography */}
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <Badge className="bg-blue-100/80 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/30 px-3 py-1">
+                          Strategy
+                        </Badge>
+                        <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {post.date}
+                        </div>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="px-8 pb-8">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300">
+                      {post.excerpt}
+                    </p>
+
+                    {/* Advanced CTA */}
+                    <div className="flex items-center justify-between">
+                      <Button
+                        variant="ghost"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 font-semibold group/btn"
+                      >
+                        <span>Read Full Article</span>
+                        <ChevronRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Button>
+
+                      <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                        <Eye className="w-4 h-4" />
+                        <span>5 min read</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Interactive Bottom Border */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+              </article>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button
-              asChild
-              className="bg-transparent border-2 border-brand-success text-brand-success hover:bg-brand-success hover:text-white"
-            >
-              <Link to="/blog">View All Posts</Link>
-            </Button>
+          {/* Advanced Footer CTA */}
+          <div className="mt-24 text-center">
+            <div className="relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-white/90 to-white/95 dark:from-white/[0.08] dark:to-white/[0.12] backdrop-blur-xl border border-gray-200/50 dark:border-white/20 rounded-2xl shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg"></div>
+              <div className="relative flex items-center space-x-6">
+                <div className="text-left">
+                  <div className="text-gray-900 dark:text-white font-semibold text-lg">
+                    Explore Our Complete Library
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                    50+ expert articles & case studies
+                  </div>
+                </div>
+
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link to="/blog" className="flex items-center">
+                    View All Insights
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 12. Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Ready to 10x Your Lead Generation?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Join thousands of sales teams who've transformed their prospecting
-            with W3Leads
-          </p>
+      {/* 12. Ultimate Conversion CTA - Hero-Level Design */}
+      <section className="py-40 px-4 relative overflow-hidden">
+        {/* Ultra-Premium Background Architecture */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.2),transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(16,185,129,0.12),transparent_50%)]"></div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              asChild
-              className="bg-white text-brand-primary hover:bg-gray-100 text-lg px-8 py-6"
-            >
-              <Link to="/signup">Start Free Trial</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-primary text-lg px-8 py-6"
-            >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Book a Demo
-            </Button>
+        {/* Dynamic Mesh Gradient Overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div
+            className="absolute inset-0 animate-pulse"
+            style={{
+              background: `
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)
+              `,
+            }}
+          ></div>
+        </div>
+
+        {/* Sophisticated Particle System */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`,
+                animationDuration: `${2 + Math.random() * 2}s`,
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Large Ambient Light Sources */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-600/15 to-blue-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto text-center">
+          {/* Premium Badge */}
+          <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 backdrop-blur-xl mb-16">
+            <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mr-4 animate-pulse shadow-lg shadow-emerald-400/50"></div>
+            <span className="text-emerald-300 text-sm font-semibold tracking-[0.2em] uppercase">
+              Ready to Transform?
+            </span>
           </div>
 
-          <p className="text-gray-200 text-sm mt-6">
-            No credit card required • 14-day free trial • Cancel anytime
+          {/* Hero-Level Typography */}
+          <h2 className="text-7xl md:text-9xl font-bold mb-8 leading-none">
+            <span className="block text-white mb-4">Scale Your</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 relative">
+              Success
+              <div className="absolute -inset-6 bg-gradient-to-r from-emerald-400/20 via-blue-400/20 to-purple-400/20 blur-2xl -z-10"></div>
+            </span>
+          </h2>
+
+          <p className="text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16 font-light">
+            Join
+            <span className="text-emerald-400 font-semibold">
+              {" "}
+              10,000+ sales professionals
+            </span>{" "}
+            who've already
+            <span className="text-blue-400 font-semibold">
+              {" "}
+              transformed their prospecting
+            </span>{" "}
+            and achieved
+            <span className="text-purple-400 font-semibold">
+              {" "}
+              exponential growth
+            </span>{" "}
+            with W3Leads.
           </p>
+
+          {/* Advanced CTA Button Group */}
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
+            {/* Primary CTA with Complex Design */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition-all duration-700"></div>
+              <Button
+                size="lg"
+                asChild
+                className="relative bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white text-xl px-12 py-6 rounded-2xl font-bold shadow-2xl transform group-hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/signup" className="flex items-center">
+                  <Sparkles className="w-6 h-6 mr-3" />
+                  Start Free Trial Now
+                  <ChevronRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Secondary CTA with Glass Morphism */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/30 rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-all duration-700"></div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="relative bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white hover:bg-white/20 text-xl px-12 py-6 rounded-2xl font-bold transform group-hover:scale-105 transition-all duration-300"
+              >
+                <PlayCircle className="w-6 h-6 mr-3" />
+                Watch Live Demo
+              </Button>
+            </div>
+          </div>
+
+          {/* Trust Indicators with Advanced Design */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+            {[
+              {
+                icon: Shield,
+                text: "Enterprise Security",
+                subtext: "SOC 2 Type II Certified",
+              },
+              {
+                icon: Award,
+                text: "Industry Leading",
+                subtext: "98.5% Accuracy Rate",
+              },
+              {
+                icon: Users,
+                text: "Trusted Globally",
+                subtext: "10K+ Companies",
+              },
+            ].map((item, index) => (
+              <div key={index} className="group text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-white/10 to-white/20 backdrop-blur-xl border border-white/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-white font-semibold">{item.text}</div>
+                <div className="text-gray-400 text-sm">{item.subtext}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Premium Footer Note */}
+          <div className="inline-flex items-center px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
+            <div className="flex items-center space-x-6 text-gray-300">
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-emerald-400" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="w-px h-6 bg-white/20"></div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-blue-400" />
+                <span>No credit card required</span>
+              </div>
+              <div className="w-px h-6 bg-white/20"></div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-purple-400" />
+                <span>Cancel anytime</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
