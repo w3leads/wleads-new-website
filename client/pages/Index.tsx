@@ -988,66 +988,247 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 7. Integrations Carousel */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Seamless Integrations
+      {/* 7. Advanced Integrations Ecosystem */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Sophisticated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/50 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/30 dark:to-purple-900/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.1),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15),transparent_50%)]"></div>
+
+        {/* Animated Network Lines */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 600">
+            <defs>
+              <linearGradient id="network-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3"/>
+                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.2"/>
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.3"/>
+              </linearGradient>
+            </defs>
+            <path d="M100,300 Q300,100 500,300 T900,300" stroke="url(#network-gradient)" strokeWidth="2" fill="none" className="animate-pulse"/>
+            <path d="M200,400 Q400,200 600,400 T1000,400" stroke="url(#network-gradient)" strokeWidth="1.5" fill="none" className="animate-pulse" style={{animationDelay: '1s'}}/>
+            <path d="M50,200 Q250,400 450,200 T850,200" stroke="url(#network-gradient)" strokeWidth="1" fill="none" className="animate-pulse" style={{animationDelay: '2s'}}/>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Header with Advanced Typography */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100/80 dark:bg-blue-500/10 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-medium tracking-wide uppercase">Ecosystem Integration</span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+              <span className="block">Connect Everything</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600">
+                Seamlessly
+              </span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Connect with your existing tools and workflows
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Native integrations with 100+ platforms. No complex setup, no data silos.
+              Your existing workflow, supercharged.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className="glass border-white/20 p-6 text-center hover:border-brand-success/50 transition-all duration-300"
-              >
-                <div className="text-4xl mb-2">{integration.logo}</div>
-                <div className="text-white font-semibold">
-                  {integration.name}
+          {/* Integration Hub Design */}
+          <div className="relative mb-20">
+            {/* Central Hub */}
+            <div className="flex justify-center mb-16">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
+                <div className="relative w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center border-4 border-white/20">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-2xl">W3</span>
+                  </div>
                 </div>
-              </Card>
-            ))}
+              </div>
+            </div>
+
+            {/* Integration Categories in Orbiting Design */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {integrations.map((integration, index) => (
+                <div key={index} className="group relative">
+                  {/* Connection Line to Center */}
+                  <div className="absolute top-1/2 left-1/2 w-px h-20 bg-gradient-to-t from-blue-500/30 to-transparent -translate-x-1/2 -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-2xl p-6 hover:bg-white dark:hover:bg-white/10 transition-all duration-500 transform group-hover:scale-110 group-hover:-translate-y-2">
+                      <div className="text-center">
+                        <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                          {integration.logo}
+                        </div>
+                        <div className="text-gray-900 dark:text-white font-semibold text-sm">
+                          {integration.name}
+                        </div>
+
+                        {/* Status Indicator */}
+                        <div className="mt-2 inline-flex items-center px-2 py-1 rounded-full bg-green-100/80 dark:bg-green-500/20 border border-green-200 dark:border-green-500/30">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1 animate-pulse"></div>
+                          <span className="text-green-600 dark:text-green-400 text-xs font-medium">Active</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Integration Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="group">
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
+              <div className="text-gray-600 dark:text-gray-400">Native integrations</div>
+            </div>
+            <div className="group">
+              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">&lt; 5min</div>
+              <div className="text-gray-600 dark:text-gray-400">Setup time</div>
+            </div>
+            <div className="group">
+              <div className="text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
+              <div className="text-gray-600 dark:text-gray-400">Uptime reliability</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 8. Security & Compliance */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-8">
-              Enterprise-Grade Security
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Your data security and compliance are our top priorities
-            </p>
+      {/* 8. Enterprise Security & Trust */}
+      <section className="py-32 px-4 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+        {/* Security Pattern Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 2px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { icon: Lock, title: "SPF/DKIM", desc: "Email authentication" },
-                {
-                  icon: Shield,
-                  title: "GDPR",
-                  desc: "Compliant data handling",
-                },
-                { icon: Award, title: "SOC 2", desc: "Security standards" },
-                { icon: Eye, title: "Privacy", desc: "Data protection" },
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-brand-success to-brand-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-6 h-6 text-white" />
+        {/* Floating Security Elements */}
+        <div className="absolute top-20 left-20 w-4 h-4 bg-green-400 rounded-full animate-ping opacity-60"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse opacity-70"></div>
+        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm mb-8">
+              <Shield className="w-4 h-4 text-green-400 mr-3" />
+              <span className="text-green-400 text-sm font-medium tracking-wide uppercase">Enterprise Security</span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              <span className="block">Bank-Level</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
+                Security & Compliance
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Your data deserves fortress-level protection. We meet and exceed the highest security standards
+              so you can focus on growing your business with complete peace of mind.
+            </p>
+          </div>
+
+          {/* Security Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {[
+              {
+                icon: Lock,
+                title: "SPF/DKIM Authentication",
+                desc: "Email authentication protocols ensure deliverability and reputation protection",
+                color: "from-green-500 to-emerald-500",
+                bgColor: "from-green-500/20 to-emerald-500/20"
+              },
+              {
+                icon: Shield,
+                title: "GDPR Compliance",
+                desc: "Full European data protection regulation compliance with automated consent management",
+                color: "from-blue-500 to-cyan-500",
+                bgColor: "from-blue-500/20 to-cyan-500/20"
+              },
+              {
+                icon: Award,
+                title: "SOC 2 Type II",
+                desc: "Certified security controls for availability, processing integrity, and confidentiality",
+                color: "from-purple-500 to-violet-500",
+                bgColor: "from-purple-500/20 to-violet-500/20"
+              },
+              {
+                icon: Eye,
+                title: "Zero-Trust Architecture",
+                desc: "Advanced privacy controls with end-to-end encryption and access verification",
+                color: "from-orange-500 to-red-500",
+                bgColor: "from-orange-500/20 to-red-500/20"
+              },
+            ].map((item, index) => (
+              <div key={index} className="group relative">
+                {/* Glow Effect */}
+                <div className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}></div>
+
+                <div className="relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/[0.12] transition-all duration-500">
+                  {/* Icon Container */}
+                  <div className="relative mb-6">
+                    <div className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}></div>
+                    <div className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500`}>
+                      <item.icon className="w-8 h-8 text-white" />
+                    </div>
+
+                    {/* Status Indicator */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
                   </div>
-                  <h3 className="text-white font-semibold mb-2">
+
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    {item.desc}
+                  </p>
+
+                  {/* Verification Badge */}
+                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                    <span className="text-green-400 text-xs font-medium">Verified</span>
+                  </div>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-12">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-white mb-4">Trusted by Enterprise Leaders</h3>
+              <p className="text-gray-300">Join Fortune 500 companies who trust us with their most sensitive data</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {/* Certification Badges */}
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">ISO 27001 Certified</h4>
+                <p className="text-gray-400 text-sm">International security management standards</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">CCPA Compliant</h4>
+                <p className="text-gray-400 text-sm">California Consumer Privacy Act adherence</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <Lock className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">256-bit Encryption</h4>
+                <p className="text-gray-400 text-sm">Military-grade data protection</p>
+              </div>
             </div>
           </div>
         </div>
