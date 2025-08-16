@@ -1786,12 +1786,8 @@ export default function Index() {
               </span>
             </div>
 
-            <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
-              <span className="block text-white mb-2">Pricing That</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 relative">
-                Scales Success
-                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 via-blue-400/20 to-purple-400/20 blur-xl -z-10"></div>
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+              Choose Your Plan
             </h2>
 
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-16 font-light">
