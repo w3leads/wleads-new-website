@@ -395,7 +395,10 @@ const Layout = ({ children }: LayoutProps) => {
               <div className="lg:col-span-5 space-y-8">
                 {/* Brand Section */}
                 <div className="space-y-6">
-                  <Link to="/" className="group inline-flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+                  <Link
+                    to="/"
+                    className="group inline-flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
+                  >
                     <div className="relative">
                       <div className="w-12 h-12 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-purple rounded-2xl flex items-center justify-center shadow-2xl shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
                         <span className="text-white font-bold text-xl">W3</span>
@@ -413,23 +416,33 @@ const Layout = ({ children }: LayoutProps) => {
                   </Link>
 
                   <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                    The most advanced B2B lead generation and email verification platform.
-                    Trusted by <span className="text-brand-success font-semibold">50,000+</span> businesses worldwide.
+                    The most advanced B2B lead generation and email verification
+                    platform. Trusted by{" "}
+                    <span className="text-brand-success font-semibold">
+                      50,000+
+                    </span>{" "}
+                    businesses worldwide.
                   </p>
 
                   {/* Trust Indicators */}
                   <div className="flex flex-wrap gap-3">
                     <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
                       <CheckCircle className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">GDPR Compliant</span>
+                      <span className="text-xs text-brand-success font-medium">
+                        GDPR Compliant
+                      </span>
                     </div>
                     <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
                       <Shield className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">SOC 2 Certified</span>
+                      <span className="text-xs text-brand-success font-medium">
+                        SOC 2 Certified
+                      </span>
                     </div>
                     <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
                       <Award className="w-4 h-4 text-brand-success" />
-                      <span className="text-xs text-brand-success font-medium">99.9% Uptime</span>
+                      <span className="text-xs text-brand-success font-medium">
+                        99.9% Uptime
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -442,7 +455,8 @@ const Layout = ({ children }: LayoutProps) => {
                       <span>Stay Updated</span>
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Get the latest updates, tips, and exclusive offers delivered to your inbox.
+                      Get the latest updates, tips, and exclusive offers
+                      delivered to your inbox.
                     </p>
                   </div>
                   <div className="flex space-x-2">
@@ -467,7 +481,9 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="w-4 h-4 text-brand-secondary" />
-                    <span className="text-sm">San Francisco, CA & Remote Worldwide</span>
+                    <span className="text-sm">
+                      San Francisco, CA & Remote Worldwide
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="w-4 h-4 text-brand-secondary" />
@@ -490,11 +506,26 @@ const Layout = ({ children }: LayoutProps) => {
                   </h3>
                   <div className="space-y-3">
                     {[
-                      { name: "Domain Finder", href: "/products/domain-finder", badge: "Popular" },
-                      { name: "Email Finder", href: "/products/email-finder", badge: "New" },
-                      { name: "Email Verifier", href: "/products/email-verifier" },
+                      {
+                        name: "Domain Finder",
+                        href: "/products/domain-finder",
+                        badge: "Popular",
+                      },
+                      {
+                        name: "Email Finder",
+                        href: "/products/email-finder",
+                        badge: "New",
+                      },
+                      {
+                        name: "Email Verifier",
+                        href: "/products/email-verifier",
+                      },
                       { name: "Discover", href: "/products/discover" },
-                      { name: "Campaigns", href: "/products/campaigns", badge: "Beta" },
+                      {
+                        name: "Campaigns",
+                        href: "/products/campaigns",
+                        badge: "Beta",
+                      },
                     ].map((item, index) => (
                       <Link
                         key={index}
@@ -522,7 +553,11 @@ const Layout = ({ children }: LayoutProps) => {
                   <div className="space-y-3">
                     {[
                       { name: "About Us", href: "/about" },
-                      { name: "Careers", href: "/careers", badge: "We're hiring!" },
+                      {
+                        name: "Careers",
+                        href: "/careers",
+                        badge: "We're hiring!",
+                      },
                       { name: "Blog", href: "/blog" },
                       { name: "Press Kit", href: "/press" },
                       { name: "Contact", href: "/contact" },
@@ -610,10 +645,15 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className="flex items-center space-x-2">
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
-                  <span className="text-sm text-gray-400">4.9/5 from 2,500+ reviews</span>
+                  <span className="text-sm text-gray-400">
+                    4.9/5 from 2,500+ reviews
+                  </span>
                 </div>
               </div>
 
@@ -621,11 +661,31 @@ const Layout = ({ children }: LayoutProps) => {
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400 text-sm mr-2">Follow us:</span>
                 {[
-                  { icon: Twitter, href: "https://twitter.com/w3leads", label: "Twitter" },
-                  { icon: Linkedin, href: "https://linkedin.com/company/w3leads", label: "LinkedIn" },
-                  { icon: Github, href: "https://github.com/w3leads", label: "GitHub" },
-                  { icon: Youtube, href: "https://youtube.com/w3leads", label: "YouTube" },
-                  { icon: Instagram, href: "https://instagram.com/w3leads", label: "Instagram" },
+                  {
+                    icon: Twitter,
+                    href: "https://twitter.com/w3leads",
+                    label: "Twitter",
+                  },
+                  {
+                    icon: Linkedin,
+                    href: "https://linkedin.com/company/w3leads",
+                    label: "LinkedIn",
+                  },
+                  {
+                    icon: Github,
+                    href: "https://github.com/w3leads",
+                    label: "GitHub",
+                  },
+                  {
+                    icon: Youtube,
+                    href: "https://youtube.com/w3leads",
+                    label: "YouTube",
+                  },
+                  {
+                    icon: Instagram,
+                    href: "https://instagram.com/w3leads",
+                    label: "Instagram",
+                  },
                 ].map((social, index) => (
                   <a
                     key={index}
