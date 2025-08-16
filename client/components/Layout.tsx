@@ -114,7 +114,7 @@ const Layout = ({ children }: LayoutProps) => {
               className="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-purple rounded-xl flex items-center justify-center shadow-lg shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center shadow-lg shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
                   <span className="text-white font-bold text-lg">W3</span>
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-brand-success rounded-full opacity-80 animate-pulse"></div>
                 </div>
