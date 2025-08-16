@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +40,14 @@ export default function Index() {
   const [searchDomain, setSearchDomain] = useState("");
   const [verifyEmail, setVerifyEmail] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   const handleDomainSearch = () => {
     console.log("Searching domain:", searchDomain);
@@ -630,7 +638,7 @@ export default function Index() {
             What Our Customers Say
           </h2>
 
-          <Card className="glass border-white/20 p-8">
+          <Card className="glass-card border-gray-200 dark:border-white/20 p-8">
             <CardContent className="space-y-6">
               <div className="flex justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -641,7 +649,7 @@ export default function Index() {
                 ))}
               </div>
 
-              <blockquote className="text-xl text-white italic">
+              <blockquote className="text-xl text-gray-900 dark:text-white italic">
                 "{testimonials[currentTestimonial].content}"
               </blockquote>
 
@@ -650,10 +658,10 @@ export default function Index() {
                   {testimonials[currentTestimonial].avatar}
                 </div>
                 <div className="text-left">
-                  <div className="text-white font-semibold">
+                  <div className="text-gray-900 dark:text-white font-semibold">
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-gray-300 text-sm">
+                  <div className="text-gray-600 dark:text-gray-300 text-sm">
                     {testimonials[currentTestimonial].role}
                   </div>
                 </div>
@@ -666,8 +674,8 @@ export default function Index() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentTestimonial
-                        ? "bg-brand-success"
-                        : "bg-white/30"
+                        ? "bg-brand-primary"
+                        : "bg-gray-300 dark:bg-white/30"
                     }`}
                   />
                 ))}
