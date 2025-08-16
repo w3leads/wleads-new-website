@@ -881,7 +881,7 @@ export default function Index() {
                     <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-lg opacity-40"></div>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent rounded-3xl blur-lg opacity-40"></div>
                         <div className="relative">
                           <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
                             <div className="flex-shrink-0">
