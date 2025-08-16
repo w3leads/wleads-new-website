@@ -734,7 +734,7 @@ export default function Index() {
                 generation process and increased conversions by 340%
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white px-8 py-3 font-semibold">
+                <Button className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white px-8 py-3 font-semibold">
                   Start Free Trial
                 </Button>
                 <Button
