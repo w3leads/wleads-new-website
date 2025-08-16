@@ -319,10 +319,10 @@ export default function Index() {
                 label: "Companies Served",
                 sublabel: "Across 50+ countries",
                 icon: "🏢",
-                gradient: "from-blue-500 to-cyan-500",
+                gradient: "from-brand-primary to-brand-primary",
                 bgGradient:
-                  "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-                iconBg: "bg-blue-100 dark:bg-blue-900/30",
+                  "from-brand-primary/5 to-brand-primary/10 dark:from-brand-primary/10 dark:to-brand-primary/20",
+                iconBg: "bg-brand-primary/20 dark:bg-brand-primary/30",
               },
               {
                 number: "98.5%",
