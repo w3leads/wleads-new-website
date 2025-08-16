@@ -759,13 +759,13 @@ export default function Index() {
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/40 to-transparent rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/30 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-purple/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-success rounded-full animate-ping opacity-60"></div>
+        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-accent rounded-full animate-ping opacity-60"></div>
         <div className="absolute bottom-32 right-10 w-1 h-1 bg-brand-secondary rounded-full animate-pulse opacity-80"></div>
-        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-purple rounded-full animate-bounce opacity-40"></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-primary rounded-full animate-bounce opacity-40"></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Header Section */}
