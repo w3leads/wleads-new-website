@@ -230,72 +230,99 @@ const Layout = ({ children }: LayoutProps) => {
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 space-y-4">
-              <div className="space-y-2">
-                <div className="text-white font-medium">Products</div>
-                <div className="pl-4 space-y-2">
+            <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-white/10 shadow-xl shadow-black/5">
+              <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
+                {/* Mobile Products Section */}
+                <div className="space-y-4">
+                  <div className="text-gray-900 dark:text-white font-semibold text-lg border-b border-gray-200/50 dark:border-white/10 pb-3">
+                    Products
+                  </div>
+                  <div className="grid grid-cols-1 gap-3">
+                    {productItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="group flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <div className={`p-2 rounded-lg bg-gray-100/50 dark:bg-white/5 group-hover:scale-110 transition-transform duration-300 ${item.color}`}>
+                          <item.icon className="w-5 h-5" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary transition-colors duration-300">
+                            {item.title}
+                          </div>
+                          <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                            {item.description}
+                          </div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-primary group-hover:translate-x-1 transition-all duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Navigation Links */}
+                <div className="grid grid-cols-1 gap-2">
                   <Link
-                    to="/products/domain-finder"
-                    className="block text-gray-300 hover:text-brand-success"
+                    to="/pricing"
+                    className={`p-4 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100/50 dark:hover:bg-white/5 ${
+                      isActive("/pricing")
+                        ? "text-brand-primary bg-brand-primary/10"
+                        : "text-gray-700 dark:text-gray-200 hover:text-brand-primary"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Domain Finder
+                    Pricing
                   </Link>
                   <Link
-                    to="/products/email-finder"
-                    className="block text-gray-300 hover:text-brand-success"
+                    to="/blog"
+                    className={`p-4 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100/50 dark:hover:bg-white/5 ${
+                      isActive("/blog")
+                        ? "text-brand-primary bg-brand-primary/10"
+                        : "text-gray-700 dark:text-gray-200 hover:text-brand-primary"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Email Finder
+                    Blog
                   </Link>
                   <Link
-                    to="/products/email-verifier"
-                    className="block text-gray-300 hover:text-brand-success"
+                    to="/about"
+                    className={`p-4 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100/50 dark:hover:bg-white/5 ${
+                      isActive("/about")
+                        ? "text-brand-primary bg-brand-primary/10"
+                        : "text-gray-700 dark:text-gray-200 hover:text-brand-primary"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Email Verifier
-                  </Link>
-                  <Link
-                    to="/products/discover"
-                    className="block text-gray-300 hover:text-brand-success"
-                  >
-                    Discover
-                  </Link>
-                  <Link
-                    to="/products/campaigns"
-                    className="block text-gray-300 hover:text-brand-success"
-                  >
-                    Campaigns
+                    About
                   </Link>
                 </div>
+
+                {/* Mobile Action Buttons */}
+                <div className="grid grid-cols-1 gap-3 pt-4 border-t border-gray-200/50 dark:border-white/10">
+                  <Button variant="outline" asChild className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5">
+                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                      <Search className="w-4 h-4 mr-2" />
+                      Search
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild className="w-full rounded-xl border-gray-200 dark:border-white/20 hover:bg-gray-100/50 dark:hover:bg-white/5">
+                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                      Sign In
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-purple text-white shadow-lg shadow-brand-primary/25 border-0 rounded-xl font-semibold"
+                  >
+                    <Link to="/signup" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center space-x-2">
+                      <span>Start Free</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              <Link
-                to="/pricing"
-                className="block text-white hover:text-brand-success"
-              >
-                Pricing
-              </Link>
-              <Link
-                to="/blog"
-                className="block text-white hover:text-brand-success"
-              >
-                Blog
-              </Link>
-              <Link
-                to="/about"
-                className="block text-white hover:text-brand-success"
-              >
-                About
-              </Link>
-              <Link
-                to="/login"
-                className="block text-white hover:text-brand-success"
-              >
-                Sign In
-              </Link>
-              <Button
-                asChild
-                className="bg-gradient-to-r from-brand-success to-brand-purple hover:from-brand-purple hover:to-brand-success text-white border-0 w-full"
-              >
-                <Link to="/signup">Start Free</Link>
-              </Button>
             </div>
           )}
         </div>
