@@ -2344,11 +2344,10 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Advanced Footer CTA */}
+          {/* Clean Footer CTA */}
           <div className="mt-24 text-center">
-            <div className="relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-white/90 to-white/95 dark:from-white/[0.08] dark:to-white/[0.12] backdrop-blur-xl border border-gray-200/50 dark:border-white/20 rounded-2xl shadow-2xl">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg"></div>
-              <div className="relative flex items-center space-x-6">
+            <div className="inline-flex items-center px-12 py-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-lg">
+              <div className="flex items-center space-x-6">
                 <div className="text-left">
                   <div className="text-gray-900 dark:text-white font-semibold text-lg">
                     Explore Our Complete Library
