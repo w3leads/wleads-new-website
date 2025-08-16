@@ -1421,15 +1421,35 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. Pricing Teaser */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+      {/* 10. Premium Pricing Architecture */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Sophisticated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-green-50/30 to-blue-50/20 dark:from-slate-900 dark:via-green-900/20 dark:to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.1),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_bottom,rgba(34,197,94,0.15),transparent_50%)]"></div>
+
+        {/* Floating Price Elements */}
+        <div className="absolute top-20 right-1/4 text-4xl text-green-200/20 dark:text-green-400/10 font-bold">$</div>
+        <div className="absolute bottom-20 left-1/4 text-3xl text-blue-200/20 dark:text-blue-400/10 font-bold">€</div>
+        <div className="absolute top-1/2 right-10 w-24 h-24 bg-green-200/10 dark:bg-green-400/5 rounded-full blur-2xl animate-pulse"></div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Premium Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-100/80 dark:bg-green-500/10 border border-green-200/50 dark:border-green-500/20 backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-green-600 dark:text-green-400 text-sm font-medium tracking-wide uppercase">Investment Plans</span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+              <span className="block">Simple, Transparent</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-blue-600 to-purple-600">
+                ROI-Driven Pricing
+              </span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Choose the plan that fits your business needs
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
+              Choose the investment level that matches your growth ambitions. Every plan is designed
+              to deliver measurable ROI from day one.
             </p>
 
             <Tabs defaultValue="monthly" className="mt-8">
