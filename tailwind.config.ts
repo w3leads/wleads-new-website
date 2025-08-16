@@ -57,14 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // W3Leads brand colors using CSS variables
+        // W3Leads professional brand system
         brand: {
           primary: "hsl(var(--brand-primary))",
           secondary: "hsl(var(--brand-secondary))",
-          success: "hsl(var(--brand-success))",
-          purple: "hsl(var(--brand-purple))",
-          "gradient-start": "hsl(var(--brand-gradient-start))",
-          "gradient-end": "hsl(var(--brand-gradient-end))",
+          accent: "hsl(var(--brand-accent))",
+          neutral: "hsl(var(--brand-neutral))",
+          text: "hsl(var(--brand-text))",
         },
       },
       borderRadius: {
