@@ -1350,10 +1350,10 @@ export default function Index() {
                 {/* Metric Display */}
                 <div className="space-y-4">
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-blue-300 transition-colors duration-500">
+                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-brand-primary transition-colors duration-500">
                       20+
                     </span>
-                    <span className="text-xl text-blue-300 font-medium">
+                    <span className="text-xl text-brand-primary font-medium">
                       hrs
                     </span>
                   </div>
