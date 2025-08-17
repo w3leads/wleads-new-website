@@ -1948,7 +1948,7 @@ export default function Index() {
                 <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   256-bit Encryption
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Military-grade data protection
                 </p>
               </div>
