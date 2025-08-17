@@ -470,19 +470,19 @@ const Layout = ({ children }: LayoutProps) => {
 
                 {/* Contact Info */}
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4 text-brand-secondary" />
-                    <span className="text-sm">
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-4 h-4 text-brand-primary" />
+                    <span className="text-sm text-gray-700 dark:text-gray-300">
                       San Francisco, CA & Remote Worldwide
                     </span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4 text-brand-secondary" />
-                    <span className="text-sm">hello@w3leads.com</span>
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-4 h-4 text-brand-primary" />
+                    <span className="text-sm text-gray-700 dark:text-gray-300">hello@w3leads.com</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Clock className="w-4 h-4 text-brand-secondary" />
-                    <span className="text-sm">24/7 Customer Support</span>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="w-4 h-4 text-brand-primary" />
+                    <span className="text-sm text-gray-700 dark:text-gray-300">24/7 Customer Support</span>
                   </div>
                 </div>
               </div>
