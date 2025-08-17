@@ -861,11 +861,11 @@ export default function Index() {
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/40 to-transparent rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/30 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-success/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-accent rounded-full animate-ping opacity-60"></div>
+        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-orange rounded-full animate-ping opacity-60"></div>
         <div className="absolute bottom-32 right-10 w-1 h-1 bg-brand-secondary rounded-full animate-pulse opacity-80"></div>
         <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-primary rounded-full animate-bounce opacity-40"></div>
 
@@ -881,7 +881,7 @@ export default function Index() {
             <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
               <span className="text-white">Experience the</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
                 Power in Action
               </span>
             </h2>
@@ -898,7 +898,7 @@ export default function Index() {
             <div className="relative">
               {/* Multi-layer Glow Effect */}
               <div className="absolute -inset-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-brand-purple rounded-3xl blur-md opacity-40"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-brand-orange rounded-3xl blur-md opacity-40"></div>
 
               {/* Main Content */}
               <div className="relative bg-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 md:p-16 shadow-2xl">
@@ -906,9 +906,9 @@ export default function Index() {
                 <div className="flex items-center justify-between mb-12 pb-8 border-b border-white/20">
                   <div className="flex items-center space-x-4">
                     <div className="flex space-x-2">
-                      <div className="w-4 h-4 bg-red-400 rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-lg"></div>
+                      <div className="w-4 h-4 bg-brand-orange rounded-full shadow-lg"></div>
+                      <div className="w-4 h-4 bg-brand-orange/70 rounded-full shadow-lg"></div>
+                      <div className="w-4 h-4 bg-brand-success rounded-full shadow-lg"></div>
                     </div>
                     <div className="bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
                       <span className="text-gray-300 text-sm font-mono">
@@ -962,7 +962,7 @@ export default function Index() {
                       }}
                       className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "email"
-                          ? "bg-gradient-to-r from-brand-success to-emerald-600 text-white shadow-xl shadow-brand-success/25"
+                          ? "bg-gradient-to-r from-brand-success to-brand-success text-white shadow-xl shadow-brand-success/25"
                           : "text-gray-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
@@ -983,7 +983,7 @@ export default function Index() {
                     <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent rounded-3xl blur-lg opacity-40"></div>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-lg opacity-40"></div>
                         <div className="relative">
                           <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
                             <div className="flex-shrink-0">
