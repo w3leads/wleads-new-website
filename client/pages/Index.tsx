@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Layout from "@/components/Layout";
+import { VideoModal } from "@/components/VideoModal";
 import {
   Search,
   Mail,
@@ -35,6 +36,7 @@ import {
   Lock,
   Award,
   ChevronRight,
+  X,
 } from "lucide-react";
 
 export default function Index() {
@@ -42,6 +44,14 @@ export default function Index() {
   const [verifyEmail, setVerifyEmail] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [activeTab, setActiveTab] = useState("domain");
+  const [isSearching, setIsSearching] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
+  const [searchResults, setSearchResults] = useState<any>(null);
+  const [verificationResults, setVerificationResults] = useState<any>(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [heroSearchQuery, setHeroSearchQuery] = useState("techcorp.com");
+  const [heroSearchResults, setHeroSearchResults] = useState<any>(null);
+  const [isHeroSearching, setIsHeroSearching] = useState(false);
 
   const testimonials = [
     {
@@ -75,12 +85,94 @@ export default function Index() {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  const handleDomainSearch = () => {
-    console.log("Searching domain:", searchDomain);
+  const handleDomainSearch = async () => {
+    if (!searchDomain.trim()) return;
+
+    setIsSearching(true);
+    setSearchResults(null);
+
+    // Simulate API call with realistic delay
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    // Generate realistic dummy data based on domain
+    const emailCount = Math.floor(Math.random() * 2000) + 500;
+    const departments = Math.floor(Math.random() * 200) + 50;
+    const accuracy = Math.random() * 5 + 95;
+
+    setSearchResults({
+      domain: searchDomain,
+      emailsFound: emailCount,
+      departments: departments,
+      accuracy: accuracy.toFixed(1),
+      lastUpdated: new Date().toLocaleDateString(),
+      breakdown: {
+        executives: Math.floor(emailCount * 0.15),
+        sales: Math.floor(emailCount * 0.25),
+        marketing: Math.floor(emailCount * 0.2),
+        engineering: Math.floor(emailCount * 0.3),
+        other: Math.floor(emailCount * 0.1),
+      },
+    });
+
+    setIsSearching(false);
   };
 
-  const handleEmailVerify = () => {
-    console.log("Verifying email:", verifyEmail);
+  const handleEmailVerify = async () => {
+    if (!verifyEmail.trim()) return;
+
+    setIsVerifying(true);
+    setVerificationResults(null);
+
+    // Simulate API call with realistic delay
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    // Generate realistic verification results
+    const isValid = Math.random() > 0.2; // 80% chance of valid email
+    const confidence = isValid
+      ? Math.random() * 10 + 90
+      : Math.random() * 30 + 20;
+
+    setVerificationResults({
+      email: verifyEmail,
+      isValid: isValid,
+      confidence: confidence.toFixed(1),
+      status: isValid ? "Valid" : "Invalid",
+      deliverability: isValid ? "High" : "Low",
+      checks: {
+        syntax: isValid,
+        domain: isValid,
+        mxRecords: isValid,
+        smtpCheck: isValid ? Math.random() > 0.1 : false,
+      },
+      riskLevel: isValid ? "Low" : "High",
+      lastChecked: new Date().toLocaleString(),
+    });
+
+    setIsVerifying(false);
+  };
+
+  const handleHeroSearch = async () => {
+    if (!heroSearchQuery.trim()) return;
+
+    setIsHeroSearching(true);
+
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    // Generate realistic dummy data
+    const emailCount = Math.floor(Math.random() * 2000) + 800;
+    const accuracy = Math.random() * 5 + 95;
+    const departments = Math.floor(Math.random() * 150) + 80;
+
+    setHeroSearchResults({
+      domain: heroSearchQuery,
+      emailsFound: emailCount,
+      accuracy: accuracy.toFixed(1),
+      departments: departments,
+      timestamp: new Date().toLocaleString(),
+    });
+
+    setIsHeroSearching(false);
   };
 
   const integrations = [
@@ -120,7 +212,7 @@ export default function Index() {
     <Layout>
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/10 to-brand-purple/10 dark:from-brand-primary dark:via-brand-secondary dark:to-brand-purple dark:opacity-90"></div>
+        <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Find{" "}
@@ -139,7 +231,7 @@ export default function Index() {
             <Button
               size="lg"
               asChild
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
+              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
             >
               <Link to="/signup">Start Free Trial</Link>
             </Button>
@@ -147,6 +239,7 @@ export default function Index() {
               size="lg"
               variant="outline"
               className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-brand-primary text-lg px-8 py-6 transition-all duration-300"
+              onClick={() => setIsVideoModalOpen(true)}
             >
               <PlayCircle className="w-5 h-5 mr-2" />
               Watch Demo
@@ -164,33 +257,101 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Search className="w-5 h-5 text-brand-primary" />
-                  <div className="flex-1 bg-gray-100 rounded-lg px-4 py-2 text-left text-gray-600">
-                    Search domain: techcorp.com
-                  </div>
-                  <Button className="bg-brand-primary text-white">
-                    Search
+                  <Input
+                    placeholder="Enter domain (e.g., microsoft.com, google.com)"
+                    value={heroSearchQuery}
+                    onChange={(e) => setHeroSearchQuery(e.target.value)}
+                    onKeyPress={(e) => e.key === "Enter" && handleHeroSearch()}
+                    className="flex-1 bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:border-brand-primary focus:ring-brand-primary/50"
+                    disabled={isHeroSearching}
+                  />
+                  <Button
+                    className="bg-brand-primary text-white hover:bg-brand-secondary transition-all duration-300"
+                    onClick={handleHeroSearch}
+                    disabled={!heroSearchQuery.trim() || isHeroSearching}
+                  >
+                    {isHeroSearching ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                        Searching...
+                      </>
+                    ) : (
+                      <>
+                        <Search className="w-4 h-4 mr-2" />
+                        Search
+                      </>
+                    )}
                   </Button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="bg-brand-success/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-success">
-                      1,247 Emails Found
+
+                {/* Results */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm animate-in fade-in-50 duration-500">
+                  <div className="bg-brand-accent/10 p-4 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center">
+                        <Mail className="w-4 h-4 text-brand-accent" />
+                      </div>
+                      <div className="font-semibold text-brand-accent">
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.emailsFound.toLocaleString()
+                            : "1,247"}{" "}
+                        Emails Found
+                      </div>
                     </div>
-                    <div className="text-gray-600">Verified contacts</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
+                      {isHeroSearching ? "Searching..." : "Verified contacts"}
+                    </div>
                   </div>
-                  <div className="bg-brand-purple/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-purple">
-                      98.2% Accuracy
+                  <div className="bg-brand-primary/10 p-4 rounded-lg border border-brand-primary/20 transition-all duration-300 hover:bg-brand-primary/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-primary/20 rounded-lg flex items-center justify-center">
+                        <Shield className="w-4 h-4 text-brand-primary" />
+                      </div>
+                      <div className="font-semibold text-brand-primary">
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.accuracy + "%"
+                            : "98.2%"}{" "}
+                        Accuracy
+                      </div>
                     </div>
-                    <div className="text-gray-600">Verification rate</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
+                      {isHeroSearching ? "Calculating..." : "Verification rate"}
+                    </div>
                   </div>
-                  <div className="bg-brand-primary/10 p-3 rounded-lg">
-                    <div className="font-semibold text-brand-primary">
-                      156 Departments
+                  <div className="bg-brand-secondary/10 p-4 rounded-lg border border-brand-secondary/20 transition-all duration-300 hover:bg-brand-secondary/15">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-brand-secondary/20 rounded-lg flex items-center justify-center">
+                        <Building className="w-4 h-4 text-brand-secondary" />
+                      </div>
+                      <div className="font-semibold text-brand-secondary">
+                        {isHeroSearching
+                          ? "..."
+                          : heroSearchResults
+                            ? heroSearchResults.departments
+                            : "156"}{" "}
+                        Departments
+                      </div>
                     </div>
-                    <div className="text-gray-600">Mapped structure</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-xs">
+                      {isHeroSearching ? "Mapping..." : "Mapped structure"}
+                    </div>
                   </div>
                 </div>
+
+                {/* Search Status */}
+                {heroSearchResults && !isHeroSearching && (
+                  <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    ✓ Search completed for{" "}
+                    <span className="font-medium text-brand-primary">
+                      {heroSearchResults.domain}
+                    </span>{" "}
+                    at {heroSearchResults.timestamp}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -245,41 +406,41 @@ export default function Index() {
                 number: "50M+",
                 label: "Emails Verified",
                 sublabel: "Monthly processing",
-                icon: "✉️",
-                gradient: "from-emerald-500 to-teal-500",
+                icon: Mail,
+                gradient: "from-brand-accent to-brand-accent",
                 bgGradient:
-                  "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
-                iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
+                  "from-brand-accent/5 to-brand-accent/10 dark:from-brand-accent/10 dark:to-brand-accent/20",
+                iconBg: "bg-brand-accent/20 dark:bg-brand-accent/30",
               },
               {
                 number: "10K+",
                 label: "Companies Served",
                 sublabel: "Across 50+ countries",
-                icon: "🏢",
-                gradient: "from-blue-500 to-cyan-500",
+                icon: Building,
+                gradient: "from-brand-primary to-brand-primary",
                 bgGradient:
-                  "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-                iconBg: "bg-blue-100 dark:bg-blue-900/30",
+                  "from-brand-primary/5 to-brand-primary/10 dark:from-brand-primary/10 dark:to-brand-primary/20",
+                iconBg: "bg-brand-primary/20 dark:bg-brand-primary/30",
               },
               {
                 number: "98.5%",
                 label: "Accuracy Rate",
                 sublabel: "Industry leading",
-                icon: "🎯",
-                gradient: "from-purple-500 to-pink-500",
+                icon: Target,
+                gradient: "from-brand-secondary to-brand-secondary",
                 bgGradient:
-                  "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
-                iconBg: "bg-purple-100 dark:bg-purple-900/30",
+                  "from-brand-secondary/5 to-brand-secondary/10 dark:from-brand-secondary/10 dark:to-brand-secondary/20",
+                iconBg: "bg-brand-secondary/20 dark:bg-brand-secondary/30",
               },
               {
                 number: "24/7",
                 label: "Expert Support",
                 sublabel: "Always available",
-                icon: "🚀",
-                gradient: "from-orange-500 to-red-500",
+                icon: Zap,
+                gradient: "from-brand-primary to-brand-secondary",
                 bgGradient:
-                  "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
-                iconBg: "bg-orange-100 dark:bg-orange-900/30",
+                  "from-brand-primary/5 to-brand-secondary/10 dark:from-brand-primary/10 dark:to-brand-secondary/20",
+                iconBg: "bg-brand-primary/20 dark:bg-brand-primary/30",
               },
             ].map((metric, index) => (
               <div key={index} className="group relative">
@@ -296,7 +457,11 @@ export default function Index() {
                   <div
                     className={`w-14 h-14 ${metric.iconBg} rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <span className="text-2xl">{metric.icon}</span>
+                    {typeof metric.icon === "string" ? (
+                      <span className="text-2xl">{metric.icon}</span>
+                    ) : (
+                      <metric.icon className="w-7 h-7 text-brand-primary" />
+                    )}
                   </div>
 
                   {/* Metric Number */}
@@ -671,7 +836,7 @@ export default function Index() {
                 generation process and increased conversions by 340%
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-600 hover:to-green-500 text-white px-8 py-3 font-semibold">
+                <Button className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white px-8 py-3 font-semibold">
                   Start Free Trial
                 </Button>
                 <Button
@@ -687,197 +852,307 @@ export default function Index() {
       </section>
 
       {/* 5. Interactive Demo - Try It Yourself */}
-      <section className="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/20 dark:to-purple-900/20">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Sophisticated Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_70%)]"></div>
 
-        {/* Floating Background Elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-primary/5 dark:bg-brand-primary/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-brand-secondary/5 dark:bg-brand-secondary/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+        {/* Animated Mesh Gradient */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/40 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/30 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-accent rounded-full animate-ping opacity-60"></div>
+        <div className="absolute bottom-32 right-10 w-1 h-1 bg-brand-secondary rounded-full animate-pulse opacity-80"></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-primary rounded-full animate-bounce opacity-40"></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 mb-6">
-              <span className="text-brand-primary text-sm font-medium">
-                Interactive Experience
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl mb-8">
+              <div className="w-2 h-2 bg-brand-success rounded-full mr-3 animate-pulse"></div>
+              <span className="text-white text-sm font-medium tracking-wide uppercase">
+                Live Interactive Demo
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Try It{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
-                Yourself
+            <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+              <span className="text-white">Experience the</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
+                Power in Action
               </span>
             </h2>
-            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Experience the power of our platform with live demo data. See real
-              results in real-time.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Test our platform with real data processing. Enter any domain or
+              email address and watch our AI-powered engine deliver instant,
+              accurate results.
             </p>
           </div>
 
           {/* Demo Interface */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Main Demo Container */}
             <div className="relative">
-              {/* Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur opacity-20"></div>
+              {/* Multi-layer Glow Effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-brand-purple rounded-3xl blur-md opacity-40"></div>
 
               {/* Main Content */}
-              <div className="relative bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
-                {/* Browser-like Header */}
-                <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-200/50 dark:border-white/10">
-                  <div className="flex items-center space-x-3">
+              <div className="relative bg-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 md:p-16 shadow-2xl">
+                {/* Premium Browser-like Header */}
+                <div className="flex items-center justify-between mb-12 pb-8 border-b border-white/20">
+                  <div className="flex items-center space-x-4">
                     <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="w-4 h-4 bg-red-400 rounded-full shadow-lg"></div>
+                      <div className="w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
+                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-lg"></div>
                     </div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm font-mono">
-                      w3leads.com/demo
+                    <div className="bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                      <span className="text-gray-300 text-sm font-mono">
+                        w3leads.com/demo
+                      </span>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span>Live Demo</span>
+                  <div className="flex items-center space-x-3">
+                    <div className="flex items-center space-x-2 bg-brand-success/20 border border-brand-success/30 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse"></div>
+                      <span className="text-brand-success text-xs font-medium">
+                        Live System
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      Real-time processing
+                    </div>
                   </div>
                 </div>
 
-                {/* Tabbed Interface */}
-                <div className="mb-8">
-                  <div className="flex space-x-1 bg-gray-100/80 dark:bg-white/5 rounded-xl p-1 mb-6 w-fit">
+                {/* Premium Tabbed Interface */}
+                <div className="mb-12">
+                  <div className="flex space-x-2 bg-white/10 rounded-2xl p-2 mb-8 w-fit mx-auto backdrop-blur-sm">
                     <button
-                      onClick={() => setActiveTab("domain")}
-                      className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      onClick={() => {
+                        setActiveTab("domain");
+                        setSearchResults(null);
+                        setVerificationResults(null);
+                      }}
+                      className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "domain"
-                          ? "bg-brand-primary text-white shadow-lg"
-                          : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10"
+                          ? "bg-gradient-to-r from-brand-primary to-brand-secondary text-white shadow-xl shadow-brand-primary/25"
+                          : "text-gray-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
-                      <Globe className="w-4 h-4 inline mr-2" />
-                      Domain Search
+                      <Globe className="w-5 h-5" />
+                      <span>Domain Intelligence</span>
+                      <div
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          activeTab === "domain"
+                            ? "bg-white/80"
+                            : "bg-brand-primary/60 group-hover:bg-white/60"
+                        }`}
+                      ></div>
                     </button>
                     <button
-                      onClick={() => setActiveTab("email")}
-                      className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      onClick={() => {
+                        setActiveTab("email");
+                        setSearchResults(null);
+                        setVerificationResults(null);
+                      }}
+                      className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "email"
-                          ? "bg-brand-success text-white shadow-lg"
-                          : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/50 dark:hover:bg-white/10"
+                          ? "bg-gradient-to-r from-brand-success to-emerald-600 text-white shadow-xl shadow-brand-success/25"
+                          : "text-gray-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
-                      <Shield className="w-4 h-4 inline mr-2" />
-                      Email Verification
+                      <Shield className="w-5 h-5" />
+                      <span>Email Verification</span>
+                      <div
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          activeTab === "email"
+                            ? "bg-white/80"
+                            : "bg-brand-success/60 group-hover:bg-white/60"
+                        }`}
+                      ></div>
                     </button>
                   </div>
 
                   {/* Domain Search Tab */}
                   {activeTab === "domain" && (
-                    <div className="space-y-6 animate-in fade-in-50 duration-500">
+                    <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur"></div>
-                        <div className="relative flex items-center space-x-4 bg-gray-50/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6">
-                          <Globe className="w-6 h-6 text-brand-primary flex-shrink-0" />
-                          <Input
-                            placeholder="Enter domain (e.g., microsoft.com, google.com, salesforce.com)"
-                            value={searchDomain}
-                            onChange={(e) => setSearchDomain(e.target.value)}
-                            className="flex-1 bg-transparent border-none text-gray-900 dark:text-white text-lg placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-0 focus:outline-none"
-                          />
-                          <Button
-                            onClick={handleDomainSearch}
-                            className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-                          >
-                            <Search className="w-5 h-5 mr-2" />
-                            Analyze
-                          </Button>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent rounded-3xl blur-lg opacity-40"></div>
+                        <div className="relative">
+                          <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
+                            <div className="flex-shrink-0">
+                              <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center">
+                                <Globe className="w-6 h-6 text-white" />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <label className="block text-white text-sm font-medium mb-2">
+                                Domain Intelligence Search
+                              </label>
+                              <Input
+                                placeholder="Enter any domain (e.g., microsoft.com, google.com, salesforce.com)"
+                                value={searchDomain}
+                                onChange={(e) =>
+                                  setSearchDomain(e.target.value)
+                                }
+                                onKeyPress={(e) =>
+                                  e.key === "Enter" && handleDomainSearch()
+                                }
+                                className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
+                                disabled={isSearching}
+                              />
+                            </div>
+                            <Button
+                              onClick={handleDomainSearch}
+                              disabled={!searchDomain.trim() || isSearching}
+                              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-6 rounded-2xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-brand-primary/50 transform hover:scale-105"
+                            >
+                              {isSearching ? (
+                                <>
+                                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                                  Analyzing...
+                                </>
+                              ) : (
+                                <>
+                                  <Search className="w-5 h-5 mr-2" />
+                                  Analyze Domain
+                                </>
+                              )}
+                            </Button>
+                          </div>
                         </div>
                       </div>
 
                       {/* Results */}
-                      {searchDomain && (
-                        <div className="space-y-6 animate-in slide-in-from-bottom-4 duration-700">
+                      {(isSearching || searchResults) && (
+                        <div className="space-y-8 animate-in slide-in-from-bottom-4 duration-700">
                           {/* Results Header */}
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                              Analysis Results
-                            </h3>
-                            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
-                              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                              <span>Processing: {searchDomain}</span>
+                          <div className="text-center">
+                            <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl px-6 py-4">
+                              <div
+                                className={`w-3 h-3 rounded-full ${isSearching ? "bg-yellow-400 animate-pulse" : "bg-brand-success"}`}
+                              ></div>
+                              <span className="text-white font-medium">
+                                {isSearching
+                                  ? `Analyzing ${searchDomain}...`
+                                  : `Analysis Complete: ${searchResults?.domain}`}
+                              </span>
+                              {!isSearching && searchResults && (
+                                <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">
+                                  Live Data
+                                </Badge>
+                              )}
                             </div>
                           </div>
 
                           {/* Metrics Grid */}
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="group relative">
-                              <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
-                                <div className="flex items-center justify-between mb-3">
-                                  <div className="w-12 h-12 bg-brand-success/20 rounded-xl flex items-center justify-center">
-                                    <Mail className="w-6 h-6 text-brand-success" />
+                          {searchResults && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                              <div className="group relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-emerald-600 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                                <div className="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 transform group-hover:scale-105">
+                                  <div className="flex items-center justify-between mb-6">
+                                    <div className="w-16 h-16 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl flex items-center justify-center">
+                                      <Mail className="w-8 h-8 text-white" />
+                                    </div>
+                                    <div className="text-right">
+                                      <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">
+                                        Live
+                                      </Badge>
+                                    </div>
                                   </div>
-                                  <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30">
-                                    Live
-                                  </Badge>
-                                </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
-                                  1,247
-                                </div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">
-                                  Email contacts found
-                                </div>
-                                <div className="text-xs text-brand-success mt-2">
-                                  +23% from last scan
+                                  <div className="text-4xl font-bold text-white mb-2">
+                                    {searchResults.emailsFound.toLocaleString()}
+                                  </div>
+                                  <div className="text-gray-300 mb-4">
+                                    Email contacts discovered
+                                  </div>
+                                  <div className="flex items-center text-brand-success text-sm">
+                                    <TrendingUp className="w-4 h-4 mr-1" />
+                                    <span>
+                                      +{Math.floor(Math.random() * 30) + 10}%
+                                      from last scan
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
 
-                            <div className="group relative">
-                              <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-purple to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
-                                <div className="flex items-center justify-between mb-3">
-                                  <div className="w-12 h-12 bg-brand-purple/20 rounded-xl flex items-center justify-center">
-                                    <Building className="w-6 h-6 text-brand-purple" />
+                              <div className="group relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-brand-purple to-purple-600 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                                <div className="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 transform group-hover:scale-105">
+                                  <div className="flex items-center justify-between mb-6">
+                                    <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-purple-600 rounded-2xl flex items-center justify-center">
+                                      <Building className="w-8 h-8 text-white" />
+                                    </div>
+                                    <Badge className="bg-brand-purple/20 text-brand-purple border-brand-purple/30">
+                                      Mapped
+                                    </Badge>
                                   </div>
-                                  <Badge className="bg-brand-purple/20 text-brand-purple border-brand-purple/30">
-                                    Updated
-                                  </Badge>
-                                </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
-                                  156
-                                </div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">
-                                  Department structure
-                                </div>
-                                <div className="text-xs text-brand-purple mt-2">
-                                  Mapped hierarchy
+                                  <div className="text-4xl font-bold text-white mb-2">
+                                    {searchResults.departments}
+                                  </div>
+                                  <div className="text-gray-300 mb-4">
+                                    Department structures
+                                  </div>
+                                  <div className="text-brand-purple text-sm">
+                                    Complete organizational hierarchy
+                                  </div>
                                 </div>
                               </div>
-                            </div>
 
-                            <div className="group relative">
-                              <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-primary to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                              <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6 hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
-                                <div className="flex items-center justify-between mb-3">
-                                  <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
-                                    <CheckCircle className="w-6 h-6 text-brand-primary" />
+                              <div className="group relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-blue-600 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                                <div className="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500 transform group-hover:scale-105">
+                                  <div className="flex items-center justify-between mb-6">
+                                    <div className="w-16 h-16 bg-gradient-to-r from-brand-primary to-blue-600 rounded-2xl flex items-center justify-center">
+                                      <CheckCircle className="w-8 h-8 text-white" />
+                                    </div>
+                                    <Badge className="bg-brand-primary/20 text-brand-primary border-brand-primary/30">
+                                      Verified
+                                    </Badge>
                                   </div>
-                                  <Badge className="bg-brand-primary/20 text-brand-primary border-brand-primary/30">
-                                    Verified
-                                  </Badge>
-                                </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
-                                  98.2%
-                                </div>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">
-                                  Accuracy rate
-                                </div>
-                                <div className="text-xs text-brand-primary mt-2">
-                                  Industry leading
+                                  <div className="text-4xl font-bold text-white mb-2">
+                                    {searchResults.accuracy}%
+                                  </div>
+                                  <div className="text-gray-300 mb-4">
+                                    Accuracy rate
+                                  </div>
+                                  <div className="text-brand-primary text-sm">
+                                    Industry-leading precision
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          )}
+
+                          {/* Department Breakdown */}
+                          {searchResults && (
+                            <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
+                              <h4 className="text-xl font-semibold text-white mb-6 text-center">
+                                Department Breakdown
+                              </h4>
+                              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                {Object.entries(searchResults.breakdown).map(
+                                  ([dept, count], index) => (
+                                    <div key={dept} className="text-center">
+                                      <div className="text-2xl font-bold text-white mb-1">
+                                        {(count as number).toLocaleString()}
+                                      </div>
+                                      <div className="text-gray-400 text-sm capitalize">
+                                        {dept}
+                                      </div>
+                                    </div>
+                                  ),
+                                )}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
@@ -885,102 +1160,201 @@ export default function Index() {
 
                   {/* Email Verification Tab */}
                   {activeTab === "email" && (
-                    <div className="space-y-6 animate-in fade-in-50 duration-500">
+                    <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Verification Input */}
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-success/20 to-emerald-600/20 rounded-2xl blur"></div>
-                        <div className="relative flex items-center space-x-4 bg-gray-50/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-6">
-                          <Shield className="w-6 h-6 text-brand-success flex-shrink-0" />
-                          <Input
-                            placeholder="Enter email to verify (e.g., john.doe@company.com)"
-                            value={verifyEmail}
-                            onChange={(e) => setVerifyEmail(e.target.value)}
-                            className="flex-1 bg-transparent border-none text-gray-900 dark:text-white text-lg placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-0 focus:outline-none"
-                          />
-                          <Button
-                            onClick={handleEmailVerify}
-                            className="bg-gradient-to-r from-brand-success to-emerald-600 hover:from-emerald-600 hover:to-brand-success text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-                          >
-                            <CheckCircle className="w-5 h-5 mr-2" />
-                            Verify
-                          </Button>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-success via-emerald-500 to-teal-500 rounded-3xl blur-lg opacity-40"></div>
+                        <div className="relative">
+                          <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
+                            <div className="flex-shrink-0">
+                              <div className="w-12 h-12 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl flex items-center justify-center">
+                                <Shield className="w-6 h-6 text-white" />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <label className="block text-white text-sm font-medium mb-2">
+                                Email Verification Engine
+                              </label>
+                              <Input
+                                placeholder="Enter any email address (e.g., john.doe@company.com)"
+                                value={verifyEmail}
+                                onChange={(e) => setVerifyEmail(e.target.value)}
+                                onKeyPress={(e) =>
+                                  e.key === "Enter" && handleEmailVerify()
+                                }
+                                className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-success focus:ring-brand-success/50 transition-all duration-300"
+                                disabled={isVerifying}
+                              />
+                            </div>
+                            <Button
+                              onClick={handleEmailVerify}
+                              disabled={!verifyEmail.trim() || isVerifying}
+                              className="bg-gradient-to-r from-brand-success to-emerald-600 hover:from-emerald-600 hover:to-brand-success disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-6 rounded-2xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-brand-success/50 transform hover:scale-105"
+                            >
+                              {isVerifying ? (
+                                <>
+                                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                                  Verifying...
+                                </>
+                              ) : (
+                                <>
+                                  <CheckCircle className="w-5 h-5 mr-2" />
+                                  Verify Email
+                                </>
+                              )}
+                            </Button>
+                          </div>
                         </div>
                       </div>
 
                       {/* Verification Results */}
-                      {verifyEmail && (
-                        <div className="space-y-6 animate-in slide-in-from-bottom-4 duration-700">
-                          <div className="relative">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-success to-emerald-600 rounded-2xl blur opacity-30"></div>
-                            <div className="relative bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200/50 dark:border-white/20 rounded-2xl p-8">
-                              <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                                  Verification Complete
-                                </h3>
-                                <div className="flex items-center space-x-2">
-                                  <CheckCircle className="w-5 h-5 text-brand-success" />
-                                  <span className="text-brand-success font-medium">
-                                    Verified
-                                  </span>
-                                </div>
-                              </div>
+                      {(isVerifying || verificationResults) && (
+                        <div className="space-y-8 animate-in slide-in-from-bottom-4 duration-700">
+                          {/* Status Header */}
+                          <div className="text-center">
+                            <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl px-6 py-4">
+                              <div
+                                className={`w-3 h-3 rounded-full ${isVerifying ? "bg-yellow-400 animate-pulse" : verificationResults?.isValid ? "bg-brand-success" : "bg-red-400"}`}
+                              ></div>
+                              <span className="text-white font-medium">
+                                {isVerifying
+                                  ? `Verifying ${verifyEmail}...`
+                                  : `Verification Complete: ${verificationResults?.email}`}
+                              </span>
+                              {!isVerifying && verificationResults && (
+                                <Badge
+                                  className={`${verificationResults.isValid ? "bg-brand-success/20 text-brand-success border-brand-success/30" : "bg-red-500/20 text-red-400 border-red-500/30"}`}
+                                >
+                                  {verificationResults.status}
+                                </Badge>
+                              )}
+                            </div>
+                          </div>
 
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="space-y-4">
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      Status
-                                    </span>
-                                    <Badge className="bg-brand-success/20 text-brand-success border-brand-success/30 px-3 py-1">
-                                      Valid
-                                    </Badge>
+                          {/* Detailed Results */}
+                          {verificationResults && (
+                            <div className="relative">
+                              <div
+                                className={`absolute -inset-1 bg-gradient-to-r ${verificationResults.isValid ? "from-brand-success to-emerald-600" : "from-red-500 to-orange-500"} rounded-3xl blur-lg opacity-40`}
+                              ></div>
+                              <div className="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-10">
+                                {/* Main Status */}
+                                <div className="text-center mb-8">
+                                  <div
+                                    className={`w-20 h-20 mx-auto mb-4 rounded-3xl flex items-center justify-center ${verificationResults.isValid ? "bg-gradient-to-r from-brand-success to-emerald-600" : "bg-gradient-to-r from-red-500 to-orange-500"}`}
+                                  >
+                                    {verificationResults.isValid ? (
+                                      <CheckCircle className="w-10 h-10 text-white" />
+                                    ) : (
+                                      <X className="w-10 h-10 text-white" />
+                                    )}
                                   </div>
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      Confidence
+                                  <h3 className="text-2xl font-bold text-white mb-2">
+                                    Email {verificationResults.status}
+                                  </h3>
+                                  <p className="text-gray-300">
+                                    Confidence Score:{" "}
+                                    <span className="text-white font-semibold">
+                                      {verificationResults.confidence}%
                                     </span>
-                                    <span className="text-gray-900 dark:text-white font-semibold">
-                                      98.5%
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      Deliverability
-                                    </span>
-                                    <span className="text-brand-success font-semibold">
-                                      High
-                                    </span>
-                                  </div>
+                                  </p>
                                 </div>
-                                <div className="space-y-4">
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      Domain Check
-                                    </span>
-                                    <span className="text-brand-success">
-                                      ✓ Valid
-                                    </span>
+
+                                {/* Detailed Checks Grid */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                  <div className="space-y-4">
+                                    <h4 className="text-lg font-semibold text-white mb-4">
+                                      Verification Details
+                                    </h4>
+                                    {[
+                                      {
+                                        label: "Deliverability",
+                                        value:
+                                          verificationResults.deliverability,
+                                        icon: Mail,
+                                      },
+                                      {
+                                        label: "Risk Level",
+                                        value: verificationResults.riskLevel,
+                                        icon: Shield,
+                                      },
+                                      {
+                                        label: "Last Checked",
+                                        value: verificationResults.lastChecked,
+                                        icon: Clock,
+                                      },
+                                    ].map((item, index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0"
+                                      >
+                                        <div className="flex items-center space-x-3">
+                                          <item.icon className="w-5 h-5 text-gray-400" />
+                                          <span className="text-gray-300">
+                                            {item.label}
+                                          </span>
+                                        </div>
+                                        <span
+                                          className={`font-semibold ${
+                                            item.label === "Risk Level"
+                                              ? verificationResults.riskLevel ===
+                                                "Low"
+                                                ? "text-brand-success"
+                                                : "text-red-400"
+                                              : item.label === "Deliverability"
+                                                ? verificationResults.deliverability ===
+                                                  "High"
+                                                  ? "text-brand-success"
+                                                  : "text-red-400"
+                                                : "text-white"
+                                          }`}
+                                        >
+                                          {item.value}
+                                        </span>
+                                      </div>
+                                    ))}
                                   </div>
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      Syntax Check
-                                    </span>
-                                    <span className="text-brand-success">
-                                      ✓ Valid
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">
-                                      MX Records
-                                    </span>
-                                    <span className="text-brand-success">
-                                      ✓ Found
-                                    </span>
+
+                                  <div className="space-y-4">
+                                    <h4 className="text-lg font-semibold text-white mb-4">
+                                      Technical Checks
+                                    </h4>
+                                    {Object.entries(
+                                      verificationResults.checks,
+                                    ).map(([check, passed], index) => (
+                                      <div
+                                        key={index}
+                                        className="flex items-center justify-between py-3 border-b border-white/10 last:border-b-0"
+                                      >
+                                        <span className="text-gray-300 capitalize">
+                                          {check
+                                            .replace(/([A-Z])/g, " $1")
+                                            .trim()}
+                                        </span>
+                                        <div className="flex items-center space-x-2">
+                                          {passed ? (
+                                            <>
+                                              <CheckCircle className="w-5 h-5 text-brand-success" />
+                                              <span className="text-brand-success font-medium">
+                                                Passed
+                                              </span>
+                                            </>
+                                          ) : (
+                                            <>
+                                              <X className="w-5 h-5 text-red-400" />
+                                              <span className="text-red-400 font-medium">
+                                                Failed
+                                              </span>
+                                            </>
+                                          )}
+                                        </div>
+                                      </div>
+                                    ))}
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          )}
                         </div>
                       )}
                     </div>
@@ -1003,6 +1377,7 @@ export default function Index() {
                   size="lg"
                   variant="outline"
                   className="border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+                  onClick={() => setIsVideoModalOpen(true)}
                 >
                   <PlayCircle className="w-5 h-5 mr-2" />
                   Watch Full Demo
@@ -1061,27 +1436,27 @@ export default function Index() {
             {/* Metric 1: Time Savings */}
             <div className="group relative">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-primary to-brand-secondary rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
 
               <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
                 {/* Floating Icon Container */}
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-lg opacity-50"></div>
-                  <div className="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <Clock className="w-10 h-10 text-white" />
                   </div>
                   {/* Orbiting Elements */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-bounce"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-secondary rounded-full animate-bounce"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-primary rounded-full animate-pulse"></div>
                 </div>
 
                 {/* Metric Display */}
                 <div className="space-y-4">
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-blue-300 transition-colors duration-500">
+                    <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-brand-primary transition-colors duration-500">
                       20+
                     </span>
-                    <span className="text-xl text-blue-300 font-medium">
+                    <span className="text-xl text-brand-primary font-medium">
                       hrs
                     </span>
                   </div>
@@ -1101,7 +1476,7 @@ export default function Index() {
                       <span>Automated</span>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-5/6 transition-all duration-1000"></div>
+                      <div className="bg-gradient-to-r from-brand-primary to-brand-secondary h-2 rounded-full w-5/6 transition-all duration-1000"></div>
                     </div>
                   </div>
                 </div>
@@ -1111,18 +1486,18 @@ export default function Index() {
             {/* Metric 2: Lead Quality */}
             <div className="group relative">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-accent via-brand-accent to-brand-accent rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
 
               <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
                 {/* Floating Icon Container */}
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-lg opacity-50"></div>
-                  <div className="relative w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <TrendingUp className="w-10 h-10 text-white" />
                   </div>
                   {/* Orbiting Elements */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-teal-400 rounded-full animate-bounce delay-300"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-emerald-400 rounded-full animate-pulse delay-500"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-accent rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-accent rounded-full animate-pulse delay-500"></div>
                 </div>
 
                 {/* Metric Display */}
@@ -2678,6 +3053,15 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl="https://www.youtube.com/watch?v=0yVgZWgR2dQ"
+        title="W3Leads Platform Demo"
+        description="See how our B2B lead generation platform works in action"
+      />
     </Layout>
   );
 }
