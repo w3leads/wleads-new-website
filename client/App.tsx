@@ -29,6 +29,7 @@ const App = () => (
 
             {/* Product Routes */}
             <Route path="/products/:product" element={<Products />} />
+            <Route path="/domain-finder" element={<DomainFinder />} />
 
             {/* Main Pages */}
             <Route path="/about" element={<About />} />
