@@ -643,10 +643,17 @@ export default function DomainFinder() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => {
+              const gradientColors = [
+                'from-brand-success to-green-600',
+                'from-brand-purple to-purple-600',
+                'from-brand-orange to-red-500',
+                'from-brand-primary to-blue-600'
+              ];
+              return (
               <Card key={index} className="group bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl">
                 <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${gradientColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-gray-900 text-xl mb-2">{useCase.title}</CardTitle>
@@ -656,12 +663,13 @@ export default function DomainFinder() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="space-y-3">
-                    <div className="text-2xl font-bold text-brand-primary">{useCase.metrics}</div>
+                    <div className={`text-2xl font-bold ${index === 0 ? 'text-brand-success' : index === 1 ? 'text-brand-purple' : index === 2 ? 'text-brand-orange' : 'text-brand-primary'}`}>{useCase.metrics}</div>
                     <div className="text-sm text-gray-600">Used by {useCase.companies} companies</div>
                   </div>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
