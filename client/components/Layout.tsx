@@ -521,7 +521,7 @@ const Layout = ({ children }: LayoutProps) => {
                       <Link
                         key={index}
                         to={item.href}
-                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                        className="group flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
                       >
                         <span>{item.name}</span>
                         {item.badge && (
@@ -556,7 +556,7 @@ const Layout = ({ children }: LayoutProps) => {
                       <Link
                         key={index}
                         to={item.href}
-                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                        className="group flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
                       >
                         <span>{item.name}</span>
                         {item.badge && (
@@ -587,7 +587,7 @@ const Layout = ({ children }: LayoutProps) => {
                       <Link
                         key={index}
                         to={item.href}
-                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                        className="group flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
                       >
                         <span>{item.name}</span>
                         <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -613,7 +613,7 @@ const Layout = ({ children }: LayoutProps) => {
                       <Link
                         key={index}
                         to={item.href}
-                        className="group flex items-center justify-between text-gray-400 hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
+                        className="group flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white text-sm transition-all duration-300 hover:translate-x-1"
                       >
                         <span>{item.name}</span>
                         <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
