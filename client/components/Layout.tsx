@@ -650,7 +650,7 @@ const Layout = ({ children }: LayoutProps) => {
 
               {/* Social Links */}
               <div className="flex items-center space-x-4">
-                <span className="text-gray-400 text-sm mr-2">Follow us:</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm mr-2">Follow us:</span>
                 {[
                   {
                     icon: Twitter,
