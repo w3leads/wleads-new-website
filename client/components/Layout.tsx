@@ -377,7 +377,6 @@ const Layout = ({ children }: LayoutProps) => {
 
       {/* Footer */}
       <footer className="relative bg-slate-50 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800">
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Footer Content */}
           <div className="py-16">
@@ -478,11 +477,15 @@ const Layout = ({ children }: LayoutProps) => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 text-brand-primary" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">hello@w3leads.com</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">
+                      hello@w3leads.com
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-4 h-4 text-brand-primary" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">24/7 Customer Support</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">
+                      24/7 Customer Support
+                    </span>
                   </div>
                 </div>
               </div>
@@ -650,7 +653,9 @@ const Layout = ({ children }: LayoutProps) => {
 
               {/* Social Links */}
               <div className="flex items-center space-x-4">
-                <span className="text-gray-600 dark:text-gray-400 text-sm mr-2">Follow us:</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm mr-2">
+                  Follow us:
+                </span>
                 {[
                   {
                     icon: Twitter,
