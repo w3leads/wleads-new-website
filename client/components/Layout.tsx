@@ -683,10 +683,10 @@ const Layout = ({ children }: LayoutProps) => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-brand-primary/20 hover:border-brand-primary/30 transition-all duration-300 hover:scale-110"
+                    className="group p-2 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-brand-primary/20 hover:border-brand-primary/30 transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                    <social.icon className="w-4 h-4 text-gray-600 dark:text-gray-400 group-hover:text-brand-primary dark:group-hover:text-white transition-colors duration-300" />
                   </a>
                 ))}
               </div>
