@@ -784,7 +784,7 @@ export default function DomainFinder() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
+      <section className="py-24 px-4 bg-gradient-to-r from-brand-success via-brand-purple to-brand-orange">
         <div className="max-w-5xl mx-auto text-center">
           <div className="space-y-8">
             <Badge className="bg-white/20 text-white border-white/30 px-4 py-2">
