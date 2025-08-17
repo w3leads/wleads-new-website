@@ -83,7 +83,7 @@ export default function DomainFinder() {
             role: "VP of Engineering",
             verified: true,
             socialLinks: ["LinkedIn", "Twitter"],
-            lastActive: "2 days ago"
+            lastActive: "2 days ago",
           },
           {
             name: "Michael Rodriguez",
@@ -92,7 +92,7 @@ export default function DomainFinder() {
             role: "Chief Revenue Officer",
             verified: true,
             socialLinks: ["LinkedIn"],
-            lastActive: "1 day ago"
+            lastActive: "1 day ago",
           },
           {
             name: "Jennifer Park",
@@ -101,7 +101,7 @@ export default function DomainFinder() {
             role: "CMO",
             verified: true,
             socialLinks: ["LinkedIn", "Twitter"],
-            lastActive: "3 hours ago"
+            lastActive: "3 hours ago",
           },
           {
             name: "David Thompson",
@@ -110,7 +110,7 @@ export default function DomainFinder() {
             role: "Head of Product Strategy",
             verified: true,
             socialLinks: ["LinkedIn"],
-            lastActive: "5 hours ago"
+            lastActive: "5 hours ago",
           },
           {
             name: "Amanda Foster",
@@ -119,7 +119,7 @@ export default function DomainFinder() {
             role: "COO",
             verified: false,
             socialLinks: ["LinkedIn"],
-            lastActive: "1 week ago"
+            lastActive: "1 week ago",
           },
         ],
       });
@@ -138,62 +138,72 @@ export default function DomainFinder() {
     {
       icon: Brain,
       title: "AI-Powered Discovery",
-      description: "Advanced machine learning algorithms analyze web patterns, social signals, and corporate structures to uncover hidden contact information with 98.7% accuracy.",
-      benefits: ["Pattern Recognition", "Predictive Analytics", "Behavioral Insights"],
-      color: "from-brand-success to-green-600"
+      description:
+        "Advanced machine learning algorithms analyze web patterns, social signals, and corporate structures to uncover hidden contact information with 98.7% accuracy.",
+      benefits: [
+        "Pattern Recognition",
+        "Predictive Analytics",
+        "Behavioral Insights",
+      ],
+      color: "from-brand-success to-green-600",
     },
     {
       icon: Database,
       title: "Multi-Source Intelligence",
-      description: "Aggregates data from 200+ premium sources including corporate directories, social networks, professional platforms, and public records.",
+      description:
+        "Aggregates data from 200+ premium sources including corporate directories, social networks, professional platforms, and public records.",
       benefits: ["Real-time Updates", "Cross-verification", "Data Enrichment"],
-      color: "from-brand-purple to-purple-600"
+      color: "from-brand-purple to-purple-600",
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-level security with SOC 2 compliance, GDPR adherence, and zero-trust architecture ensuring your searches remain completely confidential.",
+      description:
+        "Bank-level security with SOC 2 compliance, GDPR adherence, and zero-trust architecture ensuring your searches remain completely confidential.",
       benefits: ["End-to-end Encryption", "Audit Trails", "Privacy Controls"],
-      color: "from-brand-orange to-red-500"
+      color: "from-brand-orange to-red-500",
     },
     {
       icon: Zap,
       title: "Instant Verification",
-      description: "Real-time email verification with deliverability scoring, spam trap detection, and role-based email identification for maximum campaign success.",
+      description:
+        "Real-time email verification with deliverability scoring, spam trap detection, and role-based email identification for maximum campaign success.",
       benefits: ["Live Validation", "Quality Scoring", "Bounce Prevention"],
-      color: "from-brand-primary to-blue-600"
-    }
+      color: "from-brand-primary to-blue-600",
+    },
   ];
 
   const useCases = [
     {
       title: "Sales Prospecting",
-      description: "Build targeted prospect lists with verified decision-maker contacts",
+      description:
+        "Build targeted prospect lists with verified decision-maker contacts",
       icon: Target,
       metrics: "400% pipeline growth",
-      companies: "2,500+"
+      companies: "2,500+",
     },
     {
       title: "Recruitment",
       description: "Source top talent and hiring managers across industries",
       icon: UserCheck,
       metrics: "50% faster hiring",
-      companies: "800+"
+      companies: "800+",
     },
     {
-      title: "Partnership Development", 
-      description: "Connect with strategic partners and business development leads",
+      title: "Partnership Development",
+      description:
+        "Connect with strategic partners and business development leads",
       icon: Briefcase,
       metrics: "300% more partnerships",
-      companies: "1,200+"
+      companies: "1,200+",
     },
     {
       title: "Market Research",
       description: "Analyze competitive landscapes and industry contacts",
       icon: Eye,
       metrics: "90% market coverage",
-      companies: "5,000+"
-    }
+      companies: "5,000+",
+    },
   ];
 
   const testimonials = [
@@ -201,29 +211,32 @@ export default function DomainFinder() {
       name: "Sarah Martinez",
       role: "VP Sales, DataFlow Systems",
       company: "Fortune 500",
-      content: "Domain Finder transformed our prospecting process. We discovered 3,000+ qualified leads in our ICP that we never knew existed. Our conversion rate increased by 340%.",
+      content:
+        "Domain Finder transformed our prospecting process. We discovered 3,000+ qualified leads in our ICP that we never knew existed. Our conversion rate increased by 340%.",
       avatar: "SM",
       rating: 5,
-      results: "+340% conversion rate"
+      results: "+340% conversion rate",
     },
     {
       name: "James Kim",
       role: "Head of Talent Acquisition, InnovateHR",
       company: "Series C Startup",
-      content: "The quality of contact data is exceptional. We reduced our time-to-hire by 50% and improved candidate quality significantly. The verification accuracy is outstanding.",
-      avatar: "JK", 
+      content:
+        "The quality of contact data is exceptional. We reduced our time-to-hire by 50% and improved candidate quality significantly. The verification accuracy is outstanding.",
+      avatar: "JK",
       rating: 5,
-      results: "50% faster hiring"
+      results: "50% faster hiring",
     },
     {
       name: "Maria Rodriguez",
       role: "Chief Marketing Officer, GrowthTech",
       company: "Public Company",
-      content: "Finally, a tool that delivers what it promises. The company insights and contact mapping features have revolutionized our account-based marketing strategy.",
+      content:
+        "Finally, a tool that delivers what it promises. The company insights and contact mapping features have revolutionized our account-based marketing strategy.",
       avatar: "MR",
       rating: 5,
-      results: "5x better targeting"
-    }
+      results: "5x better targeting",
+    },
   ];
 
   return (
@@ -231,8 +244,12 @@ export default function DomainFinder() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 px-4 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20">
         {/* Background Pattern */}
-        <div className={"absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234f46e5\" fill-opacity=\"0.03\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"}></div>
-        
+        <div
+          className={
+            'absolute inset-0 bg-[url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')]'
+          }
+        ></div>
+
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -254,26 +271,35 @@ export default function DomainFinder() {
                   <br />
                   Platform
                 </h1>
-                
+
                 <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
-                  Unlock comprehensive company insights and verified contact information from any domain. 
-                  Powered by AI and trusted by 10,000+ enterprise teams worldwide.
+                  Unlock comprehensive company insights and verified contact
+                  information from any domain. Powered by AI and trusted by
+                  10,000+ enterprise teams worldwide.
                 </p>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-success">98.7%</div>
+                  <div className="text-3xl font-bold text-brand-success">
+                    98.7%
+                  </div>
                   <div className="text-sm text-gray-600">Accuracy Rate</div>
                 </div>
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-purple">50M+</div>
+                  <div className="text-3xl font-bold text-brand-purple">
+                    50M+
+                  </div>
                   <div className="text-sm text-gray-600">Contacts Found</div>
                 </div>
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-orange">10K+</div>
-                  <div className="text-sm text-gray-600">Companies Trust Us</div>
+                  <div className="text-3xl font-bold text-brand-orange">
+                    10K+
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Companies Trust Us
+                  </div>
                 </div>
               </div>
 
@@ -297,7 +323,8 @@ export default function DomainFinder() {
 
               {/* Trust Indicators */}
               <div className="text-sm text-gray-600">
-                Trusted by teams at Fortune 500 companies, unicorn startups, and high-growth SaaS companies
+                Trusted by teams at Fortune 500 companies, unicorn startups, and
+                high-growth SaaS companies
               </div>
             </div>
 
@@ -372,39 +399,57 @@ export default function DomainFinder() {
                             <div className="text-lg font-bold text-brand-primary">
                               {searchResults.totalEmails.toLocaleString()}
                             </div>
-                            <div className="text-xs text-gray-600">Contacts</div>
+                            <div className="text-xs text-gray-600">
+                              Contacts
+                            </div>
                           </div>
                           <div className="bg-green-50 rounded-lg p-3 border border-green-100">
                             <div className="text-lg font-bold text-brand-success">
                               {searchResults.departments}
                             </div>
-                            <div className="text-xs text-gray-600">Departments</div>
+                            <div className="text-xs text-gray-600">
+                              Departments
+                            </div>
                           </div>
                           <div className="bg-purple-50 rounded-lg p-3 border border-purple-100">
                             <div className="text-lg font-bold text-brand-purple">
                               {searchResults.employees}
                             </div>
-                            <div className="text-xs text-gray-600">Employees</div>
+                            <div className="text-xs text-gray-600">
+                              Employees
+                            </div>
                           </div>
                         </div>
 
                         {/* Sample Contacts */}
                         <div className="space-y-2">
-                          <div className="text-xs text-gray-600 mb-2">Sample verified contacts:</div>
-                          {searchResults.emails.slice(0, 2).map((contact: any, index: number) => (
-                            <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg border border-gray-100">
-                              <div>
-                                <div className="text-gray-900 text-sm font-medium">{contact.name}</div>
-                                <div className="text-gray-600 text-xs">{contact.role}</div>
+                          <div className="text-xs text-gray-600 mb-2">
+                            Sample verified contacts:
+                          </div>
+                          {searchResults.emails
+                            .slice(0, 2)
+                            .map((contact: any, index: number) => (
+                              <div
+                                key={index}
+                                className="flex items-center justify-between p-2 bg-gray-50 rounded-lg border border-gray-100"
+                              >
+                                <div>
+                                  <div className="text-gray-900 text-sm font-medium">
+                                    {contact.name}
+                                  </div>
+                                  <div className="text-gray-600 text-xs">
+                                    {contact.role}
+                                  </div>
+                                </div>
+                                <CheckCircle className="w-4 h-4 text-brand-success" />
                               </div>
-                              <CheckCircle className="w-4 h-4 text-brand-success" />
-                            </div>
-                          ))}
+                            ))}
                         </div>
 
                         <Button className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white text-sm">
                           <Download className="w-4 h-4 mr-2" />
-                          View All {searchResults.totalEmails.toLocaleString()} Contacts
+                          View All {searchResults.totalEmails.toLocaleString()}{" "}
+                          Contacts
                         </Button>
                       </div>
                     )}
@@ -431,17 +476,23 @@ export default function DomainFinder() {
               Enterprise-Grade Domain Intelligence
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Go beyond basic contact finding. Our AI-powered platform delivers comprehensive company insights, 
-              organizational mapping, and verified contact data with unmatched accuracy and scale.
+              Go beyond basic contact finding. Our AI-powered platform delivers
+              comprehensive company insights, organizational mapping, and
+              verified contact data with unmatched accuracy and scale.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {features.map((feature, index) => (
-              <Card key={index} className="group bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl">
+              <Card
+                key={index}
+                className="group bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl"
+              >
                 <CardHeader className="pb-4">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className={`w-14 h-14 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
                       <feature.icon className="w-7 h-7 text-white" />
                     </div>
                     <div>
@@ -479,7 +530,8 @@ export default function DomainFinder() {
                 Comprehensive Domain Analysis
               </h2>
               <p className="text-xl text-gray-700">
-                Deep insights for {searchResults.domain} - Everything you need to know
+                Deep insights for {searchResults.domain} - Everything you need
+                to know
               </p>
             </div>
 
@@ -500,19 +552,30 @@ export default function DomainFinder() {
                         {searchResults.companyName.charAt(0)}
                       </div>
                       <div>
-                        <h3 className="text-gray-900 font-semibold">{searchResults.companyName}</h3>
-                        <p className="text-gray-600 text-sm">{searchResults.industry}</p>
+                        <h3 className="text-gray-900 font-semibold">
+                          {searchResults.companyName}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          {searchResults.industry}
+                        </p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                       {companyInsights.map((insight, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                        <div
+                          key={index}
+                          className="bg-gray-50 rounded-lg p-3 border border-gray-100"
+                        >
                           <div className="flex items-center space-x-2 mb-1">
                             <insight.icon className="w-4 h-4 text-brand-primary" />
-                            <span className="text-gray-600 text-xs">{insight.label}</span>
+                            <span className="text-gray-600 text-xs">
+                              {insight.label}
+                            </span>
                           </div>
-                          <div className="text-gray-900 font-medium text-sm">{insight.value}</div>
+                          <div className="text-gray-900 font-medium text-sm">
+                            {insight.value}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -528,11 +591,16 @@ export default function DomainFinder() {
                       <div className="flex items-center justify-between">
                         <span className="text-gray-600">Tech Stack:</span>
                         <div className="flex flex-wrap gap-1">
-                          {searchResults.techStack.slice(0, 3).map((tech: string, idx: number) => (
-                            <Badge key={idx} className="bg-brand-primary/10 text-brand-primary border-brand-primary/20 text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
+                          {searchResults.techStack
+                            .slice(0, 3)
+                            .map((tech: string, idx: number) => (
+                              <Badge
+                                key={idx}
+                                className="bg-brand-primary/10 text-brand-primary border-brand-primary/20 text-xs"
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
@@ -554,7 +622,8 @@ export default function DomainFinder() {
                       <Users className="w-5 h-5 mr-3 text-brand-primary" />
                       Decision Makers & Key Contacts
                       <Badge className="ml-3 bg-brand-primary/10 text-brand-primary border-brand-primary/20">
-                        {searchResults.emails.length} of {searchResults.totalEmails.toLocaleString()}
+                        {searchResults.emails.length} of{" "}
+                        {searchResults.totalEmails.toLocaleString()}
                       </Badge>
                     </CardTitle>
                     <Button
@@ -575,11 +644,16 @@ export default function DomainFinder() {
                       >
                         <div className="flex items-center space-x-4 flex-1">
                           <div className="w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg flex items-center justify-center text-white font-semibold">
-                            {contact.name.split(' ').map((n: string) => n.charAt(0)).join('')}
+                            {contact.name
+                              .split(" ")
+                              .map((n: string) => n.charAt(0))
+                              .join("")}
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-1">
-                              <h4 className="text-gray-900 font-medium">{contact.name}</h4>
+                              <h4 className="text-gray-900 font-medium">
+                                {contact.name}
+                              </h4>
                               {contact.verified && (
                                 <CheckCircle className="w-4 h-4 text-brand-success" />
                               )}
@@ -587,13 +661,17 @@ export default function DomainFinder() {
                                 {contact.department}
                               </Badge>
                             </div>
-                            <p className="text-gray-700 text-sm mb-1">{contact.email}</p>
+                            <p className="text-gray-700 text-sm mb-1">
+                              {contact.email}
+                            </p>
                             <div className="flex items-center space-x-4 text-xs text-gray-600">
                               <span>{contact.role}</span>
                               <span>•</span>
                               <span>Active {contact.lastActive}</span>
                               <span>•</span>
-                              <span>{contact.socialLinks.length} social profiles</span>
+                              <span>
+                                {contact.socialLinks.length} social profiles
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -619,7 +697,8 @@ export default function DomainFinder() {
 
                   <div className="mt-8 text-center">
                     <Button className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white px-8">
-                      View All {searchResults.totalEmails.toLocaleString()} Contacts
+                      View All {searchResults.totalEmails.toLocaleString()}{" "}
+                      Contacts
                       <ChevronRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
@@ -638,36 +717,50 @@ export default function DomainFinder() {
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              From sales prospecting to talent acquisition, Domain Intelligence powers success across industries
+              From sales prospecting to talent acquisition, Domain Intelligence
+              powers success across industries
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
               const gradientColors = [
-                'from-brand-success to-green-600',
-                'from-brand-purple to-purple-600',
-                'from-brand-orange to-red-500',
-                'from-brand-primary to-blue-600'
+                "from-brand-success to-green-600",
+                "from-brand-purple to-purple-600",
+                "from-brand-orange to-red-500",
+                "from-brand-primary to-blue-600",
               ];
               return (
-              <Card key={index} className="group bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl">
-                <CardHeader className="text-center pb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${gradientColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-gray-900 text-xl mb-2">{useCase.title}</CardTitle>
-                  <CardDescription className="text-gray-700">
-                    {useCase.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="space-y-3">
-                    <div className={`text-2xl font-bold ${index === 0 ? 'text-brand-success' : index === 1 ? 'text-brand-purple' : index === 2 ? 'text-brand-orange' : 'text-brand-primary'}`}>{useCase.metrics}</div>
-                    <div className="text-sm text-gray-600">Used by {useCase.companies} companies</div>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card
+                  key={index}
+                  className="group bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl"
+                >
+                  <CardHeader className="text-center pb-4">
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${gradientColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
+                      <useCase.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-gray-900 text-xl mb-2">
+                      {useCase.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-700">
+                      {useCase.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-3">
+                      <div
+                        className={`text-2xl font-bold ${index === 0 ? "text-brand-success" : index === 1 ? "text-brand-purple" : index === 2 ? "text-brand-orange" : "text-brand-primary"}`}
+                      >
+                        {useCase.metrics}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Used by {useCase.companies} companies
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>
@@ -693,32 +786,34 @@ export default function DomainFinder() {
                 title: "Domain Analysis",
                 desc: "AI analyzes domain architecture, DNS records, and web presence patterns",
                 icon: Target,
-                color: "from-brand-success to-green-600"
+                color: "from-brand-success to-green-600",
               },
               {
                 step: "02",
                 title: "Multi-Source Crawling",
                 desc: "Searches across 200+ premium databases, social networks, and public records",
                 icon: Database,
-                color: "from-brand-purple to-purple-600"
+                color: "from-brand-purple to-purple-600",
               },
               {
                 step: "03",
                 title: "AI Verification",
                 desc: "Machine learning validates emails with 98.7% accuracy and quality scoring",
                 icon: Brain,
-                color: "from-brand-orange to-red-500"
+                color: "from-brand-orange to-red-500",
               },
               {
                 step: "04",
                 title: "Enriched Results",
                 desc: "Organized, exportable data with company insights and contact details",
                 icon: Sparkles,
-                color: "from-brand-primary to-blue-600"
+                color: "from-brand-primary to-blue-600",
               },
             ].map((item, index) => (
               <div key={index} className="relative text-center group">
-                <div className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                <div
+                  className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                >
                   <item.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-brand-primary mb-3">
@@ -745,19 +840,26 @@ export default function DomainFinder() {
               Loved by Growth Teams Worldwide
             </h2>
             <p className="text-xl text-gray-700">
-              See how industry leaders achieve breakthrough results with Domain Intelligence
+              See how industry leaders achieve breakthrough results with Domain
+              Intelligence
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl">
+              <Card
+                key={index}
+                className="bg-white border-gray-200 hover:border-brand-primary/30 transition-all duration-500 hover:shadow-xl"
+              >
                 <CardContent className="p-8">
                   <div className="space-y-6">
                     {/* Rating */}
                     <div className="flex items-center space-x-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="w-5 h-5 text-yellow-400 fill-current"
+                        />
                       ))}
                     </div>
 
@@ -768,7 +870,9 @@ export default function DomainFinder() {
 
                     {/* Results */}
                     <div className="bg-brand-success/10 border border-brand-success/20 rounded-lg p-3">
-                      <div className="text-brand-success font-semibold text-sm">Result:</div>
+                      <div className="text-brand-success font-semibold text-sm">
+                        Result:
+                      </div>
                       <div className="text-gray-900">{testimonial.results}</div>
                     </div>
 
@@ -778,9 +882,15 @@ export default function DomainFinder() {
                         {testimonial.avatar}
                       </div>
                       <div>
-                        <div className="text-gray-900 font-semibold">{testimonial.name}</div>
-                        <div className="text-gray-600 text-sm">{testimonial.role}</div>
-                        <div className="text-brand-primary text-xs">{testimonial.company}</div>
+                        <div className="text-gray-900 font-semibold">
+                          {testimonial.name}
+                        </div>
+                        <div className="text-gray-600 text-sm">
+                          {testimonial.role}
+                        </div>
+                        <div className="text-brand-primary text-xs">
+                          {testimonial.company}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -798,17 +908,16 @@ export default function DomainFinder() {
             <Badge className="bg-white/20 text-white border-white/30 px-4 py-2">
               Ready to Scale Your Outreach?
             </Badge>
-            
+
             <h2 className="text-6xl font-bold text-white leading-tight">
               Start Finding Your Next
-              <span className="block">
-                Best Customers Today
-              </span>
+              <span className="block">Best Customers Today</span>
             </h2>
-            
+
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Join 10,000+ companies using Domain Intelligence to build better prospect lists, 
-              find key decision makers, and accelerate their growth.
+              Join 10,000+ companies using Domain Intelligence to build better
+              prospect lists, find key decision makers, and accelerate their
+              growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">

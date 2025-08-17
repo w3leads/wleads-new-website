@@ -1830,9 +1830,7 @@ export default function Index() {
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               <span className="block">Bank-Level</span>
-              <span className="text-slate-200">
-                Security & Compliance
-              </span>
+              <span className="text-slate-200">Security & Compliance</span>
             </h2>
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
