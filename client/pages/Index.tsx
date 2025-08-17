@@ -1794,39 +1794,34 @@ export default function Index() {
       </section>
 
       {/* 8. Enterprise Security & Trust */}
-      <section className="py-32 px-4 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
-        {/* Security Pattern Background */}
-        <div className="absolute inset-0 opacity-20">
+      <section className="py-32 px-4 relative overflow-hidden bg-gray-50 dark:bg-gray-900">
+        {/* Professional Background */}
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 2px)`,
+              backgroundImage: `radial-gradient(circle at 25px 25px, rgba(64, 81, 181, 0.2) 1px, transparent 1px)`,
               backgroundSize: "50px 50px",
             }}
           ></div>
         </div>
 
-        {/* Floating Security Elements */}
-        <div className="absolute top-20 left-20 w-4 h-4 bg-green-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse opacity-70"></div>
-        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
-
         <div className="relative max-w-7xl mx-auto">
-          {/* Header */}
+          {/* Professional Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/80 border border-slate-700/50 backdrop-blur-sm mb-8">
-              <Shield className="w-4 h-4 text-slate-300 mr-3" />
-              <span className="text-slate-300 text-sm font-medium tracking-wide uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-primary/10 border border-brand-primary/20 backdrop-blur-sm mb-8">
+              <Shield className="w-4 h-4 text-brand-primary mr-3" />
+              <span className="text-brand-primary text-sm font-semibold tracking-wide uppercase">
                 Enterprise Security
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               <span className="block">Bank-Level</span>
-              <span className="text-slate-200">Security & Compliance</span>
+              <span className="text-brand-primary">Security & Compliance</span>
             </h2>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Your data deserves fortress-level protection. We meet and exceed
               the highest security standards so you can focus on growing your
               business with complete peace of mind.
@@ -1840,38 +1835,38 @@ export default function Index() {
                 icon: Lock,
                 title: "SPF/DKIM Authentication",
                 desc: "Email authentication protocols ensure deliverability and reputation protection",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Shield,
                 title: "GDPR Compliance",
                 desc: "Full European data protection regulation compliance with automated consent management",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Award,
                 title: "SOC 2 Type II",
                 desc: "Certified security controls for availability, processing integrity, and confidentiality",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Eye,
                 title: "Zero-Trust Architecture",
                 desc: "Advanced privacy controls with end-to-end encryption and access verification",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
-                {/* Glow Effect */}
+                {/* Professional Border */}
                 <div
-                  className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}
+                  className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-xl blur-sm opacity-40 group-hover:opacity-60 transition-all duration-500`}
                 ></div>
 
-                <div className="relative bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-8 hover:bg-slate-800/50 hover:border-slate-600/50 transition-all duration-500">
+                <div className="relative bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-8 hover:border-brand-primary/50 transition-all duration-500 shadow-lg">
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     <div
