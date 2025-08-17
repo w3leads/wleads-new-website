@@ -140,28 +140,28 @@ export default function DomainFinder() {
       title: "AI-Powered Discovery",
       description: "Advanced machine learning algorithms analyze web patterns, social signals, and corporate structures to uncover hidden contact information with 98.7% accuracy.",
       benefits: ["Pattern Recognition", "Predictive Analytics", "Behavioral Insights"],
-      color: "from-brand-primary to-blue-600"
+      color: "from-brand-success to-green-600"
     },
     {
       icon: Database,
       title: "Multi-Source Intelligence",
       description: "Aggregates data from 200+ premium sources including corporate directories, social networks, professional platforms, and public records.",
       benefits: ["Real-time Updates", "Cross-verification", "Data Enrichment"],
-      color: "from-brand-secondary to-brand-purple"
+      color: "from-brand-purple to-purple-600"
     },
     {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2 compliance, GDPR adherence, and zero-trust architecture ensuring your searches remain completely confidential.",
       benefits: ["End-to-end Encryption", "Audit Trails", "Privacy Controls"],
-      color: "from-brand-success to-green-600"
+      color: "from-brand-orange to-red-500"
     },
     {
       icon: Zap,
       title: "Instant Verification",
       description: "Real-time email verification with deliverability scoring, spam trap detection, and role-based email identification for maximum campaign success.",
       benefits: ["Live Validation", "Quality Scoring", "Bounce Prevention"],
-      color: "from-brand-purple to-purple-600"
+      color: "from-brand-primary to-blue-600"
     }
   ];
 
