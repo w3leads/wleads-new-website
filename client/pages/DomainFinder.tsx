@@ -248,7 +248,7 @@ export default function DomainFinder() {
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-7xl font-bold text-gray-900 leading-tight">
                   Domain{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-success via-brand-purple to-brand-orange">
                     Intelligence
                   </span>
                   <br />
