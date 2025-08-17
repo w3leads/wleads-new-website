@@ -630,7 +630,7 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
               {/* Copyright & Rating */}
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   © 2024 W3Leads, Inc. All rights reserved.
                 </p>
                 <div className="flex items-center space-x-2">
