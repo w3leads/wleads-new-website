@@ -286,12 +286,12 @@ export default function Index() {
 
                 {/* Results */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm animate-in fade-in-50 duration-500">
-                  <div className="bg-brand-accent/10 p-4 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
+                  <div className="bg-brand-purple/10 p-4 rounded-lg border border-brand-purple/20 transition-all duration-300 hover:bg-brand-purple/15">
                     <div className="flex items-center space-x-3 mb-2">
-                      <div className="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center">
-                        <Mail className="w-4 h-4 text-brand-accent" />
+                      <div className="w-8 h-8 bg-brand-purple/20 rounded-lg flex items-center justify-center">
+                        <Mail className="w-4 h-4 text-brand-purple" />
                       </div>
-                      <div className="font-semibold text-brand-accent">
+                      <div className="font-semibold text-brand-purple">
                         {isHeroSearching
                           ? "..."
                           : heroSearchResults
@@ -407,10 +407,10 @@ export default function Index() {
                 label: "Emails Verified",
                 sublabel: "Monthly processing",
                 icon: Mail,
-                gradient: "from-brand-accent to-brand-accent",
+                gradient: "from-brand-purple to-brand-purple",
                 bgGradient:
-                  "from-brand-accent/5 to-brand-accent/10 dark:from-brand-accent/10 dark:to-brand-accent/20",
-                iconBg: "bg-brand-accent/20 dark:bg-brand-accent/30",
+                  "from-brand-purple/5 to-brand-purple/10 dark:from-brand-purple/10 dark:to-brand-purple/20",
+                iconBg: "bg-brand-purple/20 dark:bg-brand-purple/30",
               },
               {
                 number: "10K+",
@@ -1486,18 +1486,18 @@ export default function Index() {
             {/* Metric 2: Lead Quality */}
             <div className="group relative">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-accent via-brand-accent to-brand-accent rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange via-brand-orange to-brand-orange rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
 
               <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
                 {/* Floating Icon Container */}
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl blur-lg opacity-50"></div>
-                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-orange rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-orange to-brand-orange rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <TrendingUp className="w-10 h-10 text-white" />
                   </div>
                   {/* Orbiting Elements */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-accent rounded-full animate-bounce delay-300"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-accent rounded-full animate-pulse delay-500"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-orange rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-orange rounded-full animate-pulse delay-500"></div>
                 </div>
 
                 {/* Metric Display */}
