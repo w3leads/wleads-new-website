@@ -282,14 +282,14 @@ export default function DomainFinder() {
                 <Button
                   size="lg"
                   asChild
-                  className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-gradient-to-r from-brand-success to-brand-purple hover:from-brand-purple hover:to-brand-success text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Link to="/signup">Start Free Trial</Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white text-lg px-8 py-4 rounded-xl backdrop-blur-sm transition-all duration-300"
+                  className="border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white text-lg px-8 py-4 rounded-xl backdrop-blur-sm transition-all duration-300"
                 >
                   Watch 2-Min Demo
                 </Button>
