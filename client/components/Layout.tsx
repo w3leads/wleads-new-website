@@ -642,7 +642,7 @@ const Layout = ({ children }: LayoutProps) => {
                       />
                     ))}
                   </div>
-                  <span className="text-sm text-gray-400">
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
                     4.9/5 from 2,500+ reviews
                   </span>
                 </div>
