@@ -19,6 +19,8 @@ import {
   Clock,
   Shield,
 } from "lucide-react";
+import { requestPasswordReset, ApiError } from "@shared/api";
+import { toast } from "@/hooks/use-toast";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -28,19 +30,27 @@ export default function ForgotPassword() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Simulate sending reset email
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      await requestPasswordReset({ email });
       setIsEmailSent(true);
-    }, 2000);
+      toast({ title: "Email sent", description: "Check your inbox for the reset link." });
+    } catch (err) {
+      const message = err instanceof ApiError ? err.message : "Unable to send reset email";
+      toast({ title: "Request failed", description: message });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleResendEmail = () => {
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    requestPasswordReset({ email })
+      .then(() => toast({ title: "Email resent" }))
+      .catch((err) => {
+        const message = err instanceof ApiError ? err.message : "Unable to resend email";
+        toast({ title: "Resend failed", description: message });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   if (isEmailSent) {

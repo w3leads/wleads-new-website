@@ -53,6 +53,19 @@ export default function Index() {
   const [heroSearchResults, setHeroSearchResults] = useState<any>(null);
   const [isHeroSearching, setIsHeroSearching] = useState(false);
 
+  // If already authenticated, redirect to dashboard
+  useEffect(() => {
+    try {
+      // Only trust cookie for cross-app auth to avoid mismatch with other origin's localStorage
+      const cookieMatch = document.cookie.match(/(?:^|; )w3leads_auth=([^;]*)/);
+      const tokenFromCookie = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
+      if (tokenFromCookie) {
+        const dashboardUrl = (import.meta as any)?.env?.VITE_DASHBOARD_URL || "http://localhost:3000/";
+        window.location.replace(dashboardUrl);
+      }
+    } catch {}
+  }, []);
+
   const testimonials = [
     {
       name: "Sarah Johnson",

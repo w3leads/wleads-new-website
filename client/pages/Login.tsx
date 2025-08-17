@@ -22,6 +22,8 @@ import {
   Shield,
   CheckCircle,
 } from "lucide-react";
+import { login, ApiError } from "@shared/api";
+import { toast } from "@/hooks/use-toast";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -33,14 +35,17 @@ export default function Login() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Simulate login process
-    setTimeout(() => {
-      // In a real app, this would redirect to dashboard.w3leads.in
-      console.log("Redirecting to dashboard...");
+    try {
+      await login({ email, password, remember: rememberMe });
+      toast({ title: "Signed in", description: "Welcome back!" });
+      const dashboardUrl = (import.meta as any)?.env?.VITE_DASHBOARD_URL || "http://localhost:3000/";
+      window.location.replace(dashboardUrl);
+    } catch (err) {
+      const message = err instanceof ApiError ? err.message : "Unable to sign in";
+      toast({ title: "Sign in failed", description: message });
+    } finally {
       setIsLoading(false);
-      // window.location.href = "https://dashboard.w3leads.in";
-    }, 2000);
+    }
   };
 
   const handleGoogleLogin = () => {

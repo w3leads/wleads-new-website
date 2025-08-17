@@ -26,6 +26,8 @@ import {
   Shield,
   Gift,
 } from "lucide-react";
+import { register, ApiError } from "@shared/api";
+import { toast } from "@/hooks/use-toast";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -60,14 +62,24 @@ export default function Signup() {
     }
 
     setIsLoading(true);
-
-    // Simulate signup process
-    setTimeout(() => {
-      // In a real app, this would redirect to dashboard.w3leads.in
-      console.log("Account created, redirecting to dashboard...");
+    try {
+      await register({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        company: formData.company,
+        password: formData.password,
+        password_confirmation: formData.confirmPassword,
+      });
+      toast({ title: "Account created", description: "Welcome to W3Leads!" });
+      const dashboardUrl = (import.meta as any)?.env?.VITE_DASHBOARD_URL || "http://localhost:3000/";
+      window.location.replace(dashboardUrl);
+    } catch (err) {
+      const message = err instanceof ApiError ? err.message : "Unable to create account";
+      toast({ title: "Signup failed", description: message });
+    } finally {
       setIsLoading(false);
-      // window.location.href = "https://dashboard.w3leads.in";
-    }, 2000);
+    }
   };
 
   const handleGoogleSignup = () => {
