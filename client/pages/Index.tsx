@@ -1903,13 +1903,13 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Trust Indicators */}
-          <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-12">
+          {/* Professional Trust Indicators */}
+          <div className="bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-12 shadow-lg">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Trusted by Enterprise Leaders
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300">
                 Join Fortune 500 companies who trust us with their most
                 sensitive data
               </p>
@@ -1918,34 +1918,34 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Certification Badges */}
               <div className="text-center group">
-                <div className="w-20 h-20 bg-slate-700 rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 group-hover:bg-slate-600">
-                  <Award className="w-10 h-10 text-slate-200" />
+                <div className="w-20 h-20 bg-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
+                  <Award className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   ISO 27001 Certified
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   International security management standards
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-brand-success rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   CCPA Compliant
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   California Consumer Privacy Act adherence
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-brand-secondary rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
                   <Lock className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   256-bit Encryption
                 </h4>
                 <p className="text-gray-400 text-sm">
