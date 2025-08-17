@@ -1918,7 +1918,7 @@ export default function Index() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-12">
+          <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-12">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Trusted by Enterprise Leaders
@@ -1932,8 +1932,8 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Certification Badges */}
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-slate-700 rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 group-hover:bg-slate-600">
+                  <Award className="w-10 h-10 text-slate-200" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">
                   ISO 27001 Certified
