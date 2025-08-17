@@ -179,7 +179,7 @@ export default function Index() {
     { name: "Gmail", logo: "📧" },
     { name: "Outlook", logo: "���" },
     { name: "Zapier", logo: "⚡" },
-    { name: "HubSpot", logo: "🎯" },
+    { name: "HubSpot", logo: "����" },
     { name: "Salesforce", logo: "☁️" },
     { name: "Slack", logo: "💬" },
   ];
@@ -997,14 +997,14 @@ export default function Index() {
                                 onKeyPress={(e) =>
                                   e.key === "Enter" && handleDomainSearch()
                                 }
-                                className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
+                                className="bg-white dark:bg-gray-600 border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-lg placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-lg focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
                                 disabled={isSearching}
                               />
                             </div>
                             <Button
                               onClick={handleDomainSearch}
                               disabled={!searchDomain.trim() || isSearching}
-                              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-6 rounded-2xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-brand-primary/50 transform hover:scale-105"
+                              className="bg-brand-primary hover:bg-brand-secondary disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                             >
                               {isSearching ? (
                                 <>
