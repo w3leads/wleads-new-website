@@ -51,7 +51,11 @@
     /* W3Leads professional brand system */
     --brand-primary: 231 48% 48%; /* Professional blue - primary brand color */
     --brand-secondary: 231 48% 38%; /* Darker blue - for depth and contrast */
-    --brand-accent: 142 71% 45%; /* Success green - only for positive states */
+    --brand-success: 142 71% 45%; /* Success green - for positive states */
+    --brand-purple: 283 39% 53%; /* Purple accent - for highlights */
+    --brand-orange: 25 95% 53%; /* Orange accent - for energy */
+    --brand-gradient-start: 231 48% 48%; /* Blue gradient start */
+    --brand-gradient-end: 259 83% 62%; /* Purple gradient end */
     --brand-neutral: 220 13% 91%; /* Light neutral for backgrounds */
     --brand-text: 220 9% 46%; /* Professional gray for text */
   }
@@ -97,7 +101,11 @@
     /* W3Leads professional brand system - dark mode */
     --brand-primary: 231 48% 55%; /* Slightly brighter blue for dark backgrounds */
     --brand-secondary: 231 48% 38%; /* Darker blue maintained */
-    --brand-accent: 142 71% 50%; /* Slightly brighter green for dark mode */
+    --brand-success: 142 71% 50%; /* Slightly brighter green for dark mode */
+    --brand-purple: 283 39% 60%; /* Brighter purple for dark mode */
+    --brand-orange: 25 95% 60%; /* Brighter orange for dark mode */
+    --brand-gradient-start: 231 48% 48%; /* Blue gradient start */
+    --brand-gradient-end: 259 83% 62%; /* Purple gradient end */
     --brand-neutral: 220 13% 18%; /* Dark neutral for backgrounds */
     --brand-text: 220 9% 70%; /* Light gray for dark mode text */
   }

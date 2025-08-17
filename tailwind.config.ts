@@ -61,7 +61,11 @@ export default {
         brand: {
           primary: "hsl(var(--brand-primary))",
           secondary: "hsl(var(--brand-secondary))",
-          accent: "hsl(var(--brand-accent))",
+          success: "hsl(var(--brand-success))",
+          purple: "hsl(var(--brand-purple))",
+          orange: "hsl(var(--brand-orange))",
+          "gradient-start": "hsl(var(--brand-gradient-start))",
+          "gradient-end": "hsl(var(--brand-gradient-end))",
           neutral: "hsl(var(--brand-neutral))",
           text: "hsl(var(--brand-text))",
         },

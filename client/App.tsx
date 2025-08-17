@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
+import DomainFinder from "./pages/DomainFinder";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Pricing from "./pages/Pricing";
@@ -28,6 +29,7 @@ const App = () => (
 
             {/* Product Routes */}
             <Route path="/products/:product" element={<Products />} />
+            <Route path="/domain-finder" element={<DomainFinder />} />
 
             {/* Main Pages */}
             <Route path="/about" element={<About />} />

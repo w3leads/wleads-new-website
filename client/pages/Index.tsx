@@ -1821,18 +1821,16 @@ export default function Index() {
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm mb-8">
-              <Shield className="w-4 h-4 text-green-400 mr-3" />
-              <span className="text-green-400 text-sm font-medium tracking-wide uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/80 border border-slate-700/50 backdrop-blur-sm mb-8">
+              <Shield className="w-4 h-4 text-slate-300 mr-3" />
+              <span className="text-slate-300 text-sm font-medium tracking-wide uppercase">
                 Enterprise Security
               </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               <span className="block">Bank-Level</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
-                Security & Compliance
-              </span>
+              <span className="text-slate-200">Security & Compliance</span>
             </h2>
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -1849,29 +1847,29 @@ export default function Index() {
                 icon: Lock,
                 title: "SPF/DKIM Authentication",
                 desc: "Email authentication protocols ensure deliverability and reputation protection",
-                color: "from-green-500 to-emerald-500",
-                bgColor: "from-green-500/20 to-emerald-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Shield,
                 title: "GDPR Compliance",
                 desc: "Full European data protection regulation compliance with automated consent management",
-                color: "from-blue-500 to-cyan-500",
-                bgColor: "from-blue-500/20 to-cyan-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Award,
                 title: "SOC 2 Type II",
                 desc: "Certified security controls for availability, processing integrity, and confidentiality",
-                color: "from-purple-500 to-violet-500",
-                bgColor: "from-purple-500/20 to-violet-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Eye,
                 title: "Zero-Trust Architecture",
                 desc: "Advanced privacy controls with end-to-end encryption and access verification",
-                color: "from-orange-500 to-red-500",
-                bgColor: "from-orange-500/20 to-red-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -1880,25 +1878,25 @@ export default function Index() {
                   className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}
                 ></div>
 
-                <div className="relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/[0.12] transition-all duration-500">
+                <div className="relative bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-8 hover:bg-slate-800/50 hover:border-slate-600/50 transition-all duration-500">
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     <div
                       className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}
                     ></div>
                     <div
-                      className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500`}
+                      className={`relative w-16 h-16 bg-slate-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 group-hover:bg-slate-600`}
                     >
-                      <item.icon className="w-8 h-8 text-white" />
+                      <item.icon className="w-8 h-8 text-slate-200" />
                     </div>
 
                     {/* Status Indicator */}
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-slate-100 transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-sm">
@@ -1906,9 +1904,9 @@ export default function Index() {
                   </p>
 
                   {/* Verification Badge */}
-                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                    <span className="text-green-400 text-xs font-medium">
+                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-600/30">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                    <span className="text-emerald-400 text-xs font-medium">
                       Verified
                     </span>
                   </div>
@@ -1918,7 +1916,7 @@ export default function Index() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-12">
+          <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-12">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Trusted by Enterprise Leaders
@@ -1932,8 +1930,8 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Certification Badges */}
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-slate-700 rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 group-hover:bg-slate-600">
+                  <Award className="w-10 h-10 text-slate-200" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">
                   ISO 27001 Certified
