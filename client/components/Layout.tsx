@@ -392,7 +392,7 @@ const Layout = ({ children }: LayoutProps) => {
                     <div className="relative">
                       <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center shadow-2xl shadow-brand-primary/25 group-hover:shadow-brand-primary/40 transition-all duration-300">
                         <span className="text-white font-bold text-xl">W3</span>
-                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-brand-accent rounded-full opacity-80 animate-pulse"></div>
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-brand-orange rounded-full opacity-80 animate-pulse"></div>
                       </div>
                     </div>
                     <div className="flex flex-col">
@@ -408,7 +408,7 @@ const Layout = ({ children }: LayoutProps) => {
                   <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-md">
                     The most advanced B2B lead generation and email verification
                     platform. Trusted by{" "}
-                    <span className="text-brand-accent font-semibold">
+                    <span className="text-brand-orange font-semibold">
                       50,000+
                     </span>{" "}
                     businesses worldwide.
@@ -416,21 +416,21 @@ const Layout = ({ children }: LayoutProps) => {
 
                   {/* Trust Indicators */}
                   <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
-                      <CheckCircle className="w-4 h-4 text-brand-accent" />
-                      <span className="text-xs text-brand-accent font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/20 px-3 py-2 rounded-full">
+                      <CheckCircle className="w-4 h-4 text-brand-success" />
+                      <span className="text-xs text-brand-success font-medium">
                         GDPR Compliant
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
-                      <Shield className="w-4 h-4 text-brand-accent" />
-                      <span className="text-xs text-brand-accent font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-primary/10 border border-brand-primary/20 px-3 py-2 rounded-full">
+                      <Shield className="w-4 h-4 text-brand-primary" />
+                      <span className="text-xs text-brand-primary font-medium">
                         SOC 2 Certified
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-2 rounded-full">
-                      <Award className="w-4 h-4 text-brand-accent" />
-                      <span className="text-xs text-brand-accent font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-3 py-2 rounded-full">
+                      <Award className="w-4 h-4 text-brand-orange" />
+                      <span className="text-xs text-brand-orange font-medium">
                         99.9% Uptime
                       </span>
                     </div>
