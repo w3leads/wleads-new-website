@@ -441,11 +441,11 @@ const Layout = ({ children }: LayoutProps) => {
                 {/* Newsletter Signup */}
                 <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 space-y-4 shadow-sm">
                   <div className="space-y-2">
-                    <h3 className="text-white font-semibold text-lg flex items-center space-x-2">
-                      <Sparkles className="w-5 h-5 text-brand-secondary" />
+                    <h3 className="text-gray-900 dark:text-white font-semibold text-lg flex items-center space-x-2">
+                      <Sparkles className="w-5 h-5 text-brand-primary" />
                       <span>Stay Updated</span>
                     </h3>
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
                       Get the latest updates, tips, and exclusive offers
                       delivered to your inbox.
                     </p>
