@@ -685,28 +685,28 @@ export default function DomainFinder() {
                 title: "Domain Analysis",
                 desc: "AI analyzes domain architecture, DNS records, and web presence patterns",
                 icon: Target,
-                color: "from-brand-primary to-blue-600"
+                color: "from-brand-success to-green-600"
               },
               {
-                step: "02", 
+                step: "02",
                 title: "Multi-Source Crawling",
                 desc: "Searches across 200+ premium databases, social networks, and public records",
                 icon: Database,
-                color: "from-brand-success to-green-600"
+                color: "from-brand-purple to-purple-600"
               },
               {
                 step: "03",
                 title: "AI Verification",
                 desc: "Machine learning validates emails with 98.7% accuracy and quality scoring",
                 icon: Brain,
-                color: "from-brand-secondary to-indigo-600"
+                color: "from-brand-orange to-red-500"
               },
               {
                 step: "04",
                 title: "Enriched Results",
                 desc: "Organized, exportable data with company insights and contact details",
                 icon: Sparkles,
-                color: "from-brand-purple to-purple-600"
+                color: "from-brand-primary to-blue-600"
               },
             ].map((item, index) => (
               <div key={index} className="relative text-center group">
