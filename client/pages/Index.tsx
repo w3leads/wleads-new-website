@@ -179,7 +179,7 @@ export default function Index() {
     { name: "Gmail", logo: "📧" },
     { name: "Outlook", logo: "���" },
     { name: "Zapier", logo: "⚡" },
-    { name: "HubSpot", logo: "🎯" },
+    { name: "HubSpot", logo: "����" },
     { name: "Salesforce", logo: "☁️" },
     { name: "Slack", logo: "💬" },
   ];
@@ -286,12 +286,12 @@ export default function Index() {
 
                 {/* Results */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm animate-in fade-in-50 duration-500">
-                  <div className="bg-brand-accent/10 p-4 rounded-lg border border-brand-accent/20 transition-all duration-300 hover:bg-brand-accent/15">
+                  <div className="bg-brand-purple/10 p-4 rounded-lg border border-brand-purple/20 transition-all duration-300 hover:bg-brand-purple/15">
                     <div className="flex items-center space-x-3 mb-2">
-                      <div className="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center">
-                        <Mail className="w-4 h-4 text-brand-accent" />
+                      <div className="w-8 h-8 bg-brand-purple/20 rounded-lg flex items-center justify-center">
+                        <Mail className="w-4 h-4 text-brand-purple" />
                       </div>
-                      <div className="font-semibold text-brand-accent">
+                      <div className="font-semibold text-brand-purple">
                         {isHeroSearching
                           ? "..."
                           : heroSearchResults
@@ -407,10 +407,10 @@ export default function Index() {
                 label: "Emails Verified",
                 sublabel: "Monthly processing",
                 icon: Mail,
-                gradient: "from-brand-accent to-brand-accent",
+                gradient: "from-brand-purple to-brand-purple",
                 bgGradient:
-                  "from-brand-accent/5 to-brand-accent/10 dark:from-brand-accent/10 dark:to-brand-accent/20",
-                iconBg: "bg-brand-accent/20 dark:bg-brand-accent/30",
+                  "from-brand-purple/5 to-brand-purple/10 dark:from-brand-purple/10 dark:to-brand-purple/20",
+                iconBg: "bg-brand-purple/20 dark:bg-brand-purple/30",
               },
               {
                 number: "10K+",
@@ -853,85 +853,77 @@ export default function Index() {
 
       {/* 5. Interactive Demo - Try It Yourself */}
       <section className="py-32 px-4 relative overflow-hidden">
-        {/* Sophisticated Background Design */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_70%)]"></div>
+        {/* Professional Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(64,81,181,0.05),transparent_70%)]"></div>
 
-        {/* Animated Mesh Gradient */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/40 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/30 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+        {/* Subtle Professional Elements */}
+        <div className="absolute inset-0 opacity-30 flex flex-col justify-start items-start">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/8 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-success/8 to-transparent rounded-full blur-3xl"></div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-accent rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-32 right-10 w-1 h-1 bg-brand-secondary rounded-full animate-pulse opacity-80"></div>
-        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-primary rounded-full animate-bounce opacity-40"></div>
-
         <div className="relative max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="text-center mb-24">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl mb-8">
-              <div className="w-2 h-2 bg-brand-success rounded-full mr-3 animate-pulse"></div>
-              <span className="text-white text-sm font-medium tracking-wide uppercase">
-                Live Interactive Demo
+          {/* Professional Header Section */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-primary/10 border border-brand-primary/20 backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-brand-primary rounded-full mr-3"></div>
+              <span className="text-brand-primary text-sm font-semibold tracking-wide uppercase">
+                Interactive Demo
               </span>
             </div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-white">Experience the</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-gray-900 dark:text-white">
+              Experience Our Platform
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
-                Power in Action
-              </span>
+              <span className="text-brand-primary">In Action</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Test our platform with real data processing. Enter any domain or
-              email address and watch our AI-powered engine deliver instant,
-              accurate results.
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Test our enterprise-grade platform with real data processing.
+              Enter any domain or email address and see our AI-powered engine
+              deliver instant, accurate results.
             </p>
           </div>
 
-          {/* Demo Interface */}
-          <div className="max-w-6xl mx-auto">
+          {/* Professional Demo Interface */}
+          <div className="max-w-5xl mx-auto">
             {/* Main Demo Container */}
             <div className="relative">
-              {/* Multi-layer Glow Effect */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-brand-purple rounded-3xl blur-md opacity-40"></div>
+              {/* Subtle Professional Border */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur-sm opacity-40"></div>
 
               {/* Main Content */}
-              <div className="relative bg-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 md:p-16 shadow-2xl">
-                {/* Premium Browser-like Header */}
-                <div className="flex items-center justify-between mb-12 pb-8 border-b border-white/20">
+              <div className="relative bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl p-8 md:p-12 shadow-xl">
+                {/* Professional Browser-like Header */}
+                <div className="flex items-center justify-between mb-10 pb-6 border-b border-gray-200 dark:border-gray-700">
                   <div className="flex items-center space-x-4">
                     <div className="flex space-x-2">
-                      <div className="w-4 h-4 bg-red-400 rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-lg"></div>
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-brand-success rounded-full"></div>
                     </div>
-                    <div className="bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                      <span className="text-gray-300 text-sm font-mono">
+                    <div className="bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-2">
+                      <span className="text-gray-600 dark:text-gray-300 text-sm font-mono">
                         w3leads.com/demo
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="flex items-center space-x-2 bg-brand-success/20 border border-brand-success/30 px-3 py-1 rounded-full">
-                      <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse"></div>
-                      <span className="text-brand-success text-xs font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/30 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-brand-success rounded-full"></div>
+                      <span className="text-brand-success text-xs font-semibold">
                         Live System
                       </span>
                     </div>
-                    <div className="text-xs text-gray-400">
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
                       Real-time processing
                     </div>
                   </div>
                 </div>
 
-                {/* Premium Tabbed Interface */}
-                <div className="mb-12">
-                  <div className="flex space-x-2 bg-white/10 rounded-2xl p-2 mb-8 w-fit mx-auto backdrop-blur-sm">
+                {/* Professional Tabbed Interface */}
+                <div className="mb-10">
+                  <div className="flex space-x-1 bg-gray-100 dark:bg-gray-700 rounded-xl p-1 mb-8 w-fit mx-auto">
                     <button
                       onClick={() => {
                         setActiveTab("domain");
@@ -962,7 +954,7 @@ export default function Index() {
                       }}
                       className={`group px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-3 ${
                         activeTab === "email"
-                          ? "bg-gradient-to-r from-brand-success to-emerald-600 text-white shadow-xl shadow-brand-success/25"
+                          ? "bg-gradient-to-r from-brand-success to-brand-success text-white shadow-xl shadow-brand-success/25"
                           : "text-gray-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
@@ -983,16 +975,16 @@ export default function Index() {
                     <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent rounded-3xl blur-lg opacity-40"></div>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary/30 to-brand-secondary/30 rounded-xl blur-sm opacity-40"></div>
                         <div className="relative">
-                          <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
+                          <div className="flex items-center space-x-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl p-6">
                             <div className="flex-shrink-0">
-                              <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center">
+                              <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center shadow-sm">
                                 <Globe className="w-6 h-6 text-white" />
                               </div>
                             </div>
                             <div className="flex-1">
-                              <label className="block text-white text-sm font-medium mb-2">
+                              <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">
                                 Domain Intelligence Search
                               </label>
                               <Input
@@ -1004,14 +996,14 @@ export default function Index() {
                                 onKeyPress={(e) =>
                                   e.key === "Enter" && handleDomainSearch()
                                 }
-                                className="bg-white/10 border-white/20 text-white text-lg placeholder:text-gray-400 rounded-xl focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
+                                className="bg-white dark:bg-gray-600 border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-lg placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-lg focus:border-brand-primary focus:ring-brand-primary/50 transition-all duration-300"
                                 disabled={isSearching}
                               />
                             </div>
                             <Button
                               onClick={handleDomainSearch}
                               disabled={!searchDomain.trim() || isSearching}
-                              className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary disabled:opacity-50 disabled:cursor-not-allowed text-white px-8 py-6 rounded-2xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-brand-primary/50 transform hover:scale-105"
+                              className="bg-brand-primary hover:bg-brand-secondary disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                             >
                               {isSearching ? (
                                 <>
@@ -1486,18 +1478,18 @@ export default function Index() {
             {/* Metric 2: Lead Quality */}
             <div className="group relative">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-accent via-brand-accent to-brand-accent rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange via-brand-orange to-brand-orange rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
 
               <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-10 hover:bg-white/[0.12] transition-all duration-500">
                 {/* Floating Icon Container */}
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl blur-lg opacity-50"></div>
-                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-accent to-brand-accent rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-orange rounded-2xl blur-lg opacity-50"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-r from-brand-orange to-brand-orange rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <TrendingUp className="w-10 h-10 text-white" />
                   </div>
                   {/* Orbiting Elements */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-accent rounded-full animate-bounce delay-300"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-accent rounded-full animate-pulse delay-500"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-orange rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-brand-orange rounded-full animate-pulse delay-500"></div>
                 </div>
 
                 {/* Metric Display */}
@@ -1801,39 +1793,34 @@ export default function Index() {
       </section>
 
       {/* 8. Enterprise Security & Trust */}
-      <section className="py-32 px-4 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
-        {/* Security Pattern Background */}
-        <div className="absolute inset-0 opacity-20">
+      <section className="py-32 px-4 relative overflow-hidden bg-gray-50 dark:bg-gray-900">
+        {/* Professional Background */}
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 2px)`,
+              backgroundImage: `radial-gradient(circle at 25px 25px, rgba(64, 81, 181, 0.2) 1px, transparent 1px)`,
               backgroundSize: "50px 50px",
             }}
           ></div>
         </div>
 
-        {/* Floating Security Elements */}
-        <div className="absolute top-20 left-20 w-4 h-4 bg-green-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse opacity-70"></div>
-        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
-
         <div className="relative max-w-7xl mx-auto">
-          {/* Header */}
+          {/* Professional Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/80 border border-slate-700/50 backdrop-blur-sm mb-8">
-              <Shield className="w-4 h-4 text-slate-300 mr-3" />
-              <span className="text-slate-300 text-sm font-medium tracking-wide uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-primary/10 border border-brand-primary/20 backdrop-blur-sm mb-8">
+              <Shield className="w-4 h-4 text-brand-primary mr-3" />
+              <span className="text-brand-primary text-sm font-semibold tracking-wide uppercase">
                 Enterprise Security
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               <span className="block">Bank-Level</span>
-              <span className="text-slate-200">Security & Compliance</span>
+              <span className="text-brand-primary">Security & Compliance</span>
             </h2>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Your data deserves fortress-level protection. We meet and exceed
               the highest security standards so you can focus on growing your
               business with complete peace of mind.
@@ -1847,64 +1834,64 @@ export default function Index() {
                 icon: Lock,
                 title: "SPF/DKIM Authentication",
                 desc: "Email authentication protocols ensure deliverability and reputation protection",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Shield,
                 title: "GDPR Compliance",
                 desc: "Full European data protection regulation compliance with automated consent management",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Award,
                 title: "SOC 2 Type II",
                 desc: "Certified security controls for availability, processing integrity, and confidentiality",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
               {
                 icon: Eye,
                 title: "Zero-Trust Architecture",
                 desc: "Advanced privacy controls with end-to-end encryption and access verification",
-                color: "from-slate-600 to-slate-700",
-                bgColor: "from-slate-600/10 to-slate-700/10",
+                color: "from-brand-primary to-brand-secondary",
+                bgColor: "from-brand-primary/10 to-brand-secondary/10",
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
-                {/* Glow Effect */}
+                {/* Professional Border */}
                 <div
-                  className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}
+                  className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-xl blur-sm opacity-40 group-hover:opacity-60 transition-all duration-500`}
                 ></div>
 
-                <div className="relative bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-8 hover:bg-slate-800/50 hover:border-slate-600/50 transition-all duration-500">
-                  {/* Icon Container */}
+                <div className="relative bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-8 hover:border-brand-primary/50 transition-all duration-500 shadow-lg">
+                  {/* Professional Icon Container */}
                   <div className="relative mb-6">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}
+                      className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-sm opacity-30`}
                     ></div>
                     <div
-                      className={`relative w-16 h-16 bg-slate-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 group-hover:bg-slate-600`}
+                      className={`relative w-16 h-16 bg-brand-primary rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 shadow-lg`}
                     >
-                      <item.icon className="w-8 h-8 text-slate-200" />
+                      <item.icon className="w-8 h-8 text-white" />
                     </div>
 
-                    {/* Status Indicator */}
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
+                    {/* Professional Status Indicator */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-success rounded-full flex items-center justify-center shadow-sm">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-slate-100 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                     {item.desc}
                   </p>
 
-                  {/* Verification Badge */}
-                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-600/30">
+                  {/* Professional Verification Badge */}
+                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-brand-success/10 border border-brand-success/30">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
                     <span className="text-emerald-400 text-xs font-medium">
                       Verified
@@ -1915,13 +1902,13 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Trust Indicators */}
-          <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-12">
+          {/* Professional Trust Indicators */}
+          <div className="bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-12 shadow-lg">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Trusted by Enterprise Leaders
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300">
                 Join Fortune 500 companies who trust us with their most
                 sensitive data
               </p>
@@ -1930,37 +1917,37 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Certification Badges */}
               <div className="text-center group">
-                <div className="w-20 h-20 bg-slate-700 rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 group-hover:bg-slate-600">
-                  <Award className="w-10 h-10 text-slate-200" />
+                <div className="w-20 h-20 bg-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
+                  <Award className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   ISO 27001 Certified
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   International security management standards
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-brand-success rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   CCPA Compliant
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   California Consumer Privacy Act adherence
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-brand-secondary rounded-xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-105 transition-all duration-300 shadow-lg">
                   <Lock className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">
                   256-bit Encryption
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Military-grade data protection
                 </p>
               </div>
