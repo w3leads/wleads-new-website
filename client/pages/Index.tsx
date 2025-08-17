@@ -976,16 +976,16 @@ export default function Index() {
                     <div className="space-y-8 animate-in fade-in-50 duration-500">
                       {/* Search Input */}
                       <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-lg opacity-40"></div>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary/30 to-brand-secondary/30 rounded-xl blur-sm opacity-40"></div>
                         <div className="relative">
-                          <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8">
+                          <div className="flex items-center space-x-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl p-6">
                             <div className="flex-shrink-0">
-                              <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center">
+                              <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center shadow-sm">
                                 <Globe className="w-6 h-6 text-white" />
                               </div>
                             </div>
                             <div className="flex-1">
-                              <label className="block text-white text-sm font-medium mb-2">
+                              <label className="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">
                                 Domain Intelligence Search
                               </label>
                               <Input
