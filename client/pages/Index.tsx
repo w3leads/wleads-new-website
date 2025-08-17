@@ -853,85 +853,78 @@ export default function Index() {
 
       {/* 5. Interactive Demo - Try It Yourself */}
       <section className="py-32 px-4 relative overflow-hidden">
-        {/* Sophisticated Background Design */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_70%)]"></div>
+        {/* Professional Background Design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(64,81,181,0.05),transparent_70%)]"></div>
 
-        {/* Animated Mesh Gradient */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/40 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/30 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-success/20 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+        {/* Subtle Professional Elements */}
+        <div className="absolute inset-0 opacity-30 flex flex-col justify-start items-start">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-bl from-brand-secondary/8 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-brand-success/8 to-transparent rounded-full blur-3xl"></div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-32 left-10 w-2 h-2 bg-brand-orange rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-32 right-10 w-1 h-1 bg-brand-secondary rounded-full animate-pulse opacity-80"></div>
-        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-brand-primary rounded-full animate-bounce opacity-40"></div>
-
         <div className="relative max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="text-center mb-24">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl mb-8">
-              <div className="w-2 h-2 bg-brand-success rounded-full mr-3 animate-pulse"></div>
-              <span className="text-white text-sm font-medium tracking-wide uppercase">
-                Live Interactive Demo
+          {/* Professional Header Section */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-primary/10 border border-brand-primary/20 backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-brand-primary rounded-full mr-3"></div>
+              <span className="text-brand-primary text-sm font-semibold tracking-wide uppercase">
+                Interactive Demo
               </span>
             </div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-white">Experience the</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-gray-900 dark:text-white">
+              Experience Our Platform
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple">
-                Power in Action
+              <span className="text-brand-primary">
+                In Action
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Test our platform with real data processing. Enter any domain or
-              email address and watch our AI-powered engine deliver instant,
-              accurate results.
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Test our enterprise-grade platform with real data processing. Enter any domain or
+              email address and see our AI-powered engine deliver instant, accurate results.
             </p>
           </div>
 
-          {/* Demo Interface */}
-          <div className="max-w-6xl mx-auto">
+          {/* Professional Demo Interface */}
+          <div className="max-w-5xl mx-auto">
             {/* Main Demo Container */}
             <div className="relative">
-              {/* Multi-layer Glow Effect */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-purple rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-success to-brand-orange rounded-3xl blur-md opacity-40"></div>
+              {/* Subtle Professional Border */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur-sm opacity-40"></div>
 
               {/* Main Content */}
-              <div className="relative bg-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 md:p-16 shadow-2xl">
-                {/* Premium Browser-like Header */}
-                <div className="flex items-center justify-between mb-12 pb-8 border-b border-white/20">
+              <div className="relative bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl p-8 md:p-12 shadow-xl">
+                {/* Professional Browser-like Header */}
+                <div className="flex items-center justify-between mb-10 pb-6 border-b border-gray-200 dark:border-gray-700">
                   <div className="flex items-center space-x-4">
                     <div className="flex space-x-2">
-                      <div className="w-4 h-4 bg-brand-orange rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-brand-orange/70 rounded-full shadow-lg"></div>
-                      <div className="w-4 h-4 bg-brand-success rounded-full shadow-lg"></div>
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-brand-success rounded-full"></div>
                     </div>
-                    <div className="bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                      <span className="text-gray-300 text-sm font-mono">
+                    <div className="bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-2">
+                      <span className="text-gray-600 dark:text-gray-300 text-sm font-mono">
                         w3leads.com/demo
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="flex items-center space-x-2 bg-brand-success/20 border border-brand-success/30 px-3 py-1 rounded-full">
-                      <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse"></div>
-                      <span className="text-brand-success text-xs font-medium">
+                    <div className="flex items-center space-x-2 bg-brand-success/10 border border-brand-success/30 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-brand-success rounded-full"></div>
+                      <span className="text-brand-success text-xs font-semibold">
                         Live System
                       </span>
                     </div>
-                    <div className="text-xs text-gray-400">
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
                       Real-time processing
                     </div>
                   </div>
                 </div>
 
-                {/* Premium Tabbed Interface */}
-                <div className="mb-12">
-                  <div className="flex space-x-2 bg-white/10 rounded-2xl p-2 mb-8 w-fit mx-auto backdrop-blur-sm">
+                {/* Professional Tabbed Interface */}
+                <div className="mb-10">
+                  <div className="flex space-x-1 bg-gray-100 dark:bg-gray-700 rounded-xl p-1 mb-8 w-fit mx-auto">
                     <button
                       onClick={() => {
                         setActiveTab("domain");
