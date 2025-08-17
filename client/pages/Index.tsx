@@ -1887,18 +1887,18 @@ export default function Index() {
                       className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}
                     ></div>
                     <div
-                      className={`relative w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500`}
+                      className={`relative w-16 h-16 bg-slate-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 group-hover:bg-slate-600`}
                     >
-                      <item.icon className="w-8 h-8 text-white" />
+                      <item.icon className="w-8 h-8 text-slate-200" />
                     </div>
 
                     {/* Status Indicator */}
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-slate-100 transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-sm">
@@ -1906,9 +1906,9 @@ export default function Index() {
                   </p>
 
                   {/* Verification Badge */}
-                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                    <span className="text-green-400 text-xs font-medium">
+                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-600/30">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                    <span className="text-emerald-400 text-xs font-medium">
                       Verified
                     </span>
                   </div>
