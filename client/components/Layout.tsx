@@ -456,7 +456,7 @@ const Layout = ({ children }: LayoutProps) => {
                       <input
                         type="email"
                         placeholder="Enter your email"
-                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                       />
                     </div>
                     <Button className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-purple text-white shadow-lg shadow-brand-primary/25 border-0 rounded-xl px-6 transition-all duration-300 hover:scale-105">
