@@ -598,7 +598,7 @@ const Layout = ({ children }: LayoutProps) => {
 
                 {/* Legal */}
                 <div className="space-y-4">
-                  <h3 className="text-white font-semibold text-lg mb-6 relative">
+                  <h3 className="text-gray-900 dark:text-white font-semibold text-lg mb-6 relative">
                     Legal
                     <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
                   </h3>
