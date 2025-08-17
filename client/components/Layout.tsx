@@ -376,7 +376,7 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="pt-16">{children}</main>
 
       {/* Footer */}
-      <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary/10 border-t border-white/10 overflow-hidden">
+      <footer className="relative bg-slate-50 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.4)_1px,transparent_0)] bg-[size:24px_24px]"></div>
