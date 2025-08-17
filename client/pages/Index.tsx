@@ -876,13 +876,12 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-gray-900 dark:text-white">
               Experience Our Platform
               <br />
-              <span className="text-brand-primary">
-                In Action
-              </span>
+              <span className="text-brand-primary">In Action</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Test our enterprise-grade platform with real data processing. Enter any domain or
-              email address and see our AI-powered engine deliver instant, accurate results.
+              Test our enterprise-grade platform with real data processing.
+              Enter any domain or email address and see our AI-powered engine
+              deliver instant, accurate results.
             </p>
           </div>
 
