@@ -212,7 +212,7 @@ export default function Index() {
     <Layout>
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/10 to-brand-purple/10 dark:from-brand-primary dark:via-brand-secondary dark:to-brand-purple dark:opacity-90"></div>
+        <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Find{" "}
