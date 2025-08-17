@@ -1867,32 +1867,32 @@ export default function Index() {
                 ></div>
 
                 <div className="relative bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-8 hover:border-brand-primary/50 transition-all duration-500 shadow-lg">
-                  {/* Icon Container */}
+                  {/* Professional Icon Container */}
                   <div className="relative mb-6">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-2xl blur-lg opacity-50`}
+                      className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-sm opacity-30`}
                     ></div>
                     <div
-                      className={`relative w-16 h-16 bg-slate-700 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 group-hover:bg-slate-600`}
+                      className={`relative w-16 h-16 bg-brand-primary rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 shadow-lg`}
                     >
-                      <item.icon className="w-8 h-8 text-slate-200" />
+                      <item.icon className="w-8 h-8 text-white" />
                     </div>
 
-                    {/* Status Indicator */}
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
+                    {/* Professional Status Indicator */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-success rounded-full flex items-center justify-center shadow-sm">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-slate-100 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-brand-primary transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                     {item.desc}
                   </p>
 
-                  {/* Verification Badge */}
-                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-600/30">
+                  {/* Professional Verification Badge */}
+                  <div className="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-brand-success/10 border border-brand-success/30">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
                     <span className="text-emerald-400 text-xs font-medium">
                       Verified
