@@ -397,10 +397,10 @@ const Layout = ({ children }: LayoutProps) => {
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-white font-bold text-3xl tracking-tight">
+                      <span className="text-gray-900 dark:text-white font-bold text-3xl tracking-tight">
                         Leads
                       </span>
-                      <span className="text-sm text-brand-secondary font-medium -mt-1">
+                      <span className="text-sm text-brand-primary font-medium -mt-1">
                         B2B Platform
                       </span>
                     </div>
