@@ -1821,16 +1821,16 @@ export default function Index() {
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm mb-8">
-              <Shield className="w-4 h-4 text-green-400 mr-3" />
-              <span className="text-green-400 text-sm font-medium tracking-wide uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/80 border border-slate-700/50 backdrop-blur-sm mb-8">
+              <Shield className="w-4 h-4 text-slate-300 mr-3" />
+              <span className="text-slate-300 text-sm font-medium tracking-wide uppercase">
                 Enterprise Security
               </span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               <span className="block">Bank-Level</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
+              <span className="text-slate-200">
                 Security & Compliance
               </span>
             </h2>
@@ -1849,29 +1849,29 @@ export default function Index() {
                 icon: Lock,
                 title: "SPF/DKIM Authentication",
                 desc: "Email authentication protocols ensure deliverability and reputation protection",
-                color: "from-green-500 to-emerald-500",
-                bgColor: "from-green-500/20 to-emerald-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Shield,
                 title: "GDPR Compliance",
                 desc: "Full European data protection regulation compliance with automated consent management",
-                color: "from-blue-500 to-cyan-500",
-                bgColor: "from-blue-500/20 to-cyan-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Award,
                 title: "SOC 2 Type II",
                 desc: "Certified security controls for availability, processing integrity, and confidentiality",
-                color: "from-purple-500 to-violet-500",
-                bgColor: "from-purple-500/20 to-violet-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
               {
                 icon: Eye,
                 title: "Zero-Trust Architecture",
                 desc: "Advanced privacy controls with end-to-end encryption and access verification",
-                color: "from-orange-500 to-red-500",
-                bgColor: "from-orange-500/20 to-red-500/20",
+                color: "from-slate-600 to-slate-700",
+                bgColor: "from-slate-600/10 to-slate-700/10",
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -1880,7 +1880,7 @@ export default function Index() {
                   className={`absolute -inset-1 bg-gradient-to-r ${item.bgColor} rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500`}
                 ></div>
 
-                <div className="relative bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/[0.12] transition-all duration-500">
+                <div className="relative bg-slate-800/30 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-8 hover:bg-slate-800/50 hover:border-slate-600/50 transition-all duration-500">
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     <div
