@@ -237,9 +237,9 @@ export default function DomainFinder() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               {/* Status Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-success/10 border border-brand-success/20 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-brand-success mr-2" />
-                <span className="text-brand-success text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/20 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-brand-purple mr-2" />
+                <span className="text-brand-purple text-sm font-medium">
                   #1 Domain Intelligence Platform
                 </span>
               </div>
