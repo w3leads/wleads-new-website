@@ -406,10 +406,10 @@ const Layout = ({ children }: LayoutProps) => {
                     </div>
                   </Link>
 
-                  <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-md">
                     The most advanced B2B lead generation and email verification
                     platform. Trusted by{" "}
-                    <span className="text-brand-success font-semibold">
+                    <span className="text-brand-accent font-semibold">
                       50,000+
                     </span>{" "}
                     businesses worldwide.
