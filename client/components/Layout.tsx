@@ -439,7 +439,7 @@ const Layout = ({ children }: LayoutProps) => {
                 </div>
 
                 {/* Newsletter Signup */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 space-y-4">
+                <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 space-y-4 shadow-sm">
                   <div className="space-y-2">
                     <h3 className="text-white font-semibold text-lg flex items-center space-x-2">
                       <Sparkles className="w-5 h-5 text-brand-secondary" />
