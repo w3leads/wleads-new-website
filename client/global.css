@@ -101,7 +101,11 @@
     /* W3Leads professional brand system - dark mode */
     --brand-primary: 231 48% 55%; /* Slightly brighter blue for dark backgrounds */
     --brand-secondary: 231 48% 38%; /* Darker blue maintained */
-    --brand-accent: 142 71% 50%; /* Slightly brighter green for dark mode */
+    --brand-success: 142 71% 50%; /* Slightly brighter green for dark mode */
+    --brand-purple: 283 39% 60%; /* Brighter purple for dark mode */
+    --brand-orange: 25 95% 60%; /* Brighter orange for dark mode */
+    --brand-gradient-start: 231 48% 48%; /* Blue gradient start */
+    --brand-gradient-end: 259 83% 62%; /* Purple gradient end */
     --brand-neutral: 220 13% 18%; /* Dark neutral for backgrounds */
     --brand-text: 220 9% 70%; /* Light gray for dark mode text */
   }
