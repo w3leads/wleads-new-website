@@ -264,15 +264,15 @@ export default function DomainFinder() {
               {/* Key Stats */}
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-primary">98.7%</div>
+                  <div className="text-3xl font-bold text-brand-success">98.7%</div>
                   <div className="text-sm text-gray-600">Accuracy Rate</div>
                 </div>
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-success">50M+</div>
+                  <div className="text-3xl font-bold text-brand-purple">50M+</div>
                   <div className="text-sm text-gray-600">Contacts Found</div>
                 </div>
                 <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                  <div className="text-3xl font-bold text-brand-purple">10K+</div>
+                  <div className="text-3xl font-bold text-brand-orange">10K+</div>
                   <div className="text-sm text-gray-600">Companies Trust Us</div>
                 </div>
               </div>
