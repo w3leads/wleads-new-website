@@ -693,8 +693,8 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
 
             {/* Made with Love */}
-            <div className="text-center mt-8 pt-6 border-t border-white/5">
-              <p className="text-gray-500 text-xs flex items-center justify-center space-x-1">
+            <div className="text-center mt-8 pt-6 border-t border-gray-200 dark:border-white/10">
+              <p className="text-gray-600 dark:text-gray-500 text-xs flex items-center justify-center space-x-1">
                 <span>Made with</span>
                 <Heart className="w-3 h-3 text-red-400 fill-current animate-pulse" />
                 <span>in San Francisco</span>
